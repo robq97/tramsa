@@ -109,7 +109,7 @@ class Navbar extends Component {
                             </div>
                         </li>
                         <li class="nav-item bg-dark">
-                            <a class="nav-link  text-white" href="#">Cerrar Cesi&oacute;n</a>
+                            <a class="nav-link  text-white" href="#">Cerrar Sesi&oacute;n</a>
                         </li>
                     </ul>
                 </div>
