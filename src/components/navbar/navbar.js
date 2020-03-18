@@ -4,7 +4,7 @@ class Navbar extends Component {
 
     render() {
         return (
-            <nav class="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: "#B5B4B4"}}>
+            <nav class="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: "#B5B4B4" }}>
                 <a class="navbar-brand" href="#">TRAMESQUIN</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -16,9 +16,8 @@ class Navbar extends Component {
                                 Sistema
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Cambiar Contraseña</a>
+                                <a class="dropdown-item" href="#">Reiniciar Sesión</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -26,9 +25,9 @@ class Navbar extends Component {
                                 Par&aacute;metros
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Parámetros Generales</a>
+                                <a class="dropdown-item" href="#">Consecutivos</a>
+                                <a class="dropdown-item" href="#">Idioma</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -36,9 +35,12 @@ class Navbar extends Component {
                                 Administraci&oacute;n
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Tipo Materia Prima</a>
+                                <a class="dropdown-item" href="#">Bodegas</a>
+                                <a class="dropdown-item" href="#">Camiones</a>
+                                <a class="dropdown-item" href="#">Productos</a>
+                                <a class="dropdown-item" href="#">Empresas/Clientes</a>
+                                <a class="dropdown-item" href="#">Provedores</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -46,9 +48,11 @@ class Navbar extends Component {
                                 Procesos
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Crear Pedido Materias</a>
+                                <a class="dropdown-item" href="#">Comprobar Orden de Pedido</a>
+                                <a class="dropdown-item" href="#">Entrada de Inventario</a>
+                                <a class="dropdown-item" href="#">Producción en Lote</a>
+                                <a class="dropdown-item" href="#">Punto de Venta</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -56,9 +60,11 @@ class Navbar extends Component {
                                 Cajas
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Apertura Cajas</a>
+                                <a class="dropdown-item" href="#">Arqueo Cajas</a>
+                                <a class="dropdown-item" href="#">Pases Dinero</a>
+                                <a class="dropdown-item" href="#">Exportar Facturas XML</a>
+                                <a class="dropdown-item" href="#">Cierre Caja</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -66,9 +72,9 @@ class Navbar extends Component {
                                 Seguridad
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Eventos</a>
+                                <a class="dropdown-item" href="#">Roles</a>
+                                <a class="dropdown-item" href="#">Usuarios</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -76,9 +82,10 @@ class Navbar extends Component {
                                 Consultas
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Bitácora</a>
+                                <a class="dropdown-item" href="#">Clientes</a>
+                                <a class="dropdown-item" href="#">Pedidos Pendientes</a>
+                                <a class="dropdown-item" href="#">Facturas</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -86,9 +93,10 @@ class Navbar extends Component {
                                 Reportes
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Productos</a>
+                                <a class="dropdown-item" href="#">Clientes</a>
+                                <a class="dropdown-item" href="#">Inventarios</a>
+                                <a class="dropdown-item" href="#">Ventas</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -96,9 +104,8 @@ class Navbar extends Component {
                                 Ayuda
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Acerca de</a>
+                                <a class="dropdown-item" href="#">Ayuda</a>
                             </div>
                         </li>
                         <li class="nav-item bg-dark">
