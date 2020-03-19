@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import Logo from '../../components/logo/Logo';
 
 class Navbar extends Component {
 
     render() {
         return (
             <nav class="navbar navbar-expand-lg navbar-light navbar-grey">
+                <Logo />
                 <a class="navbar-brand" href="#">TRAMESQUIN</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -111,8 +113,8 @@ class Navbar extends Component {
                                 <a class="dropdown-item" href="#">Ayuda</a>
                             </div>
                         </li>
-                        <li class="nav-item bg-dark">
-                            <a class="nav-link  text-white" href="#">Cerrar Sesi&oacute;n</a>
+                        <li class="nav-item bg-dark navbar-btn">
+                            <a class="nav-link  text-white " href="#">Cerrar Sesi&oacute;n</a>
                         </li>
                     </ul>
                 </div>
