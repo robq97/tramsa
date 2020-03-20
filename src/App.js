@@ -25,10 +25,9 @@ class App extends Component {
 
           {/* testing components */}
 
-          {/*<Login />   esta listo*/}
-          <Login />
+          {/*<Login /> */}
+          {/*<Reiniciar_sesion />*/}
           <Cambio_Contraseña />
-          <Reiniciar_sesion />
 
         </div>
       </div>

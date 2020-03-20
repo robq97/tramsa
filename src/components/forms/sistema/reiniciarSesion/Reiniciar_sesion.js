@@ -9,14 +9,15 @@ const reiniciarSesion = (props) => {
         <Card>
             <div>
                 <Title title="Cambio de Contraseña" />
-                <div class="text-center mb-3">
-                    <Label for="password" lblText="Su sesión será reiniciada." />
-                </div>
-                <div class="text-center">
-                    <Button icon="refresh" btnTxt="Reiniciar Sesión" />
-                </div>
+                <form>
+                    <div class="text-center mb-3">
+                        <Label for="password" lblText="Su sesión será reiniciada." />
+                    </div>
+                    <div class="text-center">
+                        <Button icon="refresh" btnTxt="Reiniciar Sesión" />
+                    </div>
+                </form>
             </div>
-
         </Card>
     )
 }
