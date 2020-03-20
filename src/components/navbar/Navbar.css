@@ -1,0 +1,27 @@
+.navbar-nav>li:first-child {
+    font-size: 11.4px;
+    font-style: normal;
+}
+
+.navbar-grey {
+    background-color: #B5B4B4;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    background-color: #759fbc;
+}
+
+.navbar {
+    -webkit-box-shadow: 0 8px 6px -8px #999;
+    -moz-box-shadow: 0 8px 6px -8px #999;
+    box-shadow: 0 8px 6px -8px #999;
+}
+
+.navbar-btn {
+    border-radius: 5px;
+}
+
+.navbar-brand {
+    padding-left: 15px;
+}
