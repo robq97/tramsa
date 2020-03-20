@@ -1,1 +1,11 @@
 .App {}
+
+hr {
+    width: 80%;
+    margin-left: 10% !important;
+    margin-right: 10% !important;
+}
+
+.input-padding-25 {
+    padding: 0% 25% 0 25%;
+}
