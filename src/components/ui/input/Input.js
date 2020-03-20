@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
+import MaterialIcon, { colorPalette } from 'material-icons-react';
 
 const input = (props) => {
     return (
         <div>
             <small id={props.smallId} class="form-text text-muted mb-1">{props.smallTxt}</small>
-            <input type={props.type} class="form-control" id={props.id} aria-describedby="emailHelp" placeholder={props.placeholder}></input>
-        </div>);
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><MaterialIcon icon={props.icon} color={colorPalette.grey._700}></MaterialIcon></span>
+                </div>
+                <input type={props.type} class="form-control" id={props.id} aria-describedby="emailHelp" placeholder={props.placeholder}></input>
+            </div>
+        </div>
+    );
 }
 
 
