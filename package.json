@@ -10,7 +10,9 @@
     "material-icons-react": "^1.0.4",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
-    "react-scripts": "3.4.0"
+    "react-scripts": "3.4.0",
+    "react-table": "^7.0.0",
+    "react-table-6": "^6.11.0"
   },
   "scripts": {
     "start": "react-scripts start",

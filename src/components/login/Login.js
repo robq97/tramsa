@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Button from '../ui/button/Button';
+import React from 'react';
+import Button from '../ui/buttons/Button';
 import Input from '../ui/input/Input';
 import Label from '../ui/label/Label';
 
