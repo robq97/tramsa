@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Logo from '../../components/logo/Logo';
 
 const Navbar = (props) => {

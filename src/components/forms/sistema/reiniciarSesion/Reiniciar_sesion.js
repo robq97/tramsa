@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Button from '../../../ui/button/Button';
+import React from 'react';
+import Button from '../../../ui/buttons/Button';
 import Card from '../../../ui/card/Card';
 import Title from '../../../ui/title/Title';
 import Label from '../../../ui/label/Label';
@@ -8,7 +8,7 @@ const reiniciarSesion = (props) => {
     return (
         <Card>
             <div>
-                <Title title="Cambio de Contraseña" />
+                <Title title="Reiniciar Sesión" titleType="title-form" />
                 <form>
                     <div class="text-center mb-3">
                         <Label for="password" lblText="Su sesión será reiniciada." />

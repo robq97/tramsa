@@ -1,6 +1,5 @@
 .App {}
 
-
 hr {
     width: 80%;
     margin-left: 10% !important;
@@ -12,13 +11,14 @@ hr {
 }
 
 /*logo*/
+
 .Logo {
     height: 40px;
     width: 40px;
 }
 
-
 /*navbar*/
+
 .navbar-nav>li:first-child {
     font-size: 11.4px;
     font-style: normal;
@@ -47,8 +47,8 @@ hr {
     padding-left: 15px;
 }
 
-
 /*login form */
+
 .center_div {
     margin: 0 auto;
     width: 80%/* value of your choice which suits your alignment */
@@ -64,33 +64,38 @@ hr {
     border: none;
 }
 
-
 /*Button*/
+
 .icon-align {
     vertical-align: middle;
 }
 
-
 /*Card*/
+
 .myCard {
     margin: 0 auto;
     width: 70%;
     border: none;
 }
 
-
 /*Input*/
+
 .input-padding {
     padding: 0% 20% 0 20%;
 }
 
-
 /*Label*/
 
-
-
-
 /*Title*/
+
 .title-color {
     color: #4B4B4B;
+}
+
+.title-table {
+    margin: -10px
+}
+
+.title-form {
+    margin-bottom: 50px;
 }
