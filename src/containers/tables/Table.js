@@ -48,7 +48,6 @@ class Table extends Component {
                 Header: this.props.header3,
                 accessor: this.props.accessor3,
                 width: this.props.width3,
-                sortable: false,
                 filterable: this.props.filterable3,
                 style: {
                     textAlign: "center"
@@ -58,7 +57,6 @@ class Table extends Component {
                 Header: this.props.header4,
                 accessor: this.props.accessor4,
                 width: this.props.width4,
-                sortable: false,
                 filterable: this.props.filterable4
             },
             {
@@ -71,9 +69,9 @@ class Table extends Component {
                 Cell: props => {
                     return (
                         <div>
-                            <IconButton icon="create" color={colorPalette.grey._700} />
-                            <IconButton icon="info" color={colorPalette.blue._700} />
-                            <IconButton icon="delete" color={colorPalette.red._700} />
+                            <IconButton type="" icon="create" color={colorPalette.grey._700} />
+                            <IconButton type="" icon="info" color={colorPalette.blue._700} />
+                            <IconButton type="" icon="delete" color={colorPalette.red._700} />
                         </div>
                     )
                 }
@@ -81,7 +79,7 @@ class Table extends Component {
         ]
         return (
             <div>
-                <Button icon="add" btnTxt="Agregar Nueva Materia Prima" />
+                <Button type="" icon="add" btnTxt={this.props.btnTxt} />
                 <ReactTable className="ReactTable"
                     columns={columns}
                     data={this.state.posts}

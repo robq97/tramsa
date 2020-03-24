@@ -14,7 +14,7 @@ const reiniciarSesion = (props) => {
                         <Label for="password" lblText="Su sesión será reiniciada." />
                     </div>
                     <div class="text-center">
-                        <Button icon="refresh" btnTxt="Reiniciar Sesión" />
+                        <Button type="" icon="refresh" btnTxt="Reiniciar Sesión" />
                     </div>
                 </form>
             </div>

@@ -9,7 +9,7 @@ const input = (props) => {
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1"><MaterialIcon icon={props.icon} color={colorPalette.grey._700}></MaterialIcon></span>
                 </div>
-                <input type={props.type} class="form-control" id={props.id} aria-describedby="emailHelp" placeholder={props.placeholder}></input>
+                <input type={props.type} class="form-control" id={props.id} aria-describedby="emailHelp" placeholder={props.placeholder} disabled={props.disabled} required={props.required}></input>
             </div>
         </div>
     );
