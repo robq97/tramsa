@@ -1,10 +1,10 @@
 import React from 'react';
-import Button from '../../../ui/buttons/Button';
-import Input from '../../../ui/input/Input';
-import Card from '../../../ui/card/Card';
-import Title from '../../../ui/title/Title';
-import Select from '../../../../containers/ui/select/Select'
-import IconButton from '../../../ui/buttons/Icon-Button'
+import Button from '../../ui/buttons/Button';
+import Input from '../../ui/input/Input';
+import Card from '../../ui/card/Card';
+import Title from '../../ui/title/Title';
+import Select from '../../../containers/ui/select/Select'
+import IconButton from '../../ui/buttons/Icon-Button'
 import { colorPalette } from 'material-icons-react';
 
 const parametros = (props) => {
@@ -25,7 +25,7 @@ const parametros = (props) => {
                     <div class="col pr-5">
                         <Input
                             smallId="" smallTxt="Ingrese un valor para cambiar el valor de compra (₡)"
-                            icon="trending_up" id="" placeholder="Valor de compra" type="number" />
+                            icon="trending_up" id="" placeholder="Valor de compra" type="number" required="true" />
                     </div>
                 </div>
                 <div class="row align-items-center">
@@ -37,7 +37,7 @@ const parametros = (props) => {
                     <div class="col pr-5">
                         <Input
                             smallId="" smallTxt="Ingrese un valor para cambiar el valor de venta  (₡)"
-                            icon="trending_up" id="" placeholder="Valor de venta" type="number" />
+                            icon="trending_up" id="" placeholder="Valor de venta" type="number" required="true" />
                     </div>
                 </div>
 
@@ -72,7 +72,7 @@ const parametros = (props) => {
                     <div class="col pl-5 pr-5">
                         <Input
                             smallId="" smallTxt="Ingrese la dirección del establecimiento"
-                            icon="place" id="" placeholder="Dirección actual" type="text" />
+                            icon="place" id="" placeholder="Dirección actual" type="text" required="true" />
                     </div>
                 </div>
                 <div class="text-center">
