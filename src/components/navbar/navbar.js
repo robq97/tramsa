@@ -3,7 +3,7 @@ import Logo from '../../components/logo/Logo';
 
 const Navbar = (props) => {
     return (
-        <nav class="navbar navbar-expand-lg navbar-light navbar-grey">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-grey text-center">
             <Logo />
             <a class="navbar-brand" href="#">TRAMESQUIN</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -109,6 +109,15 @@ const Navbar = (props) => {
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="#">Acerca de</a>
                             <a class="dropdown-item" href="#">Ayuda</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Idioma
+                            </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Ingles</a>
+                            <a class="dropdown-item" href="#">Español</a>
                         </div>
                     </li>
                     <li class="nav-item bg-dark navbar-btn">

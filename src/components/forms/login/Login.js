@@ -1,11 +1,17 @@
 import React from 'react';
-import Button from '../ui/buttons/Button';
-import Input from '../ui/input/Input';
-import Label from '../ui/label/Label';
+import Button from '../../ui/buttons/Button';
+import Input from '../../ui/input/Input';
+import Label from '../../ui/label/Label';
+import Title from '../../ui/title/Title';
+import Logo from '../../logo/Logo'
 
 const login = (props) => {
     return (
         <div class="card size mx-auto card-center regular shadow background-login">
+            <Title title="Tramesquin" titleType="" />
+            <div class="text-center">
+                <Logo />
+            </div>
             <form>
                 <div class="center_div mb-3">
                     <Label for="username" lblText="Usuario" />
@@ -16,7 +22,7 @@ const login = (props) => {
                     <Input icon="lock" type="password" id="password" placeholder="Contraseña" smallTxt="Ingrese su contraseña" smallId="lblPassword" />
                 </div>
                 <div class="text-center">
-                    <Button icon="arrow_forward" btnTxt="Iniciar Sesión" />
+                    <Button type="" icon="arrow_forward" btnTxt="Iniciar Sesión" />
                 </div>
             </form>
         </div>
