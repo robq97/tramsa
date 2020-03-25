@@ -3,7 +3,6 @@ import Button from '../../ui/buttons/Button';
 import Input from '../../ui/input/Input';
 import Card from '../../ui/card/Card';
 import Title from '../../ui/title/Title';
-import Select from '../../../containers/ui/select/Select'
 import Automatic_Code from '../../ui/automaticCode/Automatic_Code'
 
 const nuevoCamion = (props) => {

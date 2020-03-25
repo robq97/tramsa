@@ -86,6 +86,16 @@ hr {
 
 /*Label*/
 
+.lbl-padding {
+    padding-left: 2%;
+    padding-bottom: 5%;
+    display: inline-block;
+    border-left: 5px solid grey;
+    margin: 0 40px;
+    height: 10px;
+    border-radius: 4px;
+}
+
 /*Title*/
 
 .title-color {
