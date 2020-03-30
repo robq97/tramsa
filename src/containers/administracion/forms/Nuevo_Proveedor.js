@@ -10,7 +10,7 @@ const nuevoProveedor = (props) => {
     return (
         <Card>
             <form>
-                <Title title="Nuevo Cliente" titleType="title-form" />
+                <Title title="Nuevo Proveedor" titleType="title-form" />
                 <div class="row align-items-center">
                     <div class="col pl-5">
                         <Input

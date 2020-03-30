@@ -1,10 +1,10 @@
 import React from 'react';
-import Button from '../../../components/ui/buttons/Button';
-import Input from '../../../components/ui/input/Input';
-import Card from '../../../components/ui/card/Card';
-import Title from '../../../components/ui/title/Title';
-import Select from '../../../containers/ui/select/Select'
-import Automatic_Code from '../../../components/ui/automaticCode/Automatic_Code'
+import Button from '../../../../components/ui/buttons/Button';
+import Input from '../../../../components/ui/input/Input';
+import Card from '../../../../components/ui/card/Card';
+import Title from '../../../../components/ui/title/Title';
+import Select from '../../../../containers/ui/select/Select'
+import Automatic_Code from '../../../../components/ui/automaticCode/AutomaticCode';
 
 const pedidoMateriaMaestro = (props) => {
     return (
