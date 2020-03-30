@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from '../../../ui/buttons/Button';
-import Card from '../../../ui/card/Card';
-import Title from '../../../ui/title/Title';
-import Label from '../../../ui/label/Label';
+import Button from '../../components/ui/buttons/Button';
+import Card from '../../components/ui/card/Card';
+import Title from '../../components/ui/title/Title';
+import Label from '../../components/ui/label/Label';
 
 const reiniciarSesion = (props) => {
     return (

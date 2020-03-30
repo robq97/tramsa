@@ -1,10 +1,10 @@
 import React from 'react';
-import Button from '../../ui/buttons/Button';
-import Input from '../../ui/input/Input';
-import Card from '../../ui/card/Card';
-import Title from '../../ui/title/Title';
-import Select from '../../../containers/ui/select/Select'
-import IconButton from '../../ui/buttons/Icon-Button'
+import Button from '../../components/ui/buttons/Button';
+import Input from '../../components/ui/input/Input';
+import Card from '../../components/ui/card/Card';
+import Title from '../../components/ui/title/Title';
+import Select from '../../containers/ui/select/Select';
+import IconButton from '../../components/ui/buttons/Icon-Button';
 import { colorPalette } from 'material-icons-react';
 
 const consecutivos = (props) => {

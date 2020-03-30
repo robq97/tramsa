@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Title from '../../../components/ui/title/Title';
-import Table from '../Table'
+import Table from '../../tables/Table'
 
 class Tipo_Materia_Prima extends Component {
 

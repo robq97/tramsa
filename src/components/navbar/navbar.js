@@ -1,11 +1,12 @@
 import React from 'react';
 import Logo from '../../components/logo/Logo';
+import { Link } from 'react-router-dom';
 
 const Navbar = (props) => {
     return (
         <nav class="navbar navbar-expand-lg navbar-light navbar-grey text-center">
             <Logo />
-            <a class="navbar-brand" href="#">TRAMESQUIN</a>
+            <a class="navbar-brand" href="/">TRAMESQUIN</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -15,12 +16,12 @@ const Navbar = (props) => {
                         <a class="nav-link text-dark disabled " href="#"><b>Usuario:</b> {props.user}</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <Link class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Sistema
-                            </a>
+                            </Link>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Cambiar Contraseña</a>
-                            <a class="dropdown-item" href="#">Reiniciar Sesión</a>
+                            <Link class="dropdown-item" to="/sistema/cambiar-contrasena">Cambiar Contraseña</Link>
+                            <Link class="dropdown-item" to="/sistema/reiniciar-sesion">Reiniciar Sesión</Link>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -28,9 +29,8 @@ const Navbar = (props) => {
                             Par&aacute;metros
                             </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Parámetros Generales</a>
-                            <a class="dropdown-item" href="#">Consecutivos</a>
-                            <a class="dropdown-item" href="#">Idioma</a>
+                            <Link class="dropdown-item" to="/parametros/param-generales">Parámetros Generales</Link>
+                            <Link class="dropdown-item" to="/parametros/consecutivos">Consecutivos</Link>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -38,12 +38,12 @@ const Navbar = (props) => {
                             Administraci&oacute;n
                             </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Tipo Materia Prima</a>
-                            <a class="dropdown-item" href="#">Bodegas</a>
-                            <a class="dropdown-item" href="#">Camiones</a>
-                            <a class="dropdown-item" href="#">Productos</a>
-                            <a class="dropdown-item" href="#">Empresas/Clientes</a>
-                            <a class="dropdown-item" href="#">Provedores</a>
+                            <Link class="dropdown-item" to="/administracion/materia-prima">Tipo Materia Prima</Link>
+                            <Link class="dropdown-item" to="/administracion/bodega">Bodegas</Link>
+                            <Link class="dropdown-item" to="/administracion/camion">Camiones</Link>
+                            <Link class="dropdown-item" to="/administracion/producto">Productos</Link>
+                            <Link class="dropdown-item" to="/administracion/cliente">Empresas/Clientes</Link>
+                            <Link class="dropdown-item" to="/administracion/proveedor">Proveedores</Link>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -51,11 +51,12 @@ const Navbar = (props) => {
                             Procesos
                             </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Crear Pedido Materias</a>
-                            <a class="dropdown-item" href="#">Comprobar Orden de Pedido</a>
-                            <a class="dropdown-item" href="#">Entrada de Inventario</a>
-                            <a class="dropdown-item" href="#">Producción en Lote</a>
-                            <a class="dropdown-item" href="#">Punto de Venta</a>
+                            <Link class="dropdown-item" to="/procesos/crear-pedido-materias">Crear Pedido Materias</Link>
+                            <Link class="dropdown-item" to="/procesos/comprobar-orden-de-pedido">Comprobar Orden de Pedido</Link>
+                            <Link class="dropdown-item" to="/procesos/pedido">Pedidos</Link>
+                            <Link class="dropdown-item" to="/procesos/entrada-de-inventario">Entrada de Inventario</Link>
+                            <Link class="dropdown-item" to="/procesos/produccion-en-lote">Producción en Lote</Link>
+                            <Link class="dropdown-item" to="/procesos/punto-de-venta">Punto de Venta</Link>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -104,21 +105,17 @@ const Navbar = (props) => {
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Ayuda
-                            </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Acerca de</a>
-                            <a class="dropdown-item" href="#">Ayuda</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Idioma
                             </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="#">Ingles</a>
                             <a class="dropdown-item" href="#">Español</a>
                         </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <Link class="nav-link" to="/ayuda" id="navbarLink" aria-haspopup="true" aria-expanded="false">
+                            Ayuda
+                            </Link>
                     </li>
                     <li class="nav-item bg-dark navbar-btn">
                         <a class="nav-link  text-white " href="#">Cerrar Sesi&oacute;n</a>

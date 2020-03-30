@@ -1,9 +1,9 @@
 import React from 'react';
-import Button from '../../ui/buttons/Button';
-import Input from '../../ui/input/Input';
-import Label from '../../ui/label/Label';
-import Title from '../../ui/title/Title';
-import Logo from '../../logo/Logo'
+import Button from '../../components/ui/buttons/Button';
+import Input from '../../components/ui/input/Input';
+import Label from '../../components/ui/label/Label';
+import Title from '../../components/ui/title/Title';
+import Logo from '../../components/logo/Logo'
 
 const login = (props) => {
     return (
