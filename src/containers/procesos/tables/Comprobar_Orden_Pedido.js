@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Title from '../../../components/ui/title/Title';
-import Table from '../../tables/Table'
+import Table from '../../ui/tables/Table';
 
 class Bodegas extends Component {
 

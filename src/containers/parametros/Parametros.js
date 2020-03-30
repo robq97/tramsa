@@ -6,11 +6,13 @@ import Title from '../../components/ui/title/Title';
 import Select from '../../containers/ui/select/Select'
 import IconButton from '../../components/ui/buttons/Icon-Button'
 import { colorPalette } from 'material-icons-react';
+import Modal from '../ui/modal/Modal';
 
 const parametros = (props) => {
 
     return (
         <Card>
+            <Modal />
             <form>
                 <Title title="Tipo de Cambio" titleType="title-form" />
                 <div class="row align-items-center">

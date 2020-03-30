@@ -1,10 +1,10 @@
 import React from 'react';
-import Button from '../../../components/ui/buttons/Button';
-import Input from '../../../components/ui/input/Input';
-import Card from '../../../components/ui/card/Card';
-import Title from '../../../components/ui/title/Title';
-import Automatic_Code from '../../../components/ui/automaticCode/Automatic_Code'
-import Checkbox from '../../../components/ui/radio/Radio'
+import Button from '../../../../components/ui/buttons/Button';
+import Input from '../../../../components/ui/input/Input';
+import Card from '../../../../components/ui/card/Card';
+import Title from '../../../../components/ui/title/Title';
+import Automatic_Code from '../../../../components/ui/automaticCode/AutomaticCode';
+import Radio from '../../../../components/ui/radio/Radio';
 
 const pedidoMateriaDetalle = (props) => {
     return (
@@ -30,7 +30,7 @@ const pedidoMateriaDetalle = (props) => {
                 </div>
                 <div class="row align-items-center">
                     <div class="col pl-5">
-                        <Checkbox
+                        <Radio
                             smallId="" smallTxt="Seleccione un estado"
                             value1="pendiente" txt1="Pendiente" value2="entregado" txt2="Entregado" />
                     </div>

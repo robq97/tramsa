@@ -4,7 +4,7 @@ import Input from '../../../components/ui/input/Input';
 import Card from '../../../components/ui/card/Card';
 import Title from '../../../components/ui/title/Title';
 import Select from '../../../containers/ui/select/Select'
-import Automatic_Code from '../../../components/ui/automaticCode/Automatic_Code'
+import Automatic_Code from '../../../components/ui/automaticCode/AutomaticCode'
 
 const nuevaMateriaPrima = (props) => {
 

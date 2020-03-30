@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import ReactTable, { ReactTableDefaults } from 'react-table-6';
 import 'react-table-6/react-table.css'
-import Button from '../../components/ui/buttons/Button';
-import IconButton from '../../components/ui/buttons/Icon-Button'
+import Button from '../../../components/ui/buttons/Button';
+import IconButton from '../../../components/ui/buttons/Icon-Button'
 import { colorPalette } from 'material-icons-react';
+import { Link } from 'react-router-dom';
+import Modal from '../modal/Modal';
+import Label from '../../../components/ui/label/Label'
 
 class Table extends Component {
 
@@ -70,16 +73,33 @@ class Table extends Component {
                     return (
                         <div>
                             <IconButton type="" icon="create" color={colorPalette.grey._700} />
-                            <IconButton type="" icon="info" color={colorPalette.blue._700} />
-                            <IconButton type="" icon="delete" color={colorPalette.red._700} />
+                            <IconButton type="" icon="info" color={colorPalette.blue._700}
+                                toggle="modal" target="#info" />
+                            <IconButton type="" icon="delete" color={colorPalette.red._700}
+                                toggle="modal" target="#delete" />
+
+                            <Modal id="info" body={true} confirmBtn={false} title="Información detallada"
+                                bodyContent={<div>
+                                    <Label lblText="linea 1" /> <br />
+                                    <Label lblText="linea 2" /><br />
+                                    <Label lblText="linea 3" /><br />
+                                    <Label lblText="linea 4" /><br />
+                                    <Label lblText="linea 5" /><br />
+                                    <Label lblText="linea 6" /><br />
+                                    <Label lblText="linea 7" /><br />
+                                </div>} />
+                            <Modal id="delete" body={false} confirmBtn={true} title="¿Está seguro que desea eliminar el item?" />
                         </div>
                     )
                 }
             }
         ]
+
         return (
             <div>
-                <Button type="" icon="add" btnTxt={this.props.btnTxt} />
+                <Link to={this.props.path}>
+                    <Button type="" icon="add" btnTxt={this.props.btnTxt} />
+                </Link>
                 <ReactTable className="ReactTable"
                     columns={columns}
                     data={this.state.posts}
