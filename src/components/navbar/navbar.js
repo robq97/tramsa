@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '../../components/logo/Logo';
 import { Link } from 'react-router-dom';
+import Modal from '../../containers/ui/modal/Modal';
 
 const Navbar = (props) => {
     return (
@@ -97,10 +98,10 @@ const Navbar = (props) => {
                             Reportes
                             </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Productos</a>
-                            <a class="dropdown-item" href="#">Clientes</a>
-                            <a class="dropdown-item" href="#">Inventarios</a>
-                            <a class="dropdown-item" href="#">Ventas</a>
+                            <Link class="dropdown-item" to="/reportes/productos">Productos</Link>
+                            <a class="dropdown-item" to="#">Clientes</a>
+                            <Link class="dropdown-item" to="/reportes/inventarios">Inventarios</Link>
+                            <Link class="dropdown-item" to="/reportes/ventas">Ventas</Link>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -118,7 +119,8 @@ const Navbar = (props) => {
                             </Link>
                     </li>
                     <li class="nav-item bg-dark navbar-btn">
-                        <a class="nav-link  text-white " href="#">Cerrar Sesi&oacute;n</a>
+                        <a class="nav-link  text-white " data-toggle="modal" data-target="#log-out" href="#">Cerrar Sesi&oacute;n</a>
+                        <Modal id="log-out" body={false} confirmBtn={true} title="¿Está seguro que desea cerrar la sesión?" />
                     </li>
                 </ul>
             </div>

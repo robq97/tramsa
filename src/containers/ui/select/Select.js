@@ -29,7 +29,7 @@ class Select extends Component {
         let options = this.state.options;
         let optionItems = options.map((option) =>
 
-            <option key={option}>{option.name = this.props.option}</option>
+            <option key={option.name}>{option.name}</option>
         );
 
         return (
