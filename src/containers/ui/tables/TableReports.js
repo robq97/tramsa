@@ -31,38 +31,25 @@ class TableReports extends Component {
                 Header: this.props.header1,
                 accessor: this.props.accessor1,
                 width: this.props.width1,
-                show: this.props.show1,
-                style: {
-                    textAlign: "center"
-                }
-
+                show: this.props.show1
             },
             {
                 Header: this.props.header2,
                 accessor: this.props.accessor2,
                 width: this.props.width2,
-                show: this.props.show2,
-                style: {
-                    textAlign: "center"
-                }
+                show: this.props.show2
             },
             {
                 Header: this.props.header3,
                 accessor: this.props.accessor3,
                 width: this.props.width3,
-                show: this.props.show3,
-                style: {
-                    textAlign: "center"
-                }
+                show: this.props.show3
             },
             {
                 Header: this.props.header4,
                 accessor: this.props.accessor4,
                 width: this.props.width4,
-                show: this.props.show4,
-                style: {
-                    textAlign: "center"
-                }
+                show: this.props.show4
             }
             ,
             {
@@ -71,7 +58,6 @@ class TableReports extends Component {
                 width: this.props.width5,
                 filterable: this.props.filterable5,
                 show: this.props.show5
-
             }
             ,
             {
@@ -136,13 +122,16 @@ class TableReports extends Component {
                     defaultPageSize={15}
                     previousText={'Anterior'}
                     nextText={'Siguiente'}
+                    textAlign={'center'}
                     loading={false}>
+
                     {(state, filtredData, instance) => {
                         this.ReactTable = state.pageRows.map(row => { return row._original });
                         return (
                             <div>
                                 {filtredData()}
                                 <ExportToExcel
+                                    category={this.props.category}
                                     rows={this.state.rows}
                                     filename={this.state.filename + today}
                                     title={this.props.title}
@@ -150,7 +139,10 @@ class TableReports extends Component {
                                     time={time}
                                     header1={this.props.header1}
                                     header2={this.props.header2}
-                                    header3={this.props.header3} />
+                                    header3={this.props.header3}
+                                    header4={this.props.header4}
+                                    header5={this.props.header5}
+                                />
                             </div>
                         )
                     }}

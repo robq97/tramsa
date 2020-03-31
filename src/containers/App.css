@@ -115,3 +115,7 @@ hr {
 }
 
 /*Select*/
+
+.ReactTable {
+    text-align: center;
+}

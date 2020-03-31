@@ -31,30 +31,21 @@ class Table extends Component {
                 accessor: this.props.accessor1,
                 width: this.props.width1,
                 filterable: this.props.filterable1,
-                show: this.props.show1,
-                style: {
-                    textAlign: "center"
-                }
+                show: this.props.show1
             },
             {
                 Header: this.props.header2,
                 accessor: this.props.accessor2,
                 width: this.props.width2,
                 filterable: this.props.filterable2,
-                show: this.props.show2,
-                style: {
-                    textAlign: "center"
-                }
+                show: this.props.show2
             },
             {
                 Header: this.props.header3,
                 accessor: this.props.accessor3,
                 width: this.props.width3,
                 filterable: this.props.filterable3,
-                show: this.props.show3,
-                style: {
-                    textAlign: "center"
-                }
+                show: this.props.show3
             },
             {
                 Header: this.props.header4,
@@ -81,9 +72,7 @@ class Table extends Component {
                 Header: "Acciones",
                 filterable: false,
                 sortable: false,
-                style: {
-                    textAlign: "center"
-                },
+                style: { textAlign: "center" },
                 Cell: props => {
                     return (
                         <div>

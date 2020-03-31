@@ -3,6 +3,7 @@ import Card from '../../../components/ui/card/Card';
 import Title from '../../../components/ui/title/Title';
 import Button from '../../../components/ui/buttons/Button';
 import Select from '../../ui/select/Select';
+import { Link } from 'react-router-dom';
 
 const reporteInventario = (props) => {
     return (
@@ -16,7 +17,7 @@ const reporteInventario = (props) => {
                 </div>
                 <div class="col pr-5">
                     <div class="text-center">
-                        <Button type="" icon="send" btnTxt="Generar Reporte" />
+                        <Link to="/reportes/inventarios/bodega"> <Button type="" icon="send" btnTxt="Generar Reporte" /> </Link>
                     </div>
                 </div>
             </div>
@@ -24,7 +25,7 @@ const reporteInventario = (props) => {
             <div class="row align-items-center">
                 <div class="col">
                     <div class="text-center">
-                        <Button type="" icon="send" btnTxt="Ver Reporte de Inventario General" />
+                        <Link to="/reportes/inventarios/general"><Button type="" icon="send" btnTxt="Ver Reporte de Inventario General" /></Link>
                     </div>
                 </div>
             </div>

@@ -28,6 +28,10 @@ import Ayuda from '../containers/ayuda/Ayuda';
 import Reporte_Productos from '../containers/reportes/tables/TablaReporteProductos';
 import Reporte_Inventario from '../containers/reportes/forms/ReporteInventario';
 import Reporte_Ventas from '../containers/reportes/forms/ReporteVentas';
+import Table_Reporte_Inventario_General from '../containers/reportes/tables/TablaReporteInventarioGeneral';
+import Table_Reporte_Inventario_Bodega from '../containers/reportes/tables/TablaReporteInventarioBodega';
+import Table_Reporte_Ventas from '../containers/reportes/tables/TablaReporteVentas';
+import Table_Reporte_Lista_Precios from '../containers/reportes/tables/TablaListaPrecios';
 
 
 import Login from '../containers/login/Login'
@@ -74,7 +78,11 @@ class App extends Component {
 
               <Route path="/reportes/productos" exact component={Reporte_Productos} />
               <Route path="/reportes/inventarios" exact component={Reporte_Inventario} />
+              <Route path="/reportes/inventarios/general" exact component={Table_Reporte_Inventario_General} />
+              <Route path="/reportes/inventarios/bodega" exact component={Table_Reporte_Inventario_Bodega} />
               <Route path="/reportes/ventas" exact component={Reporte_Ventas} />
+              <Route path="/reportes/ventas/general" exact component={Table_Reporte_Ventas} />
+              <Route path="/reportes/ventas/precios" exact component={Table_Reporte_Lista_Precios} />
 
               <Route path="/ayuda" exact component={Ayuda} />
 

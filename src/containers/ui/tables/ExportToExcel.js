@@ -6,8 +6,8 @@ class ExportToExcel extends Component {
     state = {
         category: this.props.category
     }
-    render() {
 
+    render() {
         return (
             <div>
                 <ReactHTMLTableToExcel
@@ -28,26 +28,100 @@ class ExportToExcel extends Component {
                             <tr>
 
                             </tr>
-                            <tr>
+
+                            {this.state.category == "Productos" ?
+                                <tr>
+                                    <th>{this.props.header1}</th>
+                                    <th>{this.props.header2}</th>
+                                    <th>{this.props.header3}</th>
+                                </tr> : null}
+
+                            {this.state.category == "Inventario" ? <tr>
                                 <th>{this.props.header1}</th>
                                 <th>{this.props.header2}</th>
                                 <th>{this.props.header3}</th>
-                            </tr>
+                                <th>{this.props.header4}</th>
+                                <th>{this.props.header5}</th>
+                            </tr> : null}
+
+                            {this.state.category == "Ventas" ? <tr>
+                                <th>{this.props.header1}</th>
+                                <th>{this.props.header2}</th>
+                                <th>{this.props.header3}</th>
+                            </tr> : null}
+
+                            {this.state.category == "Precios" ? <tr>
+                                <th>{this.props.header1}</th>
+                                <th>{this.props.header2}</th>
+                                <th>{this.props.header3}</th>
+                            </tr> : null}
+
                         </div>
                     </thead>
-                    <tbody>
-                        {
-                            this.props.rows.map(row => {
-                                return (
-                                    <tr key={row.id}>
-                                        <td>{row.userId}</td>
-                                        <td>{row.title}</td>
-                                        <td>{row.id}</td>
-                                    </tr>
-                                )
-                            })
-                        }
-                    </tbody>
+
+                    {this.state.category == "Productos" ?
+                        <tbody>
+                            {
+                                this.props.rows.map(row => {
+                                    return (
+                                        <tr key={row.id}>
+                                            <td>{row.userId}</td>
+                                            <td>{row.title}</td>
+                                            <td>{row.id}</td>
+                                        </tr>
+                                    )
+                                })
+                            }
+                        </tbody> : null}
+
+                    {this.state.category == "Inventario" ?
+                        <tbody>
+                            {
+                                this.props.rows.map(row => {
+                                    return (
+                                        <tr key={row.id}>
+                                            <td>{row.userId}</td>
+                                            <td>{row.title}</td>
+                                            <td>{row.id}</td>
+                                            <td>{row.id}</td>
+                                            <td>{row.id}</td>
+                                        </tr>
+                                    )
+                                })
+                            }
+                        </tbody> : null}
+
+                    {this.state.category == "Ventas" ?
+                        <tbody>
+                            {
+                                this.props.rows.map(row => {
+                                    return (
+                                        <tr key={row.id}>
+                                            <td>{row.userId}</td>
+                                            <td>{row.title}</td>
+                                            <td>{row.id}</td>
+                                        </tr>
+                                    )
+                                })
+                            }
+                        </tbody> : null}
+
+                    {this.state.category == "Precios" ?
+                        <tbody>
+                            {
+                                this.props.rows.map(row => {
+                                    return (
+                                        <tr key={row.id}>
+                                            <td>{row.userId}</td>
+                                            <td>{row.title}</td>
+                                            <td>{row.id}</td>
+                                        </tr>
+                                    )
+                                })
+                            }
+                        </tbody> : null}
+
+
                 </table>
             </div>
         );
@@ -55,4 +129,3 @@ class ExportToExcel extends Component {
 }
 
 export default ExportToExcel;
-
