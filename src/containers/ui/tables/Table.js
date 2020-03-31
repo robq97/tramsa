@@ -10,11 +10,8 @@ import Label from '../../../components/ui/label/Label'
 
 class Table extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            posts: []
-        }
+    state = {
+        rows: []
     }
 
     componentDidMount() {
@@ -22,8 +19,8 @@ class Table extends Component {
         fetch(
             url, {
             method: "GET"
-        }).then(response => response.json()).then(posts => {
-            this.setState({ posts: posts })
+        }).then(response => response.json()).then(rows => {
+            this.setState({ rows: rows })
         })
     }
 
@@ -34,6 +31,7 @@ class Table extends Component {
                 accessor: this.props.accessor1,
                 width: this.props.width1,
                 filterable: this.props.filterable1,
+                show: this.props.show1,
                 style: {
                     textAlign: "center"
                 }
@@ -43,6 +41,7 @@ class Table extends Component {
                 accessor: this.props.accessor2,
                 width: this.props.width2,
                 filterable: this.props.filterable2,
+                show: this.props.show2,
                 style: {
                     textAlign: "center"
                 }
@@ -52,6 +51,7 @@ class Table extends Component {
                 accessor: this.props.accessor3,
                 width: this.props.width3,
                 filterable: this.props.filterable3,
+                show: this.props.show3,
                 style: {
                     textAlign: "center"
                 }
@@ -60,7 +60,22 @@ class Table extends Component {
                 Header: this.props.header4,
                 accessor: this.props.accessor4,
                 width: this.props.width4,
-                filterable: this.props.filterable4
+                filterable: this.props.filterable4,
+                show: this.props.show4,
+            },
+            {
+                Header: this.props.header5,
+                accessor: this.props.accessor5,
+                width: this.props.width5,
+                filterable: this.props.filterable5,
+                show: this.props.show5,
+            },
+            {
+                Header: this.props.header6,
+                accessor: this.props.accessor6,
+                width: this.props.width6,
+                filterable: this.props.filterable6,
+                show: this.props.show6,
             },
             {
                 Header: "Acciones",
@@ -102,7 +117,7 @@ class Table extends Component {
                 </Link>
                 <ReactTable className="ReactTable"
                     columns={columns}
-                    data={this.state.posts}
+                    data={this.state.rows}
                     filterable
                     noDataText={'No se encontraron datos.'}
                     defaultPageSize={10}

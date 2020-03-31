@@ -25,6 +25,9 @@ import Crear_Pedido_Materias_Detalle from '../containers/procesos/forms/crearPed
 import Pedido from '../containers/procesos/tables/Busqueda_Pedido';
 import Comprobar_Orden_Pedido from '../containers/procesos/tables/Comprobar_Orden_Pedido';
 import Ayuda from '../containers/ayuda/Ayuda';
+import Reporte_Productos from '../containers/reportes/tables/TablaReporteProductos';
+import Reporte_Inventario from '../containers/reportes/forms/ReporteInventario';
+import Reporte_Ventas from '../containers/reportes/forms/ReporteVentas';
 
 
 import Login from '../containers/login/Login'
@@ -68,6 +71,10 @@ class App extends Component {
               <Route path="/procesos/crear-pedido-materias" exact component={Crear_Pedido_Materias_Detalle} />
               <Route path="/procesos/comprobar-orden-de-pedido" exact component={Comprobar_Orden_Pedido} />
               <Route path="/procesos/pedido" exact component={Pedido} />
+
+              <Route path="/reportes/productos" exact component={Reporte_Productos} />
+              <Route path="/reportes/inventarios" exact component={Reporte_Inventario} />
+              <Route path="/reportes/ventas" exact component={Reporte_Ventas} />
 
               <Route path="/ayuda" exact component={Ayuda} />
 
