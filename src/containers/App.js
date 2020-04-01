@@ -11,6 +11,7 @@ import Router_Reportes from '../containers/reportes/router/RouterReportes';
 import Router_Sistema from '../containers/sistema/router/RouterSistema';
 import Router_Parametros from '../containers/parametros/router/RouterParametros';
 import Router_Login from '../containers/login/router/RouterLogin';
+import Router_Consultas from '../containers/consultas/router/RouterConsultas';
 
 class App extends Component {
 
@@ -27,13 +28,13 @@ class App extends Component {
             <Layout>
 
               <Redirect from='/' to="/parametros/param-generales" />
-
               <Router_Administracion />
               <Router_Ayuda />
               <Router_Procesos />
               <Router_Reportes />
               <Router_Sistema />
               <Router_Parametros />
+              <Router_Consultas />
 
             </Layout>
           </div> : <Router_Login />}

@@ -10,6 +10,7 @@ class Bodegas extends Component {
                 <Title
                     title="Busqueda de Pedido" titleType="title-table" />
                 <Table
+                    type="normal"
                     url="https://jsonplaceholder.typicode.com/posts"
                     header1="Código" accessor1="id" filterable1={true} width1={80} show1={true}
                     header2="Nombre Corto" accessor2="title" filterable2={true} width2={300} show2={true}
@@ -17,6 +18,7 @@ class Bodegas extends Component {
                     header4="Estado" accessor4="body" filterable4={false} width4={400} show4={true}
                     show5={false}
                     show6={false}
+                    iconShow={true}
                     btnTxt="Agregar Nueva Pedido" />
             </div>
         );

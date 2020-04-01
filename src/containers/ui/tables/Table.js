@@ -70,6 +70,7 @@ class Table extends Component {
             },
             {
                 Header: "Acciones",
+                show: this.props.iconShow,
                 filterable: false,
                 sortable: false,
                 style: { textAlign: "center" },
@@ -81,7 +82,6 @@ class Table extends Component {
                                 toggle="modal" target="#info" />
                             <IconButton type="" icon="delete" color={colorPalette.red._700}
                                 toggle="modal" target="#delete" />
-
                             <Modal id="info" body={true} confirmBtn={false} title="Información detallada"
                                 bodyContent={<div>
                                     <Label lblText="linea 1" /> <br />
@@ -101,9 +101,23 @@ class Table extends Component {
 
         return (
             <div>
-                <Link to={this.props.path}>
-                    <Button type="" icon="add" btnTxt={this.props.btnTxt} />
-                </Link>
+
+                {this.props.type == "normal" ?
+                    <Link to={this.props.path}>
+                        <Button type="" icon="add" btnTxt={this.props.btnTxt} />
+                    </Link> : null}
+                {this.props.type == "consulta" ?
+                    <div class="row">
+                        <div class="col">
+                            <Button type="" icon="filter_list" btnTxt={this.props.btnTxt} />
+                        </div>
+                        <div class=" col text-right">
+                            <Button type="" icon="filter_list" btnTxt={this.props.btnTxt2} />
+                        </div>
+
+                    </div> : null
+                }
+
                 <ReactTable className="ReactTable"
                     columns={columns}
                     data={this.state.rows}
@@ -112,9 +126,8 @@ class Table extends Component {
                     defaultPageSize={10}
                     previousText={'Anterior'}
                     nextText={'Siguiente'}
-                    loading={false}
-                />
-            </div>
+                    loading={false} />
+            </div >
         );
     };
 }

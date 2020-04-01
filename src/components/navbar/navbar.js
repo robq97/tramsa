@@ -87,10 +87,10 @@ const Navbar = (props) => {
                             Consultas
                             </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Bitácora</a>
-                            <a class="dropdown-item" href="#">Clientes</a>
-                            <a class="dropdown-item" href="#">Pedidos Pendientes</a>
-                            <a class="dropdown-item" href="#">Facturas</a>
+                            <Link class="dropdown-item" to="/consultas/bitacora">Bitácora</Link>
+                            <Link class="dropdown-item" to="/consultas/clientes">Clientes</Link>
+                            <Link class="dropdown-item" to="/consultas/pedidos-pendientes">Pedidos Pendientes</Link>
+                            <Link class="dropdown-item" to="#">Facturas</Link>
                         </div>
                     </li>
                     <li class="nav-item dropdown">

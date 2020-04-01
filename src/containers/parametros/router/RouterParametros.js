@@ -8,7 +8,6 @@ class RouterParametros extends Component {
     render() {
         return (
             <div>
-
                 <Route path="/parametros/param-generales" exact component={Parametros_Generales} />
                 <Route path="/parametros/consecutivos" exact component={Consecutivos} />
             </div>
