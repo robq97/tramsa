@@ -28,51 +28,27 @@ class TableReports extends Component {
 
         const columns = [
             {
-                Header: this.props.header1,
-                accessor: this.props.accessor1,
-                width: this.props.width1,
-                show: this.props.show1
+                Header: this.props.header1, accessor: this.props.accessor1, width: this.props.width1, show: this.props.show1
             },
             {
-                Header: this.props.header2,
-                accessor: this.props.accessor2,
-                width: this.props.width2,
-                show: this.props.show2
+                Header: this.props.header2, accessor: this.props.accessor2, width: this.props.width2, show: this.props.show2
             },
             {
-                Header: this.props.header3,
-                accessor: this.props.accessor3,
-                width: this.props.width3,
-                show: this.props.show3
+                Header: this.props.header3, accessor: this.props.accessor3, width: this.props.width3, show: this.props.show3
             },
             {
-                Header: this.props.header4,
-                accessor: this.props.accessor4,
-                width: this.props.width4,
-                show: this.props.show4
+                Header: this.props.header4, accessor: this.props.accessor4, width: this.props.width4, show: this.props.show4
             }
             ,
             {
-                Header: this.props.header5,
-                accessor: this.props.accessor5,
-                width: this.props.width5,
-                filterable: this.props.filterable5,
-                show: this.props.show5
+                Header: this.props.header5, accessor: this.props.accessor5, width: this.props.width5, filterable: this.props.filterable5, show: this.props.show5
             }
             ,
             {
-                Header: this.props.header6,
-                accessor: this.props.accessor6,
-                width: this.props.width6,
-                filterable: this.props.filterable6,
-                show: this.props.show6
+                Header: this.props.header6, accessor: this.props.accessor6, width: this.props.width6, filterable: this.props.filterable6, show: this.props.show6
             },
             {
-                Header: this.props.header7,
-                accessor: this.props.accessor7,
-                width: this.props.width7,
-                filterable: this.props.filterable7,
-                show: this.props.show7
+                Header: this.props.header7, accessor: this.props.accessor7, width: this.props.width7, filterable: this.props.filterable7, show: this.props.show7
             }
 
         ]
