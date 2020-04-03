@@ -77,9 +77,9 @@ const Navbar = (props) => {
                             Seguridad
                             </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Eventos</a>
-                            <a class="dropdown-item" href="#">Roles</a>
-                            <a class="dropdown-item" href="#">Usuarios</a>
+                            <Link class="dropdown-item" to="/seguridad/eventos">Eventos</Link>
+                            <Link class="dropdown-item" to="/seguridad/roles">Roles</Link>
+                            <Link class="dropdown-item" to="/seguridad/usuarios">Usuarios</Link>
                         </div>
                     </li>
                     <li class="nav-item dropdown">

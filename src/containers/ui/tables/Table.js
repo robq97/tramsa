@@ -55,23 +55,30 @@ class Table extends Component {
                 Cell: props => {
                     return (
                         <div>
-                            <IconButton type="" icon="create" color={colorPalette.grey._700} />
-                            <IconButton type="" icon="info" color={colorPalette.blue._700}
-                                toggle="modal" target="#info" />
-                            <IconButton type="" icon="delete" color={colorPalette.red._700}
-                                toggle="modal" target="#delete" />
-                            <Modal id="info" body={true} confirmBtn={false} title="Información detallada"
-                                bodyContent={<div>
-                                    <Label lblText="linea 1" /> <br />
-                                    <Label lblText="linea 2" /><br />
-                                    <Label lblText="linea 3" /><br />
-                                    <Label lblText="linea 4" /><br />
-                                    <Label lblText="linea 5" /><br />
-                                    <Label lblText="linea 6" /><br />
-                                    <Label lblText="linea 7" /><br />
-                                </div>} />
-                            <Modal id="delete" body={false} confirmBtn={true} title="¿Está seguro que desea eliminar el item?" />
+                            {this.props.iconDeleteOnly ?
+                                <div>
+                                    <IconButton type="" icon="delete" color={colorPalette.red._700}
+                                        toggle="modal" target="#delete" />
+                                </div> : <div>
+                                    <IconButton type="" icon="create" color={colorPalette.grey._700} />
+                                    <IconButton type="" icon="info" color={colorPalette.blue._700}
+                                        toggle="modal" target="#info" />
+                                    <IconButton type="" icon="delete" color={colorPalette.red._700}
+                                        toggle="modal" target="#delete" />
+                                    <Modal id="info" body={true} confirmBtn={false} title="Información detallada"
+                                        bodyContent={<div>
+                                            <Label lblText="linea 1" /> <br />
+                                            <Label lblText="linea 2" /><br />
+                                            <Label lblText="linea 3" /><br />
+                                            <Label lblText="linea 4" /><br />
+                                            <Label lblText="linea 5" /><br />
+                                            <Label lblText="linea 6" /><br />
+                                            <Label lblText="linea 7" /><br />
+                                        </div>} />
+                                    <Modal id="delete" body={false} confirmBtn={true} title="¿Está seguro que desea eliminar el item?" />
+                                </div>}
                         </div>
+
                     )
                 }
             }
