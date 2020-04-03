@@ -10,6 +10,7 @@ class Tipo_Materia_Prima extends Component {
                 <Title
                     title="Tipo de Materia Prima" titleType="title-table" />
                 <Table
+                    type="normal"
                     url="https://jsonplaceholder.typicode.com/posts"
                     header1="Código" accessor1="id" filterable1={true} width1={80} show1={true}
                     header2="Nombre" accessor2="title" filterable2={true} width2={300} show2={true}
