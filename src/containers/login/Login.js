@@ -8,7 +8,7 @@ import Logo from '../../components/logo/Logo'
 class Login extends Component {
     render() {
         return (
-            <div class="card size mx-auto card-center regular shadow background-login gradient">
+            <div class="card size mx-auto card-center regular shadow background-login">
                 <Title title="Tramesquin" titleType="" />
                 <div class="text-center">
                     <Logo />

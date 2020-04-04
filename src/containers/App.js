@@ -13,6 +13,7 @@ import Router_Parametros from '../containers/parametros/router/RouterParametros'
 import Router_Login from '../containers/login/router/RouterLogin';
 import Router_Consultas from '../containers/consultas/router/RouterConsultas';
 import Router_Seguridad from '../containers/seguridad/router/RouterSeguridad';
+import Router_Cajas from '../containers/cajas/router/RouterCajas';
 
 class App extends Component {
 
@@ -37,6 +38,7 @@ class App extends Component {
               <Router_Parametros />
               <Router_Consultas />
               <Router_Seguridad />
+              <Router_Cajas />
 
             </Layout>
           </div> : <Router_Login />}
