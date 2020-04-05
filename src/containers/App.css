@@ -80,6 +80,12 @@ hr {
     margin: 0 auto;
     width: 70%;
     border: none;
+    background: #cacaca;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #f3f3f3, #cacaca);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #f0f0f0, #cacaca);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /*Input*/
@@ -119,3 +125,7 @@ hr {
 .ReactTable {
     text-align: center;
 }
+
+/*Background*/
+
+.gradient {}
