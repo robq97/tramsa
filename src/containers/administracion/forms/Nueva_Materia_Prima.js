@@ -4,7 +4,7 @@ import Input from '../../../components/ui/input/Input';
 import Card from '../../../components/ui/card/Card';
 import Title from '../../../components/ui/title/Title';
 import Select from '../../../containers/ui/select/Select'
-import Automatic_Code from '../../../components/ui/automaticCode/AutomaticCode'
+import AutomaticCode from '../../../components/ui/automaticCode/AutomaticCode'
 
 class NuevaMateriaPrima extends Component {
     render() {
@@ -29,7 +29,7 @@ class NuevaMateriaPrima extends Component {
                                 smallId="" smallTxt="Seleccione una medida" />
                         </div>
                     </div>
-                    <Automatic_Code smallId="" smallTxt="Código automático de la nueva materia prima"
+                    <AutomaticCode smallId="" smallTxt="Código automático de la nueva materia prima"
                         id="" placeholder="12345" />
                     <div class="text-center">
                         <Button type="" icon="send" btnTxt="Agregar Nueva Materia Prima" />

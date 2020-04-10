@@ -4,7 +4,7 @@ import Input from '../../../../components/ui/input/Input';
 import Card from '../../../../components/ui/card/Card';
 import Title from '../../../../components/ui/title/Title';
 import Select from '../../../../containers/ui/select/Select'
-import Automatic_Code from '../../../../components/ui/automaticCode/AutomaticCode';
+import AutomaticCode from '../../../../components/ui/automaticCode/AutomaticCode';
 
 class PedidoMateriaMaestro extends Component {
     render() {
@@ -22,7 +22,7 @@ class PedidoMateriaMaestro extends Component {
                             URL="https://swapi.co/api/planets/" property="name"
                             smallId="" smallTxt="Seleccione el proveedor" />
                     </div>
-                    <Automatic_Code smallId="" smallTxt="Número de orden"
+                    <AutomaticCode smallId="" smallTxt="Número de orden"
                         id="" placeholder="12345" />
                     <div class="text-center">
                         <Button type="" icon="arrow_right_alt" btnTxt="Siguiente" />

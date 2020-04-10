@@ -22,7 +22,6 @@ class Select extends Component {
     }
 
     render() {
-        let property = this.props.property;
         let options = this.state.options;
         let optionItems = options.map((option) =>
 

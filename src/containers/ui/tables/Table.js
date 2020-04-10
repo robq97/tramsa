@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactTable, { ReactTableDefaults } from 'react-table-6';
+import ReactTable from 'react-table-6';
 import 'react-table-6/react-table.css'
 import Button from '../../../components/ui/buttons/Button';
 import IconButton from '../../../components/ui/buttons/Icon-Button'
@@ -89,12 +89,12 @@ class Table extends Component {
         return (
             <div>
 
-                {this.props.type == "normal" ?
+                {this.props.type === "normal" ?
                     <Link to={this.props.path}>
                         <Button type="" icon="add" btnTxt={this.props.btnTxt} />
                     </Link> : null}
 
-                {this.props.type == "arqueo" ?
+                {this.props.type === "arqueo" ?
                     <div class="row">
                         <div class="col">
                             <Link to={this.props.path}>
@@ -113,7 +113,7 @@ class Table extends Component {
                         </div>
                     </div> : null}
 
-                {this.props.type == "consulta" ?
+                {this.props.type === "consulta" ?
                     <div class="row">
                         <div class="col">
                             <Button type="" icon="filter_list" btnTxt={this.props.btnTxt} />
@@ -125,7 +125,7 @@ class Table extends Component {
                     </div> : null
                 }
 
-                {this.props.type == "cierre" ?
+                {this.props.type === "cierre" ?
                     <div class="row">
                         <div class="col">
                             <Button type="" icon="picture_as_pdf" btnTxt={this.props.btnTxt} />
@@ -157,7 +157,7 @@ class Table extends Component {
                     nextText={'Siguiente'}
                     loading={false} />
 
-                {this.props.type == "arqueo" || "cierre" ?
+                {this.props.type === "arqueo" || "cierre" ?
                     <div class="pt-5 row">
                         <div class="col text-right" />
                         <div class="col-4 text-center">

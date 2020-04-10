@@ -14,10 +14,10 @@ const Navbar = (props) => {
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-dark disabled " href="#"><b>Usuario:</b> {props.user}</a>
+                        <a class="nav-link text-dark disabled " href="/#"><b>Usuario:</b> {props.user}</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <Link class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <Link class="nav-link dropdown-toggle" href="/#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Sistema
                             </Link>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -26,7 +26,7 @@ const Navbar = (props) => {
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="/#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Par&aacute;metros
                             </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -35,7 +35,7 @@ const Navbar = (props) => {
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="/#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Administraci&oacute;n
                             </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -48,7 +48,7 @@ const Navbar = (props) => {
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="/#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Procesos
                             </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -61,19 +61,19 @@ const Navbar = (props) => {
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="/#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Cajas
                             </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <Link class="dropdown-item" to="/cajas/apertura-cajas">Apertura Cajas</Link>
                             <Link class="dropdown-item" to="/cajas/arqueo-caja">Arqueo Cajas</Link>
                             <Link class="dropdown-item" to="/cajas/registrar-pase-dinero">Pases Dinero</Link>
-                            <Link class="dropdown-item" to="#">Exportar Facturas XML</Link>
+                            <Link class="dropdown-item" to="/#">Exportar Facturas XML</Link>
                             <Link class="dropdown-item" to="/cajas/cierre-caja">Cierre Caja</Link>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="/#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Seguridad
                             </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -83,34 +83,34 @@ const Navbar = (props) => {
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="/#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Consultas
                             </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <Link class="dropdown-item" to="/consultas/bitacora">Bitácora</Link>
                             <Link class="dropdown-item" to="/consultas/clientes">Clientes</Link>
                             <Link class="dropdown-item" to="/consultas/pedidos-pendientes">Pedidos Pendientes</Link>
-                            <Link class="dropdown-item" to="#">Facturas</Link>
+                            <Link class="dropdown-item" to="/#">Facturas</Link>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="/#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Reportes
                             </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <Link class="dropdown-item" to="/reportes/productos">Productos</Link>
-                            <a class="dropdown-item" to="#">Clientes</a>
+                            <Link class="dropdown-item" to="/#">Clientes</Link>
                             <Link class="dropdown-item" to="/reportes/inventarios">Inventarios</Link>
                             <Link class="dropdown-item" to="/reportes/ventas">Ventas</Link>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="/#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Idioma
                             </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Ingles</a>
-                            <a class="dropdown-item" href="#">Español</a>
+                            <a class="dropdown-item" href="/#">Ingles</a>
+                            <a class="dropdown-item" href="/#">Español</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -119,7 +119,7 @@ const Navbar = (props) => {
                             </Link>
                     </li>
                     <li class="nav-item bg-dark navbar-btn">
-                        <a class="nav-link  text-white " data-toggle="modal" data-target="#log-out" href="#">Cerrar Sesi&oacute;n</a>
+                        <a class="nav-link  text-white " data-toggle="modal" data-target="#log-out" href="/#">Cerrar Sesi&oacute;n</a>
                         <Modal id="log-out" body={false} confirmBtn={true} title="¿Está seguro que desea cerrar la sesión?" />
                     </li>
                 </ul>

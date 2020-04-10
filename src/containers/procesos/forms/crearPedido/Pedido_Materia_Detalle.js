@@ -3,7 +3,7 @@ import Button from '../../../../components/ui/buttons/Button';
 import Input from '../../../../components/ui/input/Input';
 import Card from '../../../../components/ui/card/Card';
 import Title from '../../../../components/ui/title/Title';
-import Automatic_Code from '../../../../components/ui/automaticCode/AutomaticCode';
+import AutomaticCode from '../../../../components/ui/automaticCode/AutomaticCode';
 import Radio from '../../../../components/ui/radio/Radio';
 
 class PedidoMateriaDetalle extends Component {
@@ -36,7 +36,7 @@ class PedidoMateriaDetalle extends Component {
                                 value1="pendiente" txt1="Pendiente" value2="entregado" txt2="Entregado" />
                         </div>
                     </div>
-                    <Automatic_Code smallId="" smallTxt="Código orden de pedido"
+                    <AutomaticCode smallId="" smallTxt="Código orden de pedido"
                         id="" placeholder="12345" />
                     <div class="text-center">
                         <Button type="" icon="send" btnTxt="Agregar Pedido" />

@@ -1,7 +1,5 @@
-import React from 'react';
 
 let today = new Date();
-
 
 const date = () => {
     let today = new Date();

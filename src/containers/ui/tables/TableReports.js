@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import ReactTable, { ReactTableDefaults } from 'react-table-6';
+import ReactTable from 'react-table-6';
 import 'react-table-6/react-table.css'
 import Button from '../../../components/ui/buttons/Button';
 import { Link } from 'react-router-dom';
 import ExportToExcel from './ExportToExcel';
-import ReactToExcel from 'react-html-table-to-excel';
 import util from '../../../components/util/DateTime'
 
 class TableReports extends Component {

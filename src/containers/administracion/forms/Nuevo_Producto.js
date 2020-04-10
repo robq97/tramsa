@@ -3,7 +3,7 @@ import Button from '../../../components/ui/buttons/Button';
 import Input from '../../../components/ui/input/Input';
 import Card from '../../../components/ui/card/Card';
 import Title from '../../../components/ui/title/Title';
-import Automatic_Code from '../../../components/ui/automaticCode/AutomaticCode'
+import AutomaticCode from '../../../components/ui/automaticCode/AutomaticCode'
 import Label from '../../../components/ui/label/Label'
 import Select from '../../../containers/ui/select/Select'
 
@@ -56,7 +56,7 @@ class NuevoProducto extends Component {
                                 icon="description" id="" placeholder="Descripción" type="text" required="true" />
                         </div>
                     </div>
-                    <Automatic_Code smallId="" smallTxt="Código automático del nuevo producto"
+                    <AutomaticCode smallId="" smallTxt="Código automático del nuevo producto"
                         id="" placeholder="12345" />
                     <div class="text-center">
                         <Button type="" icon="send" btnTxt="Agregar Nuevo Producto" />
