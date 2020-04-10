@@ -109,7 +109,7 @@ const Navbar = (props) => {
                             Idioma
                             </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="/#">Ingles</a>
+                            <Link class="dropdown-item" to="/print">Ingles</Link>
                             <a class="dropdown-item" href="/#">Español</a>
                         </div>
                     </li>

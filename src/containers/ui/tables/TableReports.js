@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import ExportToExcel from './ExportToExcel';
 import util from '../../../components/util/DateTime'
 
+
 class TableReports extends Component {
 
     state = {
@@ -63,7 +64,7 @@ class TableReports extends Component {
                     </div>
                     <div class=" col text-right">
                         <Link to={this.props.path}>
-                            <Button type="" icon="print" btnTxt="Imprimir" />
+                            <Button type="" icon="print" btnTxt="Imprimir" onClick={() => window.print()} /> {/*no he probado esto*/}
                         </Link>
                     </div>
                 </div>
@@ -117,3 +118,4 @@ class TableReports extends Component {
 }
 
 export default TableReports;
+
