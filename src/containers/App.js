@@ -29,7 +29,7 @@ class App extends Component {
             <NavBar user="nombreUsuario" />
             <Layout>
 
-              <Redirect from='/' to="/parametros/param-generales" />
+              {/*<Redirect from='/' to="/parametros/param-generales" />*/}
               <RouterAdministracion />
               <RouterAyuda />
               <RouterProcesos />
@@ -41,7 +41,9 @@ class App extends Component {
               <RouterCajas />
 
             </Layout>
-          </div> : <RouterLogin />}
+          </div> : <div>
+            <RouterLogin />
+            <Redirect from='/' to="/" /></div>}
       </BrowserRouter>
     );
   }

@@ -10,7 +10,8 @@ const input = (props) => {
                     <span class="input-group-text" id="basic-addon1"><MaterialIcon icon={props.icon} color={colorPalette.grey._700}></MaterialIcon></span>
                 </div>
                 <input type={props.type} class="form-control" id={props.id} aria-describedby="emailHelp" placeholder={props.placeholder}
-                    disabled={props.disabled} required={props.required} value={props.value} />
+                    disabled={props.disabled} required={props.required} value={props.value} onChange={props.onChange} onFocus={props.onFocus}
+                    name={props.name} maxLength={props.maxLength} minLength={props.minLength} pattern={props.pattern} />
             </div>
         </div>
     );
