@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 
+
 class ExportToExcel extends Component {
 
     state = {
@@ -9,6 +10,7 @@ class ExportToExcel extends Component {
 
     render() {
         return (
+
             <div>
                 <ReactHTMLTableToExcel
                     id="table-xls-button"
@@ -29,14 +31,14 @@ class ExportToExcel extends Component {
 
                             </tr>
 
-                            {this.state.category == "Productos" ?
+                            {this.state.category === "Productos" ?
                                 <tr>
                                     <th>{this.props.header1}</th>
                                     <th>{this.props.header2}</th>
                                     <th>{this.props.header3}</th>
                                 </tr> : null}
 
-                            {this.state.category == "Inventario" ? <tr>
+                            {this.state.category === "Inventario" ? <tr>
                                 <th>{this.props.header1}</th>
                                 <th>{this.props.header2}</th>
                                 <th>{this.props.header3}</th>
@@ -44,13 +46,13 @@ class ExportToExcel extends Component {
                                 <th>{this.props.header5}</th>
                             </tr> : null}
 
-                            {this.state.category == "Ventas" ? <tr>
+                            {this.state.category === "Ventas" ? <tr>
                                 <th>{this.props.header1}</th>
                                 <th>{this.props.header2}</th>
                                 <th>{this.props.header3}</th>
                             </tr> : null}
 
-                            {this.state.category == "Precios" ? <tr>
+                            {this.state.category === "Precios" ? <tr>
                                 <th>{this.props.header1}</th>
                                 <th>{this.props.header2}</th>
                                 <th>{this.props.header3}</th>
@@ -59,7 +61,7 @@ class ExportToExcel extends Component {
                         </div>
                     </thead>
 
-                    {this.state.category == "Productos" ?
+                    {this.state.category === "Productos" ?
                         <tbody>
                             {
                                 this.props.rows.map(row => {
@@ -74,7 +76,7 @@ class ExportToExcel extends Component {
                             }
                         </tbody> : null}
 
-                    {this.state.category == "Inventario" ?
+                    {this.state.category === "Inventario" ?
                         <tbody>
                             {
                                 this.props.rows.map(row => {
@@ -91,7 +93,7 @@ class ExportToExcel extends Component {
                             }
                         </tbody> : null}
 
-                    {this.state.category == "Ventas" ?
+                    {this.state.category === "Ventas" ?
                         <tbody>
                             {
                                 this.props.rows.map(row => {
@@ -106,7 +108,7 @@ class ExportToExcel extends Component {
                             }
                         </tbody> : null}
 
-                    {this.state.category == "Precios" ?
+                    {this.state.category === "Precios" ?
                         <tbody>
                             {
                                 this.props.rows.map(row => {
@@ -120,8 +122,6 @@ class ExportToExcel extends Component {
                                 })
                             }
                         </tbody> : null}
-
-
                 </table>
             </div>
         );

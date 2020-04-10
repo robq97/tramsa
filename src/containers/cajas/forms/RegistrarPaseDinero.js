@@ -16,7 +16,7 @@ class RegistrarPaseDinero extends Component {
                             <div class="col pl-5">
                                 <Select
                                     URL="https://swapi.co/api/planets/" property="name" //esta picha no sirve porque hay que pasar un objeto, no un string
-                                    smallId="" smallTxt="Indicador de Movimiento" size={0} />
+                                    smallId="" smallTxt="Indicador de Movimiento" />
                             </div>
                             <div class="col-sm- text-center">
                                 <Input

@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import ReactTable, { ReactTableDefaults } from 'react-table-6';
+import ReactTable from 'react-table-6';
 import 'react-table-6/react-table.css'
-import Button from '../../../components/ui/buttons/Button';
 import IconButton from '../../../components/ui/buttons/Icon-Button'
 import { colorPalette } from 'material-icons-react';
-import { Link } from 'react-router-dom';
 import Modal from '../modal/Modal';
-import Label from '../../../components/ui/label/Label'
+import Label from '../../../components/ui/label/Label';
+import Input from '../../../components/ui/input/Input';
+import NormalType from './types/Normal';
+import ArqueoType from './types/Arqueo';
+import ConsultaType from './types/Consulta';
+import CierreType from './types/Cierre';
 
 class Table extends Component {
 
@@ -57,15 +60,20 @@ class Table extends Component {
                         <div>
                             {this.props.iconDeleteOnly ?
                                 <div>
-                                    <IconButton type="" icon="delete" color={colorPalette.red._700}
+                                    <IconButton
+                                        type="" icon="delete" color={colorPalette.red._700}
                                         toggle="modal" target="#delete" />
                                 </div> : <div>
-                                    <IconButton type="" icon="create" color={colorPalette.grey._700} />
-                                    <IconButton type="" icon="info" color={colorPalette.blue._700}
+                                    <IconButton
+                                        type="" icon="create" color={colorPalette.grey._700} />
+                                    <IconButton
+                                        type="" icon="info" color={colorPalette.blue._700}
                                         toggle="modal" target="#info" />
-                                    <IconButton type="" icon="delete" color={colorPalette.red._700}
+                                    <IconButton
+                                        type="" icon="delete" color={colorPalette.red._700}
                                         toggle="modal" target="#delete" />
-                                    <Modal id="info" body={true} confirmBtn={false} title="Información detallada"
+                                    <Modal
+                                        id="info" body={true} confirmBtn={false} title="Información detallada"
                                         bodyContent={<div>
                                             <Label lblText="linea 1" /> <br />
                                             <Label lblText="linea 2" /><br />
@@ -78,7 +86,6 @@ class Table extends Component {
                                     <Modal id="delete" body={false} confirmBtn={true} title="¿Está seguro que desea eliminar el item?" />
                                 </div>}
                         </div>
-
                     )
                 }
             }
@@ -86,24 +93,35 @@ class Table extends Component {
 
         return (
             <div>
+                {this.props.type === "normal" ?
+                    <NormalType
+                        to={this.props.path}
+                        btnTxt={this.props.btnTxt} />
+                    : null}
 
-                {this.props.type == "normal" ?
-                    <Link to={this.props.path}>
-                        <Button type="" icon="add" btnTxt={this.props.btnTxt} />
-                    </Link> : null}
-                {this.props.type == "consulta" ?
-                    <div class="row">
-                        <div class="col">
-                            <Button type="" icon="filter_list" btnTxt={this.props.btnTxt} />
-                        </div>
-                        <div class=" col text-right">
-                            <Button type="" icon="filter_list" btnTxt={this.props.btnTxt2} />
-                        </div>
+                {this.props.type === "arqueo" ?
+                    <ArqueoType
+                        to={this.props.path}
+                        btnTxt={this.props.btnTxt} />
+                    : null}
 
-                    </div> : null
+                {this.props.type === "consulta" ?
+                    <ConsultaType
+                        btnTxt={this.props.btnTxt}
+                        btnTxt2={this.props.btnTxt2} />
+                    : null
                 }
 
-                <ReactTable className="ReactTable"
+                {this.props.type === "cierre" ?
+                    <CierreType
+                        btnTxt={this.props.btnTxt}
+                        btnTxt2={this.props.btnTxt2}
+                        onClick={() => window.print()} />
+                    : null
+                }
+
+                <ReactTable
+                    className="ReactTable"
                     columns={columns}
                     data={this.state.rows}
                     filterable
@@ -112,9 +130,20 @@ class Table extends Component {
                     previousText={'Anterior'}
                     nextText={'Siguiente'}
                     loading={false} />
+
+                {this.props.type === "arqueo" || "cierre" ?
+                    <div class="pt-5 row">
+                        <div class="col text-right" />
+                        <div class="col-4 text-center">
+                            <Input
+                                smallId="" smallTxt="Caja final"
+                                icon="grade" id="" value="12345" disabled="true" />
+                        </div>
+                        <div class="col text-right" />
+                    </div> : null}
             </div >
         );
     };
-}
+};
 
 export default Table;

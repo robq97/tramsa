@@ -4,7 +4,7 @@ import Input from '../../../components/ui/input/Input';
 import Card from '../../../components/ui/card/Card';
 import Title from '../../../components/ui/title/Title';
 import Select from '../../ui/select/Select'
-import Automatic_Code from '../../../components/ui/automaticCode/AutomaticCode'
+import AutomaticCode from '../../../components/ui/automaticCode/AutomaticCode'
 
 class NuevaBodega extends Component {
     render() {
@@ -53,7 +53,7 @@ class NuevaBodega extends Component {
                                 icon="place" id="" placeholder="Ubicación" type="text" required="true" />
                         </div>
                     </div>
-                    <Automatic_Code smallId="" smallTxt="Código automático de la nueva bodega"
+                    <AutomaticCode smallId="" smallTxt="Código automático de la nueva bodega"
                         id="" placeholder="12345" />
                     <div class="text-center">
                         <Button type="" icon="send" btnTxt="Agregar Nueva Materia Prima" />

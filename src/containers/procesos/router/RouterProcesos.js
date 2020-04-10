@@ -4,6 +4,7 @@ import Crear_Pedido_Materias_Maestro from '../forms/crearPedido/Pedido_Materia_M
 import Crear_Pedido_Materias_Detalle from '../forms/crearPedido/Pedido_Materia_Detalle';
 import Pedido from '../tables/Busqueda_Pedido';
 import Comprobar_Orden_Pedido from '../tables/Comprobar_Orden_Pedido';
+import Pago from '../forms/Pago';
 
 class RouterProcesos extends Component {
 
@@ -15,6 +16,7 @@ class RouterProcesos extends Component {
                 <Route path="/procesos/crear-pedido-materias" exact component={Crear_Pedido_Materias_Detalle} />
                 <Route path="/procesos/comprobar-orden-de-pedido" exact component={Comprobar_Orden_Pedido} />
                 <Route path="/procesos/pedido" exact component={Pedido} />
+                <Route path="/procesos/punto-de-venta/pago" exact component={Pago} />
             </div>
         );
     }
