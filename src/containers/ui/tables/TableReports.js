@@ -5,6 +5,7 @@ import Button from '../../../components/ui/buttons/Button';
 import { Link } from 'react-router-dom';
 import ExportToExcel from './ExportToExcel';
 import ReactToExcel from 'react-html-table-to-excel';
+import util from '../../../components/util/DateTime'
 
 class TableReports extends Component {
 
@@ -53,18 +54,6 @@ class TableReports extends Component {
 
         ]
 
-        let today = new Date();
-        let dd = String(today.getDate()).padStart(2, '0');
-        let mm = String(today.getMonth() + 1).padStart(2, '0');
-        let yyyy = today.getFullYear();
-
-        let seconds = today.getSeconds();
-        let minutes = today.getMinutes();
-        let hour = String(today.getHours()).padStart(2, '0');
-
-        let time = hour + ':' + minutes + ':' + seconds;
-        today = mm + '/' + dd + '/' + yyyy;
-
         return (
             <div>
                 <div class="row">
@@ -86,7 +75,7 @@ class TableReports extends Component {
                             {filtredData()}
                             <ExportToExcel
                                 rows={this.ReactTable}
-                                filename={this.state.filename + today} />
+                                filename={this.state.filename + util.date()} />
                         </div>
                     )
                 }}
@@ -109,10 +98,10 @@ class TableReports extends Component {
                                 <ExportToExcel
                                     category={this.props.category}
                                     rows={this.state.rows}
-                                    filename={this.state.filename + today}
+                                    filename={this.state.filename + util.date()}
                                     title={this.props.title}
-                                    date={today}
-                                    time={time}
+                                    date={util.date()}
+                                    time={util.time()}
                                     header1={this.props.header1}
                                     header2={this.props.header2}
                                     header3={this.props.header3}

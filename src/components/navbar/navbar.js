@@ -66,10 +66,10 @@ const Navbar = (props) => {
                             </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <Link class="dropdown-item" to="/cajas/apertura-cajas">Apertura Cajas</Link>
-                            <Link class="dropdown-item" to="#">Arqueo Cajas</Link>
+                            <Link class="dropdown-item" to="/cajas/arqueo-caja">Arqueo Cajas</Link>
                             <Link class="dropdown-item" to="/cajas/registrar-pase-dinero">Pases Dinero</Link>
                             <Link class="dropdown-item" to="#">Exportar Facturas XML</Link>
-                            <Link class="dropdown-item" to="#">Cierre Caja</Link>
+                            <Link class="dropdown-item" to="/cajas/cierre-caja">Cierre Caja</Link>
                         </div>
                     </li>
                     <li class="nav-item dropdown">

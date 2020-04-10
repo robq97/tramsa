@@ -6,7 +6,9 @@ import IconButton from '../../../components/ui/buttons/Icon-Button'
 import { colorPalette } from 'material-icons-react';
 import { Link } from 'react-router-dom';
 import Modal from '../modal/Modal';
-import Label from '../../../components/ui/label/Label'
+import Label from '../../../components/ui/label/Label';
+import Input from '../../../components/ui/input/Input';
+import Util from '../../../components/util/DateTime';
 
 class Table extends Component {
 
@@ -91,6 +93,26 @@ class Table extends Component {
                     <Link to={this.props.path}>
                         <Button type="" icon="add" btnTxt={this.props.btnTxt} />
                     </Link> : null}
+
+                {this.props.type == "arqueo" ?
+                    <div class="row">
+                        <div class="col">
+                            <Link to={this.props.path}>
+                                <Button type="" icon="add" btnTxt={this.props.btnTxt} />
+                            </Link>
+                        </div>
+                        <div class=" col-2 text-right">
+                            <Input
+                                smallId="" smallTxt="Fecha"
+                                icon="today" id="" value={Util.date()} disabled="true" />
+                        </div>
+                        <div class=" col-3 text-right">
+                            <Input
+                                smallId="" smallTxt="Monto de apertura del día (caja inicial)"
+                                icon="monetization_on" id="" value="12345" disabled="true" />
+                        </div>
+                    </div> : null}
+
                 {this.props.type == "consulta" ?
                     <div class="row">
                         <div class="col">
@@ -103,6 +125,28 @@ class Table extends Component {
                     </div> : null
                 }
 
+                {this.props.type == "cierre" ?
+                    <div class="row">
+                        <div class="col">
+                            <Button type="" icon="picture_as_pdf" btnTxt={this.props.btnTxt} />
+                        </div>
+
+                        <div class=" col-2 text-center">
+                            <Input
+                                smallId="" smallTxt="Fecha"
+                                icon="today" id="" value={Util.date()} disabled="true" />
+                        </div>
+                        <div class=" col-3 text-center">
+                            <Input
+                                smallId="" smallTxt="Monto de apertura del día (caja inicial)"
+                                icon="monetization_on" id="" value="12345" disabled="true" />
+                        </div>
+                        <div class=" col text-right">
+                            <Button type="" icon="print" btnTxt={this.props.btnTxt2} />
+                        </div>
+                    </div> : null
+                }
+
                 <ReactTable className="ReactTable"
                     columns={columns}
                     data={this.state.rows}
@@ -112,6 +156,17 @@ class Table extends Component {
                     previousText={'Anterior'}
                     nextText={'Siguiente'}
                     loading={false} />
+
+                {this.props.type == "arqueo" || "cierre" ?
+                    <div class="pt-5 row">
+                        <div class="col text-right" />
+                        <div class="col-4 text-center">
+                            <Input
+                                smallId="" smallTxt="Caja final"
+                                icon="grade" id="" value="12345" disabled="true" />
+                        </div>
+                        <div class="col text-right" />
+                    </div> : null}
             </div >
         );
     };
