@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../../components/logo/Logo';
+import Logo from '../logo/Logo';
 import { Link } from 'react-router-dom';
 import Modal from '../../containers/ui/modal/Modal';
 
