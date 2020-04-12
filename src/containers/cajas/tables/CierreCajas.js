@@ -19,6 +19,7 @@ class CierreCaja extends Component {
                     show5={false}
                     show6={false}
                     iconShow={false}
+                    inputShow={false}
                     btnTxt="Exportar a PDF"
                     btnTxt2="Imprimir" />
             </div>

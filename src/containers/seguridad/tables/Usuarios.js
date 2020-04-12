@@ -19,6 +19,7 @@ class Usuarios extends Component {
                     header5="Estado" accessor5="body" filterable5={false} width5={100} show5={true}
                     show6={false}
                     iconShow={true}
+                    inputShow={false}
                     btnTxt="Agregar Nuevo Usuario"
                     path="/seguridad/nuevo-usuario" />
             </div>

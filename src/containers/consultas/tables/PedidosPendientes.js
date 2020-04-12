@@ -17,6 +17,7 @@ class PedidosPendientes extends Component {
                     header4="Camión" accessor4="body" filterable4={false} width4={250} show4={true}
                     header5="Monto del Pedido" accessor5="body" filterable5={false} width5={250} show5={true}
                     show6={false}
+                    inputShow={false}
                     iconShow={false} />
             </div>
         );

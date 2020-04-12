@@ -17,6 +17,7 @@ class Bitacora extends Component {
                     header4="Descripción" accessor4="body" filterable4={false} width4={450} show4={true}
                     show5={false}
                     show6={false}
+                    inputShow={false}
                     iconShow={false} />
             </div>
         );

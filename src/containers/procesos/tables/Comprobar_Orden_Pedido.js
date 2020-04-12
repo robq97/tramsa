@@ -18,8 +18,9 @@ class Bodegas extends Component {
                     header4="Correcto" accessor4="body" filterable4={false} width4={400} show4={true}
                     show5={false}
                     show6={false}
+                    inputShow={false}
                     iconShow={true}
-                    btnTxt="Agregar Nueva Pedido" />
+                    btnTxt="Comprobar Pedido" />
             </div>
         );
     }

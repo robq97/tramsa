@@ -5,11 +5,15 @@ import IconButton from '../../../components/ui/buttons/Icon-Button'
 import { colorPalette } from 'material-icons-react';
 import Modal from '../modal/Modal';
 import Label from '../../../components/ui/label/Label';
-import Input from '../../../components/ui/input/Input';
+import InputSimple from '../../../components/ui/input/inputSimple';
 import NormalType from './types/Normal';
 import ArqueoType from './types/Arqueo';
 import ConsultaType from './types/Consulta';
 import CierreType from './types/Cierre';
+import VentaType from './types/Venta';
+import VentaBottom from './types/VentaBottom';
+import CajaBottom from './types/CajaBottom';
+
 
 class Table extends Component {
 
@@ -36,6 +40,21 @@ class Table extends Component {
             {
                 Header: this.props.header2, accessor: this.props.accessor2, width: this.props.width2, filterable: this.props.filterable2,
                 show: this.props.show2
+            },
+            {
+                Header: "Cantidad", width: 150, show: this.props.inputShow, filterable: false, sortable: false, style: { textAlign: "center" },
+                Cell: props => {
+                    return (
+                        <div>
+                            {this.props.inputShow ?
+                                <div>
+                                    <InputSimple
+                                        type="number" id="" />
+                                </div>
+                                : null}
+                        </div>
+                    )
+                }
             },
             {
                 Header: this.props.header3, accessor: this.props.accessor3, width: this.props.width3, filterable: this.props.filterable3,
@@ -120,6 +139,14 @@ class Table extends Component {
                     : null
                 }
 
+                {this.props.type === "venta" ?
+                    <VentaType
+                        btnTxt={this.props.btnTxt}
+                        btnTxt2={this.props.btnTxt2}
+                        to={this.props.path} />
+                    : null
+                }
+
                 <ReactTable
                     className="ReactTable"
                     columns={columns}
@@ -129,17 +156,17 @@ class Table extends Component {
                     defaultPageSize={10}
                     previousText={'Anterior'}
                     nextText={'Siguiente'}
-                    loading={false} />
+                    loading={false}
+                    showPagination={this.props.pagination}
+                />
 
-                {this.props.type === "arqueo" || "cierre" ?
-                    <div class="pt-5 row">
-                        <div class="col text-right" />
-                        <div class="col-4 text-center">
-                            <Input
-                                smallId="" smallTxt="Caja final"
-                                icon="grade" id="" value="12345" disabled="true" />
-                        </div>
-                        <div class="col text-right" />
+                {this.props.type === "arqueo" ?
+                    <CajaBottom /> : null}
+                {this.props.type === "cierre" ?
+                    <CajaBottom /> : null}
+                {this.props.type === "venta" ?
+                    <div>
+                        <VentaBottom btnTxt2={this.props.btnTxt2} to={this.props.path} />
                     </div> : null}
             </div >
         );

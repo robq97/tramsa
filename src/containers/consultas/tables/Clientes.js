@@ -19,6 +19,7 @@ class Clientes extends Component {
                     header5="Tel Trabajo" accessor5="body" filterable5={false} width5={130} show5={true}
                     header6="Correo Electrónico" accessor6="body" filterable6={false} width6={250} show6={true}
                     iconShow={false}
+                    inputShow={false}
                     btnTxt="Ver Solo Clientes Activos"
                     btnTxt2="Ver Solo Clientes Inactivos" />
             </div>

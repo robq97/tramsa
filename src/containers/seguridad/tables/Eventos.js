@@ -18,6 +18,7 @@ class Eventos extends Component {
                     show4={false}
                     show5={false}
                     show6={false}
+                    inputShow={false}
                     iconShow={false} />
             </div>
         );

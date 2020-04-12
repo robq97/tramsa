@@ -20,6 +20,7 @@ class TableListaPrecios extends Component {
                     show5={false}
                     show6={false}
                     show7={false}
+                    inputShow={false}
                     filename="lista_precios_" />
             </div>
         );

@@ -18,6 +18,7 @@ class Roles extends Component {
                     header4="Roles Asignados" accessor4="body" filterable4={false} width4={325} show4={true}
                     show5={false}
                     show6={false}
+                    inputShow={false}
                     iconShow={true}
                     iconDeleteOnly={true}
                     btnTxt="Agregar Rol" />

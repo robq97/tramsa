@@ -19,6 +19,7 @@ class ArqueoCaja extends Component {
                     show5={false}
                     show6={false}
                     iconShow={false}
+                    inputShow={false}
                     btnTxt="Agregar Movimiento" />
             </div>
         );

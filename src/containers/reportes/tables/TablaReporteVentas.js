@@ -20,6 +20,7 @@ class TableReporteVentas extends Component {
                     show5={false}
                     show6={false}
                     show7={false}
+                    inputShow={false}
                     filename="reporte_inventario_bodega_" />
             </div>
         );
