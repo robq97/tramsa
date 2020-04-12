@@ -19,6 +19,7 @@ class Productos extends Component {
                     header4="Descripción" accessor4="body" filterable4={false} width4={400} show4={true}
                     show5={false}
                     show6={false}
+                    inputShow={false}
                     btnTxt="Agregar Nuevo Producto" path="/administracion/nuevo-producto" />
             </div>
         );

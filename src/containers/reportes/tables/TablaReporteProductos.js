@@ -20,6 +20,7 @@ class TableReporteProductos extends Component {
                     show5={false}
                     show6={false}
                     show7={false}
+                    inputShow={false}
                     filename="reporte_productos_" />
             </div>
         );

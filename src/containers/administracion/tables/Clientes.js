@@ -18,6 +18,7 @@ class Clientes extends Component {
                     header4="Correo Electrónico" accessor4="body" filterable4={false} width4={400} show4={true}
                     show5={false}
                     show6={false}
+                    inputShow={false}
                     btnTxt="Agregar Nuevo Cliente" path="/administracion/nuevo-cliente" />
             </div>
         );

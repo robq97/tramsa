@@ -6,7 +6,7 @@ import Title from '../../../components/ui/title/Title';
 import Select from '../../../containers/ui/select/Select'
 
 class NuevoCliente extends Component {
-    redner() {
+    render() {
         return (
             <Card>
                 <form>

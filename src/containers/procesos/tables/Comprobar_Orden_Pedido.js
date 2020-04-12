@@ -8,18 +8,19 @@ class Bodegas extends Component {
         return (
             <div>
                 <Title
-                    title="Comprobar Orden De Pedido" titleType="title-table" />
+                    title="Comprobar Orden De Pedido" titleType="title-form" />
                 <Table
-                    type="normal"
+                    type="comprobacion"
                     url="https://jsonplaceholder.typicode.com/posts"
                     header1="Código" accessor1="id" filterable1={true} width1={80} show1={true}
-                    header2="Descripción" accessor2="title" filterable2={true} width2={300} show2={true}
-                    header3="Cantidad" accessor3="userId" filterable3={false} width3={150} show3={true}
-                    header4="Correcto" accessor4="body" filterable4={false} width4={400} show4={true}
-                    show5={false}
-                    show6={false}
-                    iconShow={true}
-                    btnTxt="Agregar Nueva Pedido" />
+                    header2="Nombre" accessor2="title" filterable2={true} width2={300} show2={true}
+                    header3="Fecha" accessor3="userId" filterable3={false} width3={150} show3={true}
+                    header4="Materia Prima" accessor4="body" filterable4={false} width4={300} show4={true}
+                    header5="Cantidad" accessor5="id" filterable5={false} width5={150} show5={true}
+                    header6="Estado" accessor6="userId" filterable6={false} width6={120} show6={true}
+                    inputShow={false}
+                    iconShow={false}
+                    btnTxt="Comprobar Pedido" />
             </div>
         );
     }

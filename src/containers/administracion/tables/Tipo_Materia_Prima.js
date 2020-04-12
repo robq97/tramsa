@@ -18,6 +18,7 @@ class Tipo_Materia_Prima extends Component {
                     header4="Unidad de Medida" accessor4="body" filterable4={false} width4={400} show4={true}
                     show5={false}
                     show6={false}
+                    inputShow={false}
                     btnTxt="Agregar Nueva Materia Prima"
                     path="/administracion/nueva-materia-prima" />
             </div>

@@ -20,6 +20,7 @@ class TableReporteInventarioGeneral extends Component {
                     header5="Punto Reorden" accessor5="userId" width5={150} show5={true}
                     show6={false}
                     show7={false}
+                    inputShow={false}
                     filename="reporte_inventario_gral_" />
             </div>
         );
