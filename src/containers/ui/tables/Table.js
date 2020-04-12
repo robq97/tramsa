@@ -13,6 +13,7 @@ import CierreType from './types/Cierre';
 import VentaType from './types/Venta';
 import VentaBottom from './types/VentaBottom';
 import CajaBottom from './types/CajaBottom';
+import ComprobacionType from './types/Comprobacion';
 
 
 class Table extends Component {
@@ -144,6 +145,12 @@ class Table extends Component {
                         btnTxt={this.props.btnTxt}
                         btnTxt2={this.props.btnTxt2}
                         to={this.props.path} />
+                    : null
+                }
+
+                {this.props.type === "comprobacion" ?
+                    <ComprobacionType
+                        btnTxt={this.props.btnTxt} />
                     : null
                 }
 
