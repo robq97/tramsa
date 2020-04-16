@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Layout from '../components/layout/layout'
 import { BrowserRouter } from 'react-router-dom';
-import NavBar from '../components/navbar/Navbar'
+import NavBar from '../components/navbar/navbar'
 import { Redirect } from 'react-router-dom';
 import RouterAdministracion from '../containers/administracion/router/RouterAdministracion';
 import RouterAyuda from '../containers/ayuda/router/RouterAyuda';
@@ -18,7 +18,7 @@ import RouterCajas from '../containers/cajas/router/RouterCajas';
 class App extends Component {
 
   state = {
-    auth: true
+    auth: false
   }
 
   render() {
