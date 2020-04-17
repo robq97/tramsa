@@ -4,7 +4,8 @@ import Button from '../../../components/ui/buttons/Button'
 class modal extends Component {
     state = {
         body: this.props.body,
-        confirmBtn: this.props.confirmBtn
+        confirmBtn: this.props.confirmBtn,
+        confirmBtnAction: this.props.confirmBtnAction
     }
     render() {
         return (
@@ -26,7 +27,7 @@ class modal extends Component {
                             <button type="button" class="btn btn-secondary mb-4 mt-3" data-dismiss="modal">Volver</button>
 
                             {this.state.confirmBtn ?
-                                <Button btnTxt="Confirmar" /> : null}
+                                <Button btnTxt="Confirmar" onClick={this.state.confirmBtnAction} /> : null}
                         </div>
                     </div>
                 </div>

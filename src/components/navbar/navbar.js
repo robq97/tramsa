@@ -2,8 +2,15 @@ import React from 'react';
 import Logo from '../logo/Logo';
 import { Link } from 'react-router-dom';
 import Modal from '../../containers/ui/modal/Modal';
+import { logOut } from '../../containers/util/common';
 
 const Navbar = (props) => {
+
+    const handleLogOut = () => {
+        logOut();
+        window.location.reload();
+    }
+
     return (
         <nav class="navbar navbar-expand-lg navbar-light navbar-grey text-center">
             <Logo />
@@ -119,8 +126,8 @@ const Navbar = (props) => {
                             </Link>
                     </li>
                     <li class="nav-item bg-dark navbar-btn">
-                        <a class="nav-link  text-white " data-toggle="modal" data-target="#log-out" href="/#">Cerrar Sesi&oacute;n</a>
-                        <Modal id="log-out" body={false} confirmBtn={true} title="¿Está seguro que desea cerrar la sesión?" />
+                        <a class="nav-link  text-white " data-toggle="modal" data-target="#log-out" href="/">Cerrar Sesi&oacute;n</a>
+                        <Modal id="log-out" body={false} confirmBtn={true} confirmBtnAction={handleLogOut} title="¿Está seguro que desea cerrar la sesión?" />
                     </li>
                 </ul>
             </div>

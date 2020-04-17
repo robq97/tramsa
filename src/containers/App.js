@@ -14,19 +14,20 @@ import RouterLogin from '../containers/login/router/RouterLogin';
 import RouterConsultas from '../containers/consultas/router/RouterConsultas';
 import RouterSeguridad from '../containers/seguridad/router/RouterSeguridad';
 import RouterCajas from '../containers/cajas/router/RouterCajas';
+import { getUser } from './util/common';
 
 class App extends Component {
 
   state = {
-    auth: false
+    auth: sessionStorage.getItem('auth')
   }
 
   render() {
     return (
       <BrowserRouter>
-        {this.state.auth ?
+        {this.state.auth === "1" ?
           <div>
-            <NavBar user="nombreUsuario" />
+            <NavBar user={getUser()} />
             <Layout>
 
               {/*<Redirect from='/' to="/parametros/param-generales" />*/}

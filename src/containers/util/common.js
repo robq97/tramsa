@@ -16,10 +16,12 @@ export const getToken = () => {
 export const logOut = () => {
     sessionStorage.removeItem('token');
     sessionStorage.removeItem('user');
+    sessionStorage.setItem('auth', "0");
 }
 
 // Gets user info
 export const setUserSession = (token, user) => {
     sessionStorage.setItem('token', token);
     sessionStorage.setItem('user', JSON.stringify(user));
+    sessionStorage.setItem('auth', "1");
 }

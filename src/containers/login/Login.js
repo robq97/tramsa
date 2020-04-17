@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import Button from '../../components/ui/buttons/Button';
 import Input from '../../components/ui/input/Input';
 import Label from '../../components/ui/label/Label';
@@ -11,8 +11,8 @@ class Login extends Component {
     constructor() {
         super();
         this.state = {
-            email: '',
-            password: ''
+            userName: '',
+            password: '',
         }
     }
 
@@ -26,20 +26,24 @@ class Login extends Component {
     handleSubmit = event => {
         event.preventDefault();
         const data = {
-            email: this.state.email,
+            userName: this.state.userName,
             password: this.state.password
         }
 
-        fetch('https://apitramsa.azurewebsites.net/user/login', {
+        fetch(URL.concat('user/login'), {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
         })
-        .then(res => res.json())
-        .catch(error => console.error('Error: ', error))
-        .then(response => console.log(response));
+            .then(res => res.json())
+            .catch(error => console.error('Error: ', error))
+            .then(response =>
+                setUserSession(response.token, response.userName),
+                this.props.history.push('/consultas/pedidos-pendientes'),
+            );
+
     }
 
     render() {
@@ -52,11 +56,11 @@ class Login extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <div className="center_div mb-3">
                         <Label htmlFor="username" lblText="Usuario" />
-                        <Input name="email" icon="account_circle" type="text" id="username" placeholder="Usuario" smallTxt="Ingrese su usuario" smallId="lblUser" required={true} onChange={(ev) => this.handleChange(ev.target)}/>
+                        <Input name="userName" icon="account_circle" type="text" id="username" placeholder="Usuario" smallTxt="Ingrese su usuario" smallId="lblUser" required={true} onChange={(ev) => this.handleChange(ev.target)} />
                     </div>
                     <div className="center_div mb-3">
                         <Label htmlFor="password" lblText="Contraseña" />
-                        <Input name="password" icon="lock" type="password" id="password" placeholder="Contraseña" smallTxt="Ingrese su contraseña" smallId="lblPassword" required={true} onChange={(ev) => this.handleChange(ev.target)}/>
+                        <Input name="password" icon="lock" type="password" id="password" placeholder="Contraseña" smallTxt="Ingrese su contraseña" smallId="lblPassword" required={true} onChange={(ev) => this.handleChange(ev.target)} />
                     </div>
                     <div className="text-center">
                         <Button type="submit" icon="arrow_forward" btnTxt="Iniciar Sesión" />
@@ -64,19 +68,6 @@ class Login extends Component {
                 </form>
             </div>
         )
-    }
-}
-
-const useFormInput = initialValue => {
-    const [value, setValue] = useState(initialValue);
-
-    const handleChange = e => {
-        setValue(e.target.value);
-    }
-
-    return {
-        value,
-        onChange: handleChange
     }
 }
 
