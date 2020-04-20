@@ -11,7 +11,7 @@ class CambioContraseña extends Component {
     constructor() {
         super();
         this.state = {
-            userName: sessionStorage.getItem('user'),
+            userName: JSON.parse(sessionStorage.getItem('user')),
             currentPassword: '',
             password: '',
             newPasswordValidation: '',
@@ -60,11 +60,14 @@ class CambioContraseña extends Component {
             password: this.state.password
         }
 
-        if (this.validateOldPassword) {
-            if (this.validateEqualPasswords) {
-                axios.post(URL.concat('user/update'), data)
+        if (this.validateOldPassword()) {
+            if (this.validateEqualPasswords()) {
+                axios.post(URL.concat('user/update'), { data })
+                    .then((res) => {
+                        alert(res.data.message);
+                        document.getElementById("password-change-form").reset();
+                    })
                     .catch(error => console.error('Error: ', error))
-                    .then(alert("Contraseña actualizada correctamente"));
             } else {
                 alert('Revise su informacion e intente de nuevo');
             }
@@ -75,7 +78,7 @@ class CambioContraseña extends Component {
         return (
             <Card>
                 <Title title="Cambio de Contraseña" titleType="title-form" />
-                <form onSubmit={this.handleSubmit}>
+                <form id="password-change-form" onSubmit={this.handleSubmit}>
                     <div class="input-padding-25">
                         <Input name="currentPassword" smallId="lblActualPassword" smallTxt="Ingrese su contraseña actual."
                             icon="vpn_key" type="password" id="actualPassword" placeholder="Contraseña Actual" required="true" onChange={(ev) => this.handleChange(ev.target)} />
@@ -86,7 +89,7 @@ class CambioContraseña extends Component {
                             icon="lock" type="password" id="newPassword" placeholder="Nueva Contraseña" required="true" onChange={(ev) => this.handleChange(ev.target)} />
                     </div>
                     <div class="input-padding-25">
-                        <Input smallId="lblNewPasswordConf" smallTxt="Confirme su nueva contraseña."
+                        <Input name="newPasswordValidation" smallId="lblNewPasswordConf" smallTxt="Confirme su nueva contraseña."
                             icon="lock" type="password" id="confirmNewPassword" placeholder="Confirmación Contraseña" required="true" onChange={(ev) => this.handleChange(ev.target)} />
                     </div>
 
