@@ -30,7 +30,7 @@ class App extends Component {
             <NavBar user={getUser()} />
             <Layout>
 
-              {/*<Redirect from='/' to="/parametros/param-generales" />*/}
+              <Redirect from='/' to="/parametros/param-generales" />
               <RouterAdministracion />
               <RouterAyuda />
               <RouterProcesos />

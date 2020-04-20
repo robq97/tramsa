@@ -4,6 +4,7 @@ import Input from '../../components/ui/input/Input';
 import Label from '../../components/ui/label/Label';
 import Title from '../../components/ui/title/Title';
 import Logo from '../../components/logo/Logo';
+import axios from 'axios';
 import { setUserSession, URL } from '../util/common';
 
 class Login extends Component {
@@ -23,27 +24,17 @@ class Login extends Component {
         this.setState(state);
     }
 
-    handleSubmit = event => {
+    handleSubmit = async event => {
         event.preventDefault();
         const data = {
             userName: this.state.userName,
             password: this.state.password
         }
 
-        fetch(URL.concat('user/login'), {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-            .then(res => res.json())
-            .catch(error => console.error('Error: ', error))
-            .then(response =>
-                setUserSession(response.token, response.userName),
-                this.props.history.push('/consultas/pedidos-pendientes'),
-            );
-
+        await axios.post(URL.concat('user/login'), { data })
+            .then((res) => setUserSession(res.data.token, res.data.userName))
+            .catch(e => console.error('Error: ', e))
+            .then(setTimeout(function() {window.location.reload()}, 550));
     }
 
     render() {
