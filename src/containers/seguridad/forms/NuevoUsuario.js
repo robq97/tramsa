@@ -26,6 +26,13 @@ class NuevoUsuario extends Component {
         }
     }
 
+    componentDidMount() {
+        axios.get(URL.concat('rol'))
+            .then((response) => this.setState({
+                roles: response.data
+            }))
+    }
+
     handleChange = control => {
         const { name, value } = control;
         const state = {};
@@ -89,12 +96,15 @@ class NuevoUsuario extends Component {
                     </div>
                     <div className="row align-items-center">
                         <div className="col pl-5">
-                            {this.state.roles.map((roles) => (
-                                <h1>{roles}</h1>
-                            ))}
-                            <Select
+                            {/*<Select
                                 URL={URL.concat('rol')} name="rol" property="ROL_Nombre"
-                                smallId="" smallTxt="Seleccione el rol" />
+                            smallId="ROL_Nombre" smallTxt="Seleccione el rol" />*/}
+                            <select name="rol">
+                                {this.state.roles.map((roles) => (
+                                    <option key={roles.ROL_Codigo}>{roles.ROL_Nombre}</option>
+                                ))}
+                            </select>
+
                         </div>
                         <div className="col">
                             <Input
