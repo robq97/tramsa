@@ -34,7 +34,7 @@ class Login extends Component {
         await axios.post(URL.concat('user/login'), { data })
             .then((res) => setUserSession(res.data.token, res.data.USU_User))
             .catch(e => console.error('Error: ', e))
-            .then(setTimeout(function() {window.location.reload()}, 550));
+            .then(setTimeout(function() {window.location.reload()}, 1000));
     }
 
     render() {

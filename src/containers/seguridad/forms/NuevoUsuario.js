@@ -26,21 +26,6 @@ class NuevoUsuario extends Component {
         }
     }
 
-    componentDidMount() {
-        this._isMounted = true;
-        if (this._isMounted) {
-            axios.get(URL.concat('rol'))
-                .then((res) => this.setState({
-                    roles: res.data.ROL_Nombre
-                }))
-                .catch(e => console.error(e));
-        }
-    }
-
-    componentWillUnmount() {
-        this._isMounted = false;
-    }
-
     handleChange = control => {
         const { name, value } = control;
         const state = {};
@@ -108,7 +93,7 @@ class NuevoUsuario extends Component {
                                 <h1>{roles}</h1>
                             ))}
                             <Select
-                                URL={URL.concat('rol')} name="rol" property="name"
+                                URL={URL.concat('rol')} name="rol" property="ROL_Nombre"
                                 smallId="" smallTxt="Seleccione el rol" />
                         </div>
                         <div className="col">
