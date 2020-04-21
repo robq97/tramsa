@@ -22,7 +22,6 @@ const Navbar = (props) => {
                             </Link>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <Link class="dropdown-item" to="/sistema/cambiar-contrasena">Cambiar Contraseña</Link>
-                            <Link class="dropdown-item" to="/sistema/reiniciar-sesion">Reiniciar Sesión</Link>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -45,31 +44,6 @@ const Navbar = (props) => {
                             <Link class="dropdown-item" to="/administracion/producto">Productos</Link>
                             <Link class="dropdown-item" to="/administracion/cliente">Empresas/Clientes</Link>
                             <Link class="dropdown-item" to="/administracion/proveedor">Proveedores</Link>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Procesos
-                            </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <Link class="dropdown-item" to="/procesos/crear-pedido-materias">Crear Pedido Materias</Link>
-                            <Link class="dropdown-item" to="/procesos/comprobar-orden-de-pedido">Comprobar Orden de Pedido</Link>
-                            <Link class="dropdown-item" to="/procesos/pedido">Pedidos</Link>
-                            <Link class="dropdown-item" to="/procesos/entrada-de-inventario">Entrada de Inventario</Link>
-                            <Link class="dropdown-item" to="/procesos/produccion-en-lote">Producción en Lote</Link>
-                            <Link class="dropdown-item" to="/procesos/punto-de-venta">Punto de Venta</Link>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Cajas
-                            </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <Link class="dropdown-item" to="/cajas/apertura-cajas">Apertura Cajas</Link>
-                            <Link class="dropdown-item" to="/cajas/arqueo-caja">Arqueo Cajas</Link>
-                            <Link class="dropdown-item" to="/cajas/registrar-pase-dinero">Pases Dinero</Link>
-                            <Link class="dropdown-item" to="/#">Exportar Facturas XML</Link>
-                            <Link class="dropdown-item" to="/cajas/cierre-caja">Cierre Caja</Link>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
