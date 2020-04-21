@@ -27,12 +27,12 @@ class Login extends Component {
     handleSubmit = async event => {
         event.preventDefault();
         const data = {
-            userName: this.state.userName,
-            password: this.state.password
+            USU_User: this.state.userName,
+            USU_Password: this.state.password
         }
 
         await axios.post(URL.concat('user/login'), { data })
-            .then((res) => setUserSession(res.data.token, res.data.userName))
+            .then((res) => setUserSession(res.data.token, res.data.USU_User))
             .catch(e => console.error('Error: ', e))
             .then(setTimeout(function() {window.location.reload()}, 550));
     }

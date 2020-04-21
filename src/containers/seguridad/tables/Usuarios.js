@@ -11,12 +11,12 @@ class Usuarios extends Component {
                     title="Busqueda de Usuario" titleType="title-table" />
                 <Table
                     type="normal"
-                    url="https://jsonplaceholder.typicode.com/posts"
-                    header1="Usuario" accessor1="id" filterable1={true} width1={200} show1={true}
-                    header2="Correo Electrónico" accessor2="title" filterable2={true} width2={300} show2={true}
-                    header3="Nombre" accessor3="userId" filterable3={false} width3={225} show3={true}
-                    header4="Rol" accessor4="body" filterable4={false} width4={125} show4={true}
-                    header5="Estado" accessor5="body" filterable5={false} width5={100} show5={true}
+                    url="http://apitramsa.azurewebsites.net/user/"
+                    header1="Usuario" accessor1="USU_User" filterable1={true} width1={200} show1={true}
+                    header2="Correo Electrónico" accessor2="USU_Email" filterable2={true} width2={300} show2={true}
+                    header3="Nombre" accessor3="USU_Nombre" filterable3={false} width3={225} show3={true}
+                    header4="Rol" accessor4="USU_Rol" filterable4={false} width4={125} show4={true}
+                    header5="Estado" accessor5="USU_Estado" filterable5={false} width5={100} show5={true}
                     show6={false}
                     iconShow={true}
                     inputShow={false}

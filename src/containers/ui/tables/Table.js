@@ -14,22 +14,25 @@ import VentaType from './types/Venta';
 import VentaBottom from './types/VentaBottom';
 import CajaBottom from './types/CajaBottom';
 import ComprobacionType from './types/Comprobacion';
+import Axios from 'axios';
 
 
 class Table extends Component {
 
-    state = {
-        rows: []
+    constructor(props) {
+        super(props);
+        this.state = {
+            rows: []
+        }
     }
 
     componentDidMount() {
         const url = this.props.url;
-        fetch(
-            url, {
-            method: "GET"
-        }).then(response => response.json()).then(rows => {
-            this.setState({ rows: rows })
-        })
+        Axios.get(url)
+            .then(response => {
+                this.setState({ rows: response.data });
+                console.table(this.state.rows)
+            })
     }
 
     render() {
@@ -103,7 +106,7 @@ class Table extends Component {
                                             <Label lblText="linea 6" /><br />
                                             <Label lblText="linea 7" /><br />
                                         </div>} />
-                                    <Modal id="delete" body={false} confirmBtn={true} title="¿Está seguro que desea eliminar el item?" />
+                                    <Modal id="delete" body={false} confirmBtn={true} confirmBtnAction={this.props.deleteAction} title="¿Está seguro que desea eliminar el item?" />
                                 </div>}
                         </div>
                     )

@@ -30,8 +30,8 @@ class CambioContraseña extends Component {
         let success = false;
 
         const data = {
-            userName: this.state.userName,
-            password: this.state.password
+            USU_User: this.state.userName,
+            USU_Password: this.state.password
         }
 
         axios.post(URL.concat('user/login'), data)
@@ -55,19 +55,18 @@ class CambioContraseña extends Component {
     handleSubmit = event => {
         event.preventDefault();
         const data = {
-            userName: this.state.userName,
-            currentPassword: this.state.currentPassword,
-            password: this.state.password
+            USU_User: this.state.userName,
+            USU_Password: this.state.password
         }
 
         if (this.validateOldPassword()) {
             if (this.validateEqualPasswords()) {
-                axios.post(URL.concat('user/update'), { data })
+                axios.post(URL.concat('user/changePassword'), { data })
                     .then((res) => {
                         alert(res.data.message);
                         document.getElementById("password-change-form").reset();
                     })
-                    .catch(error => console.error('Error: ', error))
+                    .catch(error => console.error('Error: ', error));
             } else {
                 alert('Revise su informacion e intente de nuevo');
             }

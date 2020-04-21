@@ -1,24 +1,37 @@
 import React, { Component } from 'react';
 
 class Select extends Component {
-    state = {
-        options: []
+
+    _isMounted = false;
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            options: [],
+        };
     }
 
     componentDidMount() {
+        this._isMounted = true;
         let initialOptions = [];
-        fetch(this.props.URL)
-            .then(response => {
-                return response.json();
-            }).then(data => {
-                initialOptions = (data.results || []).map((option) => {
-                    return option
+        if (this._isMounted) {
+            fetch(this.props.URL)
+                .then(response => {
+                    return response.json();
+                }).then(data => {
+                    initialOptions = (data.results || []).map((option) => {
+                        return option
+                    });
+                    console.log(initialOptions);
+                    this.setState({
+                        options: initialOptions,
+                    });
                 });
-                console.log(initialOptions);
-                this.setState({
-                    options: initialOptions,
-                });
-            });
+        }
+    }
+
+    componentWillUnmount() {
+        this._isMounted = false;
     }
 
     render() {
@@ -29,10 +42,10 @@ class Select extends Component {
         );
 
         return (
-            <div class={" col-sm-" + this.props.size} > {/* 1 al 12*/}
-                <small id={this.props.smallId} class="form-text text-muted mb-1">{this.props.smallTxt}</small>
-                <div class="input-group mb-4">
-                    <select class="form-control">
+            <div className={" col-sm-" + this.props.size} > {/* 1 al 12*/}
+                <small id={this.props.smallId} className="form-text text-muted mb-1">{this.props.smallTxt}</small>
+                <div className="input-group mb-4">
+                    <select className="form-control">
                         {optionItems}
                     </select>
                 </div>
