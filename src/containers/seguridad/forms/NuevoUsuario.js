@@ -3,8 +3,6 @@ import Button from '../../../components/ui/buttons/Button';
 import Input from '../../../components/ui/input/Input';
 import Card from '../../../components/ui/card/Card';
 import Title from '../../../components/ui/title/Title';
-import Radio from '../../../components/ui/radio/Radio';
-import Select from '../../ui/select/Select';
 import axios from 'axios';
 import { URL } from '../../util/common';
 
@@ -20,7 +18,7 @@ class NuevoUsuario extends Component {
             name: '',
             password: '',
             passwordValidation: '',
-            status: 'Activo',
+            status: '',
             roles: [],
             rol: ''
         }
@@ -30,7 +28,7 @@ class NuevoUsuario extends Component {
         axios.get(URL.concat('rol'))
             .then((response) => this.setState({
                 roles: response.data
-            }))
+            }));
     }
 
     handleChange = control => {
