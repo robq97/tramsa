@@ -11,21 +11,22 @@ class Select extends Component {
             .then(response => {
                 return response.json();
             }).then(data => {
-                initialOptions = (data.results || []).map((option) => {
-                    return option
+                initialOptions = data.map(option => {
+                    return option;
                 });
-                console.log(initialOptions);
+                console.log(initialOptions)
                 this.setState({
-                    options: initialOptions,
+                    options: initialOptions
                 });
             });
     }
 
+
     render() {
+
         let options = this.state.options;
         let optionItems = options.map((option) =>
-
-            <option key={option.name}>{option.name}</option>
+            <option key={option._id}>{option.ROL_Nombre}</option>
         );
 
         return (

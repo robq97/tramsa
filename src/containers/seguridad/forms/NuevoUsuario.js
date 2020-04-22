@@ -32,8 +32,8 @@ class NuevoUsuario extends Component {
                     <div class="row align-items-center">
                         <div class="col pl-5">
                             <Select
-                                URL="https://swapi.co/api/planets/" property="name"
-                                smallId="" smallTxt="Seleccione el rol" />
+                                URL="http://apitramsa.azurewebsites.net/rol" type="rol"
+                                smallId="" smallTxt="Seleccione el rol" name="option.ROL_Nombre" />
                         </div>
                         <div class="col">
                             <Input
