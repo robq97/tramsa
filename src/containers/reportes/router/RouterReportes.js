@@ -7,7 +7,6 @@ import Table_Reporte_Inventario_General from '../tables/TablaReporteInventarioGe
 import Table_Reporte_Inventario_Bodega from '../tables/TablaReporteInventarioBodega';
 import Table_Reporte_Ventas from '../tables/TablaReporteVentas';
 import Table_Reporte_Lista_Precios from '../tables/TablaListaPrecios';
-import PrintTest from '../../ui/tables/PrintTest';
 
 class RouterReportes extends Component {
 
@@ -21,7 +20,6 @@ class RouterReportes extends Component {
                 <Route path="/reportes/ventas" exact component={Reporte_Ventas} />
                 <Route path="/reportes/ventas/general" exact component={Table_Reporte_Ventas} />
                 <Route path="/reportes/ventas/precios" exact component={Table_Reporte_Lista_Precios} />
-                <Route path="/print" exact component={PrintTest} />
             </div>
         );
     }

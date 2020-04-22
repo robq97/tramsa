@@ -11,6 +11,7 @@ class Usuarios extends Component {
                     title="Busqueda de Usuario" titleType="title-table" />
                 <Table
                     type="normal"
+                    edit="usuario"
                     url="https://jsonplaceholder.typicode.com/posts"
                     header1="Usuario" accessor1="id" filterable1={true} width1={200} show1={true}
                     header2="Correo Electrónico" accessor2="title" filterable2={true} width2={300} show2={true}

@@ -14,6 +14,13 @@ import VentaType from './types/Venta';
 import VentaBottom from './types/VentaBottom';
 import CajaBottom from './types/CajaBottom';
 import ComprobacionType from './types/Comprobacion';
+import EditarMateriaPrima from '../../administracion/forms/Editar_Materia_Prima';
+import EditarBodega from '../../administracion/forms/Editar_Bodega';
+import EditarCamion from '../../administracion/forms/Editar_Camion'
+import EditarProducto from '../../administracion/forms/Editar_Producto';
+import EditarCliente from '../../administracion/forms/Editar_Cliente';
+import EditarProveedor from '../../administracion/forms/Editar_Proveedor';
+import EditarUsuario from '../../seguridad/forms/Editar_Usuario';
 
 
 class Table extends Component {
@@ -83,15 +90,36 @@ class Table extends Component {
                                     <IconButton
                                         type="" icon="delete" color={colorPalette.red._700}
                                         toggle="modal" target="#delete" />
+                                    <Modal id="delete" body={false} confirmBtn={true} title="¿Está seguro que desea eliminar el item?" />
                                 </div> : <div>
                                     <IconButton
-                                        type="" icon="create" color={colorPalette.grey._700} />
+                                        type="" icon="create" color={colorPalette.grey._700}
+                                        toggle="modal" target="#edit" />
+
                                     <IconButton
                                         type="" icon="info" color={colorPalette.blue._700}
                                         toggle="modal" target="#info" />
                                     <IconButton
                                         type="" icon="delete" color={colorPalette.red._700}
                                         toggle="modal" target="#delete" />
+                                    <Modal
+                                        id="edit" body={true} confirmBtn={false} title="Editar"
+                                        bodyContent={<div> EditarUsuario
+                                            {this.props.edit === "materia-prima" ?
+                                                <EditarMateriaPrima /> : null}
+                                            {this.props.edit === "bodega" ?
+                                                <EditarBodega /> : null}
+                                            {this.props.edit === "camion" ?
+                                                <EditarCamion /> : null}
+                                            {this.props.edit === "producto" ?
+                                                <EditarProducto /> : null}
+                                            {this.props.edit === "cliente" ?
+                                                <EditarCliente /> : null}
+                                            {this.props.edit === "proveedor" ?
+                                                <EditarProveedor /> : null}
+                                            {this.props.edit === "usuario" ?
+                                                <EditarUsuario /> : null}
+                                        </div>} />
                                     <Modal
                                         id="info" body={true} confirmBtn={false} title="Información detallada"
                                         bodyContent={<div>
