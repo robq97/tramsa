@@ -64,7 +64,6 @@ const Navbar = (props) => {
                             <Link class="dropdown-item" to="/consultas/bitacora">Bitácora</Link>
                             <Link class="dropdown-item" to="/consultas/clientes">Clientes</Link>
                             <Link class="dropdown-item" to="/consultas/pedidos-pendientes">Pedidos Pendientes</Link>
-                            <Link class="dropdown-item" to="/#">Facturas</Link>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
