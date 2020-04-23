@@ -18,7 +18,6 @@ class NuevoUsuario extends Component {
             name: '',
             password: '',
             passwordValidation: '',
-            status: '',
             roles: [],
             rol: ''
         }
@@ -52,7 +51,6 @@ class NuevoUsuario extends Component {
             USU_Email: this.state.email,
             USU_User: this.state.userName,
             USU_Password: this.state.password,
-            USU_Estado: this.state.status,
             USU_Nombre: this.state.name,
             USU_Rol: this.state.rol
         }
@@ -115,18 +113,6 @@ class NuevoUsuario extends Component {
                             <Input
                                 smallId="" name="passwordValidation" smallTxt="Confirmar Contraseña"
                                 icon="lock" id="" placeholder="Confirmar contraseña" type="password" required={true} onChange={(ev) => this.handleChange(ev.target)} />
-                        </div>
-                    </div>
-                    <div className="row align-items-center">
-                        <div className="col pl-5">
-                            {/*<Radio
-                                smallId="" name="status" smallTxt="Seleccione un estado"
-                            value1="activo" txt1="Activo" value2="inactivo" txt2="Inactivo" onChange={(ev) => this.handleChange(ev.target)}/>*/}
-                            <small>Estado</small>
-                            <select name="estado" onChange={(ev) => this.handleChange(ev.target)}>
-                                <option name="Activo" value="Activo">Activo</option>
-                                <option name="Inactivo" value="Inactivo">Inactivo</option>
-                            </select>
                         </div>
                     </div>
                     <div className="text-center">

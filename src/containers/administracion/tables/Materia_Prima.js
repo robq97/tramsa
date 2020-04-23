@@ -12,17 +12,17 @@ class Tipo_Materia_Prima extends Component {
                     title={<Translate content="tituloTipoMateriaPrima" />} titleType="title-table" />
                 <Table
                     type="normal"
-                    edit="tipo-materia-prima"
-                    url={`http://apitramsa.azurewebsites.net/tipomateriaprima/${sessionStorage.getItem('user')}`}
-                    header1="Código" accessor1="TMP_Codigo" filterable1={true} width1={80} show1={true}
-                    header2="Nombre Corto" accessor2="TMP_NOM_Corto" filterable2={true} width2={300} show2={true}
-                    header3="Descripcion" accessor3="TMP_Descripcion" filterable3={false} width3={150} show3={true}
-                    show4={false}
+                    edit="materia-prima"
+                    url="https://jsonplaceholder.typicode.com/posts"
+                    header1="Código" accessor1="id" filterable1={true} width1={80} show1={true}
+                    header2="Nombre" accessor2="title" filterable2={true} width2={300} show2={true}
+                    header3="Cant. Existente" accessor3="userId" filterable3={false} width3={150} show3={true}
+                    header4="Unidad de Medida" accessor4="body" filterable4={false} width4={400} show4={true}
                     show5={false}
                     show6={false}
                     inputShow={false}
                     btnTxt={<Translate content="btnAgregarMateriaPrima" />}
-                    path="/administracion/nuevo-tipo-materia-prima" />
+                    path="/administracion/nueva-materia-prima" />
             </div>
         );
     }

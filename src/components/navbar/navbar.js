@@ -3,6 +3,7 @@ import Logo from '../logo/Logo';
 import { Link } from 'react-router-dom';
 import Modal from '../../containers/ui/modal/Modal';
 import Translate from 'react-translate-component';
+import { logOut } from '../../containers/util/common';
 
 class Navbar extends Component {
 
@@ -49,7 +50,8 @@ class Navbar extends Component {
                                 {<Translate content="administracion" />}
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <Link class="dropdown-item" to="/administracion/materia-prima">{<Translate content="tipoMateriaPrima" />}</Link>
+                                <Link class="dropdown-item" to="/administracion/tipo-materia-prima">{<Translate content="tipoMateriaPrima" />}</Link>
+                                <Link class="dropdown-item" to="/administracion/materia-prima">{<Translate content="materiaPrima" />}</Link>
                                 <Link class="dropdown-item" to="/administracion/bodega">{<Translate content="bodegas" />}</Link>
                                 <Link class="dropdown-item" to="/administracion/camion">{<Translate content="camiones" />}</Link>
                                 <Link class="dropdown-item" to="/administracion/producto">{<Translate content="productos" />}</Link>
@@ -104,7 +106,7 @@ class Navbar extends Component {
                         </li>
                         <li class="nav-item bg-dark navbar-btn">
                             <a class="nav-link  text-white " data-toggle="modal" data-target="#log-out" href="/#">{<Translate content="cerrarSesion" />}</a>
-                            <Modal id="log-out" body={false} confirmBtn={true} title={<Translate content="modalCerrarSesion" />} />
+                            <Modal id="log-out" body={false} confirmBtn={true} confirmBtnAction={logOut} title={<Translate content="modalCerrarSesion" />} />
                         </li>
                     </ul>
                 </div>

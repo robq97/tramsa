@@ -70,8 +70,7 @@ class Parametros extends Component {
         const { name, value } = control;
         const state = {};
         state[name] = value;
-        this.setState(state);
-        this.currencyUpdate();
+        this.setState(state, this.currencyUpdate);
     }
 
     handleChange = control => {

@@ -15,6 +15,7 @@ import VentaBottom from './types/VentaBottom';
 import CajaBottom from './types/CajaBottom';
 import ComprobacionType from './types/Comprobacion';
 import Axios from 'axios';
+import EditarTipoMateriaPrima from '../../administracion/forms/Editar_Tipo_Materia_Prima';
 import EditarMateriaPrima from '../../administracion/forms/Editar_Materia_Prima';
 import EditarBodega from '../../administracion/forms/Editar_Bodega';
 import EditarCamion from '../../administracion/forms/Editar_Camion'
@@ -23,13 +24,13 @@ import EditarCliente from '../../administracion/forms/Editar_Cliente';
 import EditarProveedor from '../../administracion/forms/Editar_Proveedor';
 import EditarUsuario from '../../seguridad/forms/Editar_Usuario';
 
-
 class Table extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            rows: []
+            rows: [],
+            selectedRow: ''
         }
     }
 
@@ -38,8 +39,31 @@ class Table extends Component {
         Axios.get(url)
             .then(response => {
                 this.setState({ rows: response.data });
-                console.table(this.state.rows)
             })
+    }
+
+    onRowClick = (state, rowInfo, column, instance) => {
+        return {
+            onClick: (e, handleOriginal) => {
+                sessionStorage.setItem('itemId', rowInfo.original._id);
+                console.log(rowInfo.original._id);
+                this.setState({
+                    selectedRow: rowInfo.original._id
+                })
+                if (handleOriginal) {
+                    handleOriginal()
+                }
+            }
+        };
+    };
+
+    deleteItem() {
+        const url = this.props.url;
+        Axios.get(url.concat(`delete/${this.state.selectedRow}`))
+            .then((res) => {
+                alert(res.data.message);
+            })
+            .catch((err) => console.error(err));
     }
 
     render() {
@@ -93,7 +117,7 @@ class Table extends Component {
                                     <IconButton
                                         type="" icon="delete" color={colorPalette.red._700}
                                         toggle="modal" target="#delete" />
-                                    <Modal id="delete" body={false} confirmBtn={true} title="¿Está seguro que desea eliminar el item?" />
+                                    <Modal id="delete" body={false} confirmBtn={true} confirmBtnAction={this.deleteItem()} title="¿Está seguro que desea eliminar el item?" />
                                 </div> : <div>
                                     <IconButton
                                         type="" icon="create" color={colorPalette.grey._700}
@@ -108,6 +132,8 @@ class Table extends Component {
                                     <Modal
                                         id="edit" body={true} confirmBtn={false} title="Editar"
                                         bodyContent={<div>
+                                            {this.props.edit === "tipo-materia-prima" ?
+                                                <EditarTipoMateriaPrima /> : null}
                                             {this.props.edit === "materia-prima" ?
                                                 <EditarMateriaPrima /> : null}
                                             {this.props.edit === "bodega" ?
@@ -196,6 +222,7 @@ class Table extends Component {
                     nextText={'Siguiente'}
                     loading={false}
                     showPagination={this.props.pagination}
+                    getTrProps={this.onRowClick}
                 />
 
                 {this.props.type === "arqueo" ?

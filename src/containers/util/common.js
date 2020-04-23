@@ -17,6 +17,7 @@ export const logOut = () => {
     sessionStorage.removeItem('token');
     sessionStorage.removeItem('user');
     sessionStorage.setItem('auth', "0");
+    window.location.reload();
 }
 
 // Gets user info
