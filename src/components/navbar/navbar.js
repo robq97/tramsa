@@ -103,8 +103,8 @@ class Navbar extends Component {
                             </Link>
                         </li>
                         <li class="nav-item bg-dark navbar-btn">
-                            <a class="nav-link  text-white " data-toggle="modal" data-target="#log-out" href="/#">Cerrar Sesi&oacute;n</a>
-                            <Modal id="log-out" body={false} confirmBtn={true} title="¿Está seguro que desea cerrar la sesión?" />
+                            <a class="nav-link  text-white " data-toggle="modal" data-target="#log-out" href="/#">{<Translate content="cerrarSesion" />}</a>
+                            <Modal id="log-out" body={false} confirmBtn={true} title={<Translate content="modalCerrarSesion" />} />
                         </li>
                     </ul>
                 </div>

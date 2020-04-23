@@ -12,6 +12,7 @@ import RouterParametros from '../containers/parametros/router/RouterParametros';
 import RouterLogin from '../containers/login/router/RouterLogin';
 import RouterConsultas from '../containers/consultas/router/RouterConsultas';
 import RouterSeguridad from '../containers/seguridad/router/RouterSeguridad';
+import { getUser } from './util/common';
 import counterpart from 'counterpart';
 import es from '../lang/es';
 import en from '../lang/en';
@@ -23,7 +24,7 @@ counterpart.setLocale('es');
 class App extends Component {
 
   state = {
-    auth: true,
+    auth: sessionStorage.getItem('auth'),
     lang: 'es'
   }
 
@@ -35,12 +36,12 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        {this.state.auth ?
+        {this.state.auth === "1" ?
           <div>
-            <NavBar user="nombreUsuario" parentCallback={this.langChange} />
+            <NavBar user={getUser()} parentCallback={this.langChange} />
             <Layout>
 
-              {/*<Redirect from='/' to="/parametros/param-generales" />*/}
+              <Redirect from='/' to="/parametros/param-generales" />
               <RouterAdministracion />
               <RouterAyuda />
               <RouterReportes />

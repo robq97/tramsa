@@ -3,27 +3,58 @@ import Button from '../../components/ui/buttons/Button';
 import Input from '../../components/ui/input/Input';
 import Label from '../../components/ui/label/Label';
 import Title from '../../components/ui/title/Title';
-import Logo from '../../components/logo/Logo'
+import Logo from '../../components/logo/Logo';
+import axios from 'axios';
+import { setUserSession, URL } from '../util/common';
 
 class Login extends Component {
+
+    constructor() {
+        super();
+        this.state = {
+            userName: '',
+            password: '',
+        }
+    }
+
+    handleChange = control => {
+        const { name, value } = control;
+        const state = {};
+        state[name] = value;
+        this.setState(state);
+    }
+
+    handleSubmit = async event => {
+        event.preventDefault();
+        const data = {
+            USU_User: this.state.userName,
+            USU_Password: this.state.password
+        }
+
+        await axios.post(URL.concat('user/login'), { data })
+            .then((res) => setUserSession(res.data.token, res.data.USU_User))
+            .catch(e => console.error('Error: ', e))
+            .then(setTimeout(function() {window.location.reload()}, 1000));
+    }
+
     render() {
         return (
-            <div class="card size mx-auto card-center regular shadow background-login gradient">
+            <div className="card size mx-auto card-center regular shadow background-login gradient">
                 <Title title="Tramesquin" titleType="" />
                 <div class="text-center">
                     <Logo />
                 </div>
-                <form>
-                    <div class="center_div mb-3">
-                        <Label for="username" lblText="Usuario" />
-                        <Input icon="account_circle" type="text" id="username" placeholder="Usuario" smallTxt="Ingrese su usuario" smallId="lblUser" required="true" />
+                <form onSubmit={this.handleSubmit}>
+                    <div className="center_div mb-3">
+                        <Label htmlFor="username" lblText="Usuario" />
+                        <Input name="userName" icon="account_circle" type="text" id="username" placeholder="Usuario" smallTxt="Ingrese su usuario" smallId="lblUser" required={true} onChange={(ev) => this.handleChange(ev.target)} />
                     </div>
-                    <div class="center_div mb-3">
-                        <Label for="password" lblText="Contraseña" />
-                        <Input icon="lock" type="password" id="password" placeholder="Contraseña" smallTxt="Ingrese su contraseña" smallId="lblPassword" required="true" />
+                    <div className="center_div mb-3">
+                        <Label htmlFor="password" lblText="Contraseña" />
+                        <Input name="password" icon="lock" type="password" id="password" placeholder="Contraseña" smallTxt="Ingrese su contraseña" smallId="lblPassword" required={true} onChange={(ev) => this.handleChange(ev.target)} />
                     </div>
-                    <div class="text-center">
-                        <Button type="" icon="arrow_forward" btnTxt="Iniciar Sesión" />
+                    <div className="text-center">
+                        <Button type="submit" icon="arrow_forward" btnTxt="Iniciar Sesión" />
                     </div>
                 </form>
             </div>

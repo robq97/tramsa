@@ -5,58 +5,67 @@ import Card from '../../../components/ui/card/Card';
 import Title from '../../../components/ui/title/Title';
 import Select from '../../ui/select/Select'
 import AutomaticCode from '../../../components/ui/automaticCode/AutomaticCode'
+import Translate from 'react-translate-component';
+import counterpart from 'counterpart';
 
 class NuevaBodega extends Component {
     render() {
+
+        const placeholderNombreBodega = counterpart.translate('placeholderNombreBodega');
+        const placeholderNombreCorto = counterpart.translate('placeholderNombreCorto');
+        const placeholderAliasBodega = counterpart.translate('placeholderAliasBodega');
+        const placeholderEspacioBodega = counterpart.translate('placeholderEspacioBodega');
+        const placeholderUbicacionBodega = counterpart.translate('placeholderUbicacionBodega');
+
         return (
             <Card>
                 <form>
-                    <Title title="Nueva Bodega" titleType="title-form" />
+                    <Title title={<Translate content="tituloNuevaBodega" />} titleType="title-form" />
                     <div class="row align-items-center">
                         <div class="col pl-5">
                             <Input
-                                smallId="" smallTxt="Ingrese el nombre"
-                                icon="title" id="" placeholder="Nombre" type="text" required="true" />
+                                smallId="" smallTxt={<Translate content="smallNombreBodega" />}
+                                icon="title" id="" placeholder={placeholderNombreBodega} type="text" required="true" />
                         </div>
                         <div class="col">
                             <Input
-                                smallId="" smallTxt="Ingrese el nombre corto"
-                                icon="format_size" id="" placeholder="Nombre Corto" type="text" required="true" />
+                                smallId="" smallTxt={<Translate content="smallNombreCortoBodega" />}
+                                icon="format_size" id="" placeholder={placeholderNombreCorto} type="text" required="true" />
                         </div>
                         <div class="col pr-5">
                             <Input
-                                smallId="" smallTxt="Ingrese el alias"
-                                icon="business_center" id="" placeholder="Alias" type="text" required="true" />
+                                smallId="" smallTxt={<Translate content="smallAliasBodega" />}
+                                icon="business_center" id="" placeholder={placeholderAliasBodega} type="text" required="true" />
                         </div>
                     </div>
                     <div class="row align-items-center">
                         <div class="col pl-5">
                             <Input
-                                smallId="" smallTxt="Ingrese el espacio de la bodega"
-                                icon="meeting_room" id="" placeholder="Espacio" type="number" required="true" />
+                                smallId="" smallTxt={<Translate content="smallEspacioBodega" />}
+                                icon="meeting_room" id="" placeholder={placeholderEspacioBodega} type="number" required="true" />
                         </div>
                         <div class="col">
                             <Select
-                                URL="https://swapi.co/api/planets/" property="name" //esta picha no sirve porque hay que pasar un objeto, no un string
-                                smallId="" smallTxt="Seleccione una medida" />
+                                URL="https://swapi.co/api/planets/" property="name"
+                                smallId="" smallTxt={<Translate content="smallMedidaBodega" />} />
                         </div>
                         <div class="col pr-5">
                             <Select
-                                URL="https://swapi.co/api/planets/" property="name" //esta picha no sirve porque hay que pasar un objeto, no un string
-                                smallId="" smallTxt="Seleccione el tipo de bodega" />
+                                URL="https://swapi.co/api/planets/" property="name"
+                                smallId="" smallTxt={<Translate content="smallTipoBodega" />} />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col pl-5 pr-5">
                             <Input
-                                smallId="" smallTxt="Ingrese la ubicacón"
-                                icon="place" id="" placeholder="Ubicación" type="text" required="true" />
+                                smallId="" smallTxt={<Translate content="smallUbicacionBodega" />}
+                                icon="place" id="" placeholder={placeholderUbicacionBodega} type="text" required="true" />
                         </div>
                     </div>
-                    <AutomaticCode smallId="" smallTxt="Código automático de la nueva bodega"
+                    <AutomaticCode smallId="" smallTxt={<Translate content="smallNuevaBodega" />}
                         id="" placeholder="12345" />
                     <div class="text-center">
-                        <Button type="" icon="send" btnTxt="Agregar Nueva Materia Prima" />
+                        <Button type="" icon="send" btnTxt={<Translate content="btnNuevaBodega" />} />
                     </div>
                 </form>
             </Card>

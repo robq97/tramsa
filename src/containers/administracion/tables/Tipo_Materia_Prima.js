@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Title from '../../../components/ui/title/Title';
 import Table from '../../ui/tables/Table';
+import Translate from 'react-translate-component';
 
 class Tipo_Materia_Prima extends Component {
 
@@ -8,7 +9,7 @@ class Tipo_Materia_Prima extends Component {
         return (
             <div>
                 <Title
-                    title="Tipo de Materia Prima" titleType="title-table" />
+                    title={<Translate content="tituloTipoMateriaPrima" />} titleType="title-table" />
                 <Table
                     type="normal"
                     edit="materia-prima"
@@ -20,7 +21,7 @@ class Tipo_Materia_Prima extends Component {
                     show5={false}
                     show6={false}
                     inputShow={false}
-                    btnTxt="Agregar Nueva Materia Prima"
+                    btnTxt={<Translate content="btnAgregarMateriaPrima" />}
                     path="/administracion/nueva-materia-prima" />
             </div>
         );

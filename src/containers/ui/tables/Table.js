@@ -14,6 +14,7 @@ import VentaType from './types/Venta';
 import VentaBottom from './types/VentaBottom';
 import CajaBottom from './types/CajaBottom';
 import ComprobacionType from './types/Comprobacion';
+import Axios from 'axios';
 import EditarMateriaPrima from '../../administracion/forms/Editar_Materia_Prima';
 import EditarBodega from '../../administracion/forms/Editar_Bodega';
 import EditarCamion from '../../administracion/forms/Editar_Camion'
@@ -25,18 +26,20 @@ import EditarUsuario from '../../seguridad/forms/Editar_Usuario';
 
 class Table extends Component {
 
-    state = {
-        rows: []
+    constructor(props) {
+        super(props);
+        this.state = {
+            rows: []
+        }
     }
 
     componentDidMount() {
         const url = this.props.url;
-        fetch(
-            url, {
-            method: "GET"
-        }).then(response => response.json()).then(rows => {
-            this.setState({ rows: rows })
-        })
+        Axios.get(url)
+            .then(response => {
+                this.setState({ rows: response.data });
+                console.table(this.state.rows)
+            })
     }
 
     render() {
@@ -104,7 +107,7 @@ class Table extends Component {
                                         toggle="modal" target="#delete" />
                                     <Modal
                                         id="edit" body={true} confirmBtn={false} title="Editar"
-                                        bodyContent={<div> EditarUsuario
+                                        bodyContent={<div>
                                             {this.props.edit === "materia-prima" ?
                                                 <EditarMateriaPrima /> : null}
                                             {this.props.edit === "bodega" ?
@@ -131,7 +134,7 @@ class Table extends Component {
                                             <Label lblText="linea 6" /><br />
                                             <Label lblText="linea 7" /><br />
                                         </div>} />
-                                    <Modal id="delete" body={false} confirmBtn={true} title="¿Está seguro que desea eliminar el item?" />
+                                    <Modal id="delete" body={false} confirmBtn={true} confirmBtnAction={this.props.deleteAction} title="¿Está seguro que desea eliminar el item?" />
                                 </div>}
                         </div>
                     )
