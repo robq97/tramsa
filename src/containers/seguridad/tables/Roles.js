@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Title from '../../../components/ui/title/Title';
 import Table from '../../ui/tables/Table';
+import Translate from 'react-translate-component';
 
 class Roles extends Component {
 
@@ -12,7 +13,7 @@ class Roles extends Component {
         return (
             <div>
                 <Title
-                    title="Roles" titleType="title-table" />
+                    title={<Translate content="tituloRoles" />} titleType="title-table" />
                 <Table
                     type="normal"
                     url="http://apitramsa.azurewebsites.net/rol"

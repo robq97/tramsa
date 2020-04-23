@@ -3,74 +3,85 @@ import Button from '../../../components/ui/buttons/Button';
 import Input from '../../../components/ui/input/Input';
 import Card from '../../../components/ui/card/Card';
 import Title from '../../../components/ui/title/Title';
-import Select from '../../../containers/ui/select/Select'
+import Select from '../../../containers/ui/select/Select';
+import Translate from 'react-translate-component';
+import counterpart from 'counterpart';
 
 class NuevoCliente extends Component {
     render() {
+
+        const placeholderNombreCliente = counterpart.translate('placeholderNombreCliente');
+        const placeholderPrimerApellido = counterpart.translate('placeholderPrimerApellido');
+        const placeholderNumeroIdentificacion = counterpart.translate('placeholderNumeroIdentificacion');
+        const placeholderNumeroTelefono = counterpart.translate('placeholderNumeroTelefono');
+        const placeholderEmail = counterpart.translate('placeholderEmail');
+        const placeholderDireccion = counterpart.translate('placeholderDireccion');
+        const placeholderSegundoApellido = counterpart.translate('placeholderSegundoApellido');
+
         return (
             <Card>
                 <form>
-                    <Title title="Nuevo Cliente" titleType="title-form" />
+                    <Title title={<Translate content="tituloNuevoCliente" />} titleType="title-form" />
                     <div class="row align-items-center">
                         <div class="col pl-5">
                             <Input
-                                smallId="" smallTxt="Ingrese el nombre"
-                                icon="title" id="" placeholder="Nombre" type="text" required="true" />
+                                smallId="" smallTxt={<Translate content="smallNombreCliente" />}
+                                icon="title" id="" placeholder={placeholderNombreCliente} type="text" required="true" />
                         </div>
                         <div class="col">
                             <Input
-                                smallId="" smallTxt="Ingrese el primer apellido"
-                                icon="format_size" id="" placeholder="Primer Apellido" type="text" required="true" />
+                                smallId="" smallTxt={<Translate content="smallPrimerApellido" />}
+                                icon="format_size" id="" placeholder={placeholderPrimerApellido} type="text" required="true" />
                         </div>
                         <div class="col pr-5">
                             <Input
-                                smallId="" smallTxt="Ingrese el segundo apellido"
-                                icon="format_size" id="" placeholder="Segundo Apellido" type="text" required="true" />
+                                smallId="" smallTxt={<Translate content="smallSegundoApellido" />}
+                                icon="format_size" id="" placeholder={placeholderSegundoApellido} type="text" required="true" />
                         </div>
                     </div>
                     <div class="row align-items-center">
                         <div class="col pl-5">
                             <Select
                                 URL="https://swapi.co/api/planets/" property="name"
-                                smallId="" smallTxt="Seleccione el tipo de identificación" />
+                                smallId="" smallTxt={<Translate content="smallTipoIdentificacion" />} />
                         </div>
                         <div class="col">
                             <Input
-                                smallId="" smallTxt="Ingrese el número de identificación"
-                                icon="featured_video" id="" placeholder="Identificación" type="number" required="true" />
+                                smallId="" smallTxt={<Translate content="smallNumeroIdentificacion" />}
+                                icon="featured_video" id="" placeholder={placeholderNumeroIdentificacion} type="number" required="true" />
                         </div>
                         <div class="col pr-5">
                             <Input
-                                smallId="" smallTxt="Ingrese el número de teléfono"
-                                icon="phone" id="" placeholder="Teléfono" type="tel" required="true" />
+                                smallId="" smallTxt={<Translate content="smallNumeroTelefono" />}
+                                icon="phone" id="" placeholder={placeholderNumeroTelefono} type="tel" required="true" />
                         </div>
                     </div>
                     <div class="row align-items-center">
                         <div class="col pl-5">
                             <Input
-                                smallId="" smallTxt="Ingrese el correo electrónico"
-                                icon="featured_video" id="" placeholder="Correo electrónico" type="email" required="true" />
+                                smallId="" smallTxt={<Translate content="smallEmail" />}
+                                icon="featured_video" id="" placeholder={placeholderEmail} type="email" required="true" />
                         </div>
                         <div class="col">
                             <Select
                                 URL="https://swapi.co/api/planets/" property="name"
-                                smallId="" smallTxt="Seleccione el estado del cliente" />
+                                smallId="" smallTxt={<Translate content="smallEstadoCliente" />} />
                         </div>
                         <div class="col pr-5">
                             <Input
-                                smallId="" smallTxt="Ingrese la fecha de ingreso"
-                                icon="calendar_today" id="" placeholder="Teléfono" type="date" required="true" />
+                                smallId="" smallTxt={<Translate content="smallFechaIngreso" />}
+                                icon="calendar_today" id="" placeholder="" type="date" required="true" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col pl-5 pr-5">
                             <Input
-                                smallId="" smallTxt="Ingrese la dirección"
-                                icon="place" id="" placeholder="Dirección" type="text" required="true" />
+                                smallId="" smallTxt={<Translate content="smallDireccion" />}
+                                icon="place" id="" placeholder={placeholderDireccion} type="text" required="true" />
                         </div>
                     </div>
                     <div class="text-center">
-                        <Button type="" icon="send" btnTxt="Agregar Nuevo Cliente" />
+                        <Button type="" icon="send" btnTxt={<Translate content="btnAgregarNuevoCliente" />} />
                     </div>
                 </form>
             </Card>

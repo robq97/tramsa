@@ -1,6 +1,19 @@
 export default {
 
+    //Single elements of components:
+
     modalGuardar: 'Guardar Cambios',
+    headerAcciones: 'Acciones',
+    modalEditar: 'Editar',
+    modalEliminar: '¿Está seguro que desea eliminar el item?',
+    modalDetalle: 'Información detallada',
+    modalConfirmar: 'Confirmar',
+    modalVolver: 'Volver',
+    btnImprimir: 'Imprimir',
+    btnExcel: 'Exportar a Excel',
+
+
+    //<---------------------------------------------------------------------------->
 
     //Navbar
     sistema: 'Sistema', cambiarContrasena: 'Cambiar Contraseña',
@@ -139,7 +152,109 @@ export default {
     labelMaestro: 'Maestro',
     smallNombreProducto: 'Ingrese el nombre',
     placeholderNombreProducto: 'Nombre',
-    smallDescProducto: 'Ingrese la descripción'
+    smallDescProducto: 'Ingrese la descripción',
+    placeholderDescProducto: 'Descripción',
+    smallMedidaProductos: 'Seleccione una medida',
+    smallPuntoReorden: 'Ingrese el punto de re-orden',
+    placeholderPuntoReorden: 'Punto de re-orden',
+    labelDetalle: 'Detalle',
+    smallCodigoProducto: 'Ingrese un código',
+    placeholderCodigoProducto: 'Código',
+    smallNuevoProducto: 'Código automático del nuevo producto',
+    tituloEditarProducto: 'Editar Producto',
+
+    //Tabla Clientes
+    tituloBusquedaCliente: 'Busqueda de Clientes',
+    btnAgregarNuevoCliente: 'Agregar Nuevo Cliente',
+
+    //Form & Modal - Clientes
+    tituloNuevoCliente: 'Nuevo Cliente',
+    smallNombreCliente: 'Ingrese el nombre',
+    placeholderNombreCliente: 'Nombre',
+    smallPrimerApellido: 'Ingrese el primer apellido',
+    placeholderPrimerApellido: 'Primer Apellido',
+    smallSegundoApellido: 'Ingrese el segundo apellido',
+    placeholderSegundoApellido: 'Segundo apellido',
+    smallTipoIdentificacion: 'Seleccione el tipo de identificación',
+    smallNumeroIdentificacion: 'Ingrese el número de identificación',
+    placeholderNumeroIdentificacion: 'Identificación',
+    smallNumeroTelefono: 'Ingrese el número de teléfono',
+    placeholderNumeroTelefono: 'Teléfono',
+    smallEmail: 'Ingrese el correo electrónico',
+    placeholderEmail: 'Correo electrónico',
+    smallEstadoCliente: 'Seleccione el estado del cliente',
+    smallFechaIngreso: 'Ingrese la fecha de ingreso',
+    smallDireccion: 'Ingrese la dirección',
+    placeholderDireccion: 'Dirección',
+    tituloEditarCliente: 'Editar Cliente',
+
+    //Tabla Proveedores
+    tituloBusquedaProveedores: 'Busqueda de Proveedores',
+    btnAgregarNuevoProveedor: 'Agregar Nuevo Proveedor',
+
+    //Form & Modal - Proveedores
+    tituloNuevoProveedor: 'Nuevo Proveedor',
+    smallNombreProveedor: 'Ingrese el nombre',
+    placeholderNombreProveedor: 'Nombre',
+    smallTipoIdentificacionProveedor: 'Seleccione el tipo de identificación',
+    smallNumeroIdentificacionProveedor: 'Ingrese el número de identificación',
+    placeholderNumeroIdentificacionProveedor: 'Identificación',
+    smallNumeroTelefonoProveedor: 'Ingrese el número de teléfono',
+    placeholderNumeroTelefonoProveedor: 'Teléfono',
+    smallEmailProveedor: 'Ingrese el correo electrónico',
+    placeholderEmailProveedor: 'Correo electrónico',
+    smallNombreContacto: 'Ingrese el nombre del contacto',
+    placeholderNombreContacto: 'Nombre contacto',
+    smallDireccionProveedor: 'Ingrese la dirección',
+    smallTelefonoContacto: 'Ingrese el número de teléfono del contacto',
+    placeholderTelefonoContacto: 'Teléfono contacto',
+    placeholderDireccionProveedor: 'Dirección',
+    tituloEditarProveedor: 'Editar Proveedor',
+
+    //<---------------------------------------------------------------------------->
+
+    //CONSULTAS
+    //Bitacora
+    tituloConsultaBitacora: 'Consulta de Bitácora',
+
+    //Clientes
+    tituloConsultaClientes: 'Consulta de Clientes',
+    btnClientesActivos: 'Ver Solo Clientes Activos',
+    btnClientesInactivos: 'Ver Solo Clientes Inactivos',
+
+    //Pedidos Pendientes
+    tituloPedidosPendientes: 'Consulta de Pedidos Pendientes',
+
+    //<---------------------------------------------------------------------------->
+
+    //REPORTES
+    //Productos
+    tituloReporteProductos: 'Reporte de Productos',
+
+    //Inventarios
+    tituloReporteInventarios: 'Reporte de Inventarios',
+    smallSeleccionBodega: 'Seleccione una bodega',
+    btnGenerarReporte: 'Generar Reporte',
+    btnReporteInventarioGeneral: 'Ver Reporte de Inventario General',
+    tituloReporteInvetarioGeneral: 'Reporte de Inventario General',
+    tituloReporteInvetarioBodega: 'Reporte de Inventario por Bodega',
+
+    //Ventas
+    tituloReporte: 'Reporte de Ventas',
+    smallDesde: 'Desde',
+    smallHasta: 'Hasta',
+    btnListadoPrecios: 'Ver Listado de Precios',
+    tituloReporteVentas: 'Reporte de Ventas',
+    tituloListaPrecios: 'Lista de Precios',
+
+    //<---------------------------------------------------------------------------->
+
+    //SEGURIDAD
+    //Eventos
+    tituloEventos: 'Eventos',
+
+    //Roles
+    tituloRoles: 'Roles',
 
 
 }

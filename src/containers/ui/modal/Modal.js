@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Button from '../../../components/ui/buttons/Button'
+import Translate from 'react-translate-component';
 
 class modal extends Component {
     state = {
@@ -23,11 +24,11 @@ class modal extends Component {
                                 {this.props.bodyContent}
                             </div>
                             : null}
-                        <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary mb-4 mt-3" data-dismiss="modal">Volver</button>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary mb-4 mt-3" data-dismiss="modal">{<Translate content="modalVolver" />}</button>
 
                             {this.state.confirmBtn ?
-                                <Button btnTxt="Confirmar" onClick={this.state.confirmBtnAction} icon="" /> : null}
+                                <Button btnTxt={<Translate content="modalConfirmar" />} onClick={this.state.confirmBtnAction} /> : null}
                         </div>
                     </div>
                 </div>

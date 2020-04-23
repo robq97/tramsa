@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactHTMLTableToExcel from 'react-html-table-to-excel';
+import Translate from 'react-translate-component';
 
 
 class ExportToExcel extends Component {
@@ -18,7 +19,7 @@ class ExportToExcel extends Component {
                     table="table-to-xls"
                     filename={this.props.filename}
                     sheet={this.props.filename}
-                    buttonText="Exportar a Excel" />
+                    buttonText={<Translate content="btnExcel" />} />
                 <table hidden="true" id="table-to-xls">
                     <thead>
                         <div>

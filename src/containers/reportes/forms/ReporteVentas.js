@@ -4,26 +4,27 @@ import Title from '../../../components/ui/title/Title';
 import Button from '../../../components/ui/buttons/Button';
 import Input from '../../../components/ui/input/Input';
 import { Link } from 'react-router-dom';
+import Translate from 'react-translate-component';
 
 class ReporteVentas extends Component {
     render() {
         return (
             <Card>
-                <Title title="Reporte de Ventas" titleType="title-form" />
+                <Title title={<Translate content="tituloReporte" />} titleType="title-form" />
                 <div class="row align-items-center pb-5">
                     <div class="col pl-5">
                         <Input
-                            smallId="" smallTxt="Desde"
+                            smallId="" smallTxt={<Translate content="smallDesde" />}
                             icon="calendar_today" id="" type="date" required="true" />
                     </div>
                     <div class="col">
                         <Input
-                            smallId="" smallTxt="Hasta"
+                            smallId="" smallTxt={<Translate content="smallHasta" />}
                             icon="calendar_today" id="" type="date" required="true" />
                     </div>
                     <div class="col pr-5">
                         <div class="text-center">
-                            <Link to="/reportes/ventas/general"><Button type="" icon="send" btnTxt="Generar Reporte" /></Link>
+                            <Link to="/reportes/ventas/general"><Button type="" icon="send" btnTxt={<Translate content="btnGenerarReporte" />} /></Link>
                         </div>
                     </div>
                 </div>
@@ -31,7 +32,7 @@ class ReporteVentas extends Component {
                 <div class="row align-items-center">
                     <div class="col">
                         <div class="text-center">
-                            <Link to="/reportes/ventas/precios"><Button type="" icon="send" btnTxt="Ver Listado de Precios" /></Link>
+                            <Link to="/reportes/ventas/precios"><Button type="" icon="send" btnTxt={<Translate content="btnListadoPrecios" />} /></Link>
                         </div>
                     </div>
                 </div>

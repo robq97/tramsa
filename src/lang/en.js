@@ -1,6 +1,18 @@
 export default {
 
+    //Single elements of components:
+
     modalGuardar: 'Save Changes',
+    headerAcciones: 'Actions',
+    modalEditar: 'Edit',
+    modalEliminar: 'Are you sure you want to delete the item?',
+    modalDetalle: 'Details',
+    modalConfirmar: 'Confirm',
+    modalVolver: 'Back',
+    btnImprimir: 'Print',
+    btnExcel: 'Export to Excel',
+
+    //<---------------------------------------------------------------------------->
 
     //Navbar
     sistema: 'System', cambiarContrasena: 'Change Password',
@@ -128,4 +140,109 @@ export default {
     smallNuevoCamion: 'Automatic code for new truck',
     btnNuevoCamion: 'Add New Truck',
     tituloEditarCamion: 'Edit Truck',
+
+    //Tabla Productos
+    tituloBusquedaProductos: 'Product Search',
+    btnAgregarNuevoProducto: 'Add New Product',
+
+    //Form & Modal - Productos
+    tituloNuevoProducto: 'New Product',
+    labelMaestro: 'Master',
+    smallNombreProducto: 'Enter a name',
+    placeholderNombreProducto: 'Name',
+    smallDescProducto: 'Enter a description',
+    placeholderDescProducto: 'Description',
+    smallMedidaProductos: 'Select a measurement',
+    smallPuntoReorden: 'Enter a reorder point',
+    placeholderPuntoReorden: 'Reorder point',
+    labelDetalle: 'Detail',
+    smallCodigoProducto: 'Enter a product code',
+    placeholderCodigoProducto: 'Code',
+    smallNuevoProducto: 'Automatic code for new product',
+    tituloEditarProducto: 'Edit Product',
+
+    //Tabla Clientes
+    tituloBusquedaCliente: 'Client Search',
+    btnAgregarNuevoCliente: 'Add New Client',
+
+    //Form & Modal - Clientes
+    tituloNuevoCliente: 'New Client',
+    smallNombreCliente: 'Enter a name',
+    placeholderNombreCliente: 'Name',
+    smallPrimerApellido: 'Enter a last name',
+    placeholderPrimerApellido: 'Last name',
+    smallSegundoApellido: 'Enter a surname',
+    placeholderSegundoApellido: 'Surname',
+    smallTipoIdentificacion: 'Select an id type',
+    smallNumeroIdentificacion: 'Enter an ID',
+    placeholderNumeroIdentificacion: 'Identification',
+    smallNumeroTelefono: 'Enter a phone number',
+    placeholderNumeroTelefono: 'Phone number',
+    smallEmail: 'Enter an email',
+    placeholderEmail: 'Email',
+    smallEstadoCliente: 'Select the clients state',
+    smallFechaIngreso: 'Select the admission date',
+    smallDireccion: 'Enter an address',
+    placeholderDireccion: 'Address',
+    tituloEditarCliente: 'Edit Client',
+
+    //Tabla Proveedores
+    tituloBusquedaProveedores: 'Provider Search',
+    btnAgregarNuevoProveedor: 'Add New Provider',
+
+    //Form & Modal - Proveedores
+    tituloNuevoProveedor: 'New Provider',
+    smallNombreProveedor: 'Enter a name',
+    placeholderNombreProveedor: 'Name',
+    smallTipoIdentificacionProveedor: 'Select an id type',
+    smallNumeroIdentificacionProveedor: 'Enter an ID',
+    placeholderNumeroIdentificacionProveedor: 'Identification',
+    smallNumeroTelefonoProveedor: 'Enter a phone number',
+    placeholderNumeroTelefonoProveedor: 'Phone number',
+    smallEmailProveedor: 'Enter an email',
+    placeholderEmailProveedor: 'Email',
+    smallNombreContacto: 'Enter the contact name',
+    placeholderNombreContacto: 'Name',
+    smallDireccionProveedor: 'Enter an address',
+    smallTelefonoContacto: 'Enter the contact phone number',
+    placeholderTelefonoContacto: 'Contact phone number',
+    placeholderDireccionProveedor: 'Address',
+    tituloEditarProveedor: 'Edit Provider',
+
+    //<---------------------------------------------------------------------------->
+
+    //CONSULTAS
+    //Bitacora
+    tituloConsultaBitacora: 'Log Query',
+
+    //Clientes
+    tituloConsultaClientes: 'Client Query',
+    btnClientesActivos: 'Show Only Active Clients',
+    btnClientesInactivos: 'Show Only Inactive Clients',
+
+    //Pedidos Pendientes
+    tituloPedidosPendientes: 'Pending orders Query',
+
+    //<---------------------------------------------------------------------------->
+
+    //REPORTES
+    //Productos
+    tituloReporteProductos: 'Product Report',
+
+    //Inventarios
+    tituloReporteInventarios: 'Inventory Report',
+    smallSeleccionBodega: 'Select a warehouse',
+    btnGenerarReporte: 'Generate Report',
+    btnReporteInventarioGeneral: 'See General Inventory Report',
+    tituloReporteInvetarioGeneral: 'General Inventory Report',
+    tituloReporteInvetarioBodega: 'Warehouse Inventory Report',
+
+    //Ventas
+    tituloReporte: 'Sales Report',
+    smallDesde: 'From',
+    smallHasta: 'To',
+    btnListadoPrecios: 'Pricing List',
+    tituloReporteVentas: 'Sales Report',
+    tituloListaPrecios: 'Pricing List',
+
 }

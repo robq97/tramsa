@@ -5,6 +5,7 @@ import Button from '../../../components/ui/buttons/Button';
 import { Link } from 'react-router-dom';
 import ExportToExcel from './ExportToExcel';
 import util from '../../../components/util/DateTime'
+import Translate from 'react-translate-component';
 
 
 class TableReports extends Component {
@@ -59,14 +60,10 @@ class TableReports extends Component {
                 <div class="row">
                     <div class="col-2">
                         <Link to={this.props.path}>
-                            <Button type="" icon="picture_as_pdf" btnTxt="Exportar a PDF" />
+                            <Button type="" icon="print" btnTxt={<Translate content="btnImprimir" />} onClick={() => window.print()} />
                         </Link>
                     </div>
-                    <div class=" col text-right">
-                        <Link to={this.props.path}>
-                            <Button type="" icon="print" btnTxt="Imprimir" onClick={() => window.print()} /> {/*no he probado esto*/}
-                        </Link>
-                    </div>
+
                 </div>
                 {(state, filtredData, instance) => {
                     this.ReactTable = state.pageRows.map(row => { return row._original });
@@ -85,8 +82,6 @@ class TableReports extends Component {
                     data={this.state.rows}
                     noDataText={'No se encontraron datos.'}
                     defaultPageSize={15}
-                    previousText={'Anterior'}
-                    nextText={'Siguiente'}
                     textAlign={'center'}
                     loading={false}>
 
