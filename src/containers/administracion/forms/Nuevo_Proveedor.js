@@ -3,62 +3,73 @@ import Button from '../../../components/ui/buttons/Button';
 import Input from '../../../components/ui/input/Input';
 import Card from '../../../components/ui/card/Card';
 import Title from '../../../components/ui/title/Title';
-import Select from '../../../containers/ui/select/Select'
+import Select from '../../../containers/ui/select/Select';
+import Translate from 'react-translate-component';
+import counterpart from 'counterpart';
 
 class NuevoProveedor extends Component {
     render() {
+
+        const placeholderNombreProveedor = counterpart.translate('placeholderNombreProveedor');
+        const placeholderNumeroIdentificacionProveedor = counterpart.translate('placeholderNumeroIdentificacionProveedor');
+        const placeholderNumeroTelefonoProveedor = counterpart.translate('placeholderNumeroTelefonoProveedor');
+        const placeholderEmailProveedor = counterpart.translate('placeholderEmailProveedor');
+        const placeholderNombreContacto = counterpart.translate('placeholderNombreContacto');
+        const placeholderDireccionProveedor = counterpart.translate('placeholderDireccionProveedor');
+        const placeholderTelefonoContacto = counterpart.translate('placeholderTelefonoContacto');
+
         return (
             <Card>
                 <form>
-                    <Title title="Nuevo Proveedor" titleType="title-form" />
+                    <Title title={<Translate content="tituloNuevoProveedor" />} titleType="title-form" />
                     <div class="row align-items-center">
                         <div class="col pl-5">
                             <Input
-                                smallId="" smallTxt="Ingrese el nombre"
-                                icon="title" id="" placeholder="Nombre" type="text" required="true" />
+                                smallId="" smallTxt={<Translate content="smallNombreProveedor" />}
+                                icon="title" id="" placeholder={placeholderNombreProveedor} type="text" required="true" />
                         </div>
                         <div class="col">
                             <Select
                                 URL="https://swapi.co/api/planets/" property="name"
-                                smallId="" smallTxt="Seleccione el tipo de identificación" />
+                                smallId="" smallTxt={<Translate content="smallTipoIdentificacionProveedor" />} />
                         </div>
                         <div class="col pr-5">
                             <Input
-                                smallId="" smallTxt="Ingrese el número de identificación"
-                                icon="featured_video" id="" placeholder="Identificación" type="number" required="true" />
+                                smallId="" smallTxt={<Translate content="smallNumeroIdentificacionProveedor" />}
+                                icon="featured_video" id="" placeholder={placeholderNumeroIdentificacionProveedor} type="number" required="true" />
                         </div>
                     </div>
                     <div class="row align-items-center">
                         <div class="col pl-5">
                             <Input
-                                smallId="" smallTxt="Ingrese el número de teléfono"
-                                icon="phone" id="" placeholder="Teléfono" type="tel" required="true" />
+                                smallId="" smallTxt={<Translate content="smallNumeroTelefonoProveedor" />}
+                                icon="phone" id="" placeholder={placeholderNumeroTelefonoProveedor} type="tel" required="true" />
                         </div>
                         <div class="col">
                             <Input
-                                smallId="" smallTxt="Ingrese el correo electrónico"
-                                icon="featured_video" id="" placeholder="Correo electrónico" type="email" required="true" />
+                                smallId="" smallTxt={<Translate content="smallEmailProveedor" />}
+                                icon="featured_video" id="" placeholder={placeholderEmailProveedor} type="email" required="true" />
                         </div>
                         <div class="col pr-5">
                             <Input
-                                smallId="" smallTxt="Ingrese el nombre del contacto"
-                                icon="title" id="" placeholder="Nombre del contacto" type="text" required="true" />
+                                smallId="" smallTxt={<Translate content="smallNombreContacto" />}
+                                icon="title" id="" placeholder={placeholderNombreContacto} type="text" required="true" />
                         </div>
                     </div>
                     <div class="row align-items-center">
                         <div class="col pl-5">
                             <Input
-                                smallId="" smallTxt="Ingrese el número de teléfono del contacto"
-                                icon="phone" id="" placeholder="Teléfono contacto" type="tel" required="true" />
+                                smallId="" smallTxt={<Translate content="smallTelefonoContacto" />}
+                                icon="phone" id="" placeholder={placeholderTelefonoContacto} type="tel" required="true" />
                         </div>
                         <div class="col pr-5">
                             <Input
-                                smallId="" smallTxt="Ingrese la dirección"
-                                icon="place" id="" placeholder="Dirección" type="text" required="true" />
+                                smallId="" smallTxt={<Translate content="smallDireccionProveedor" />}
+                                icon="place" id="" placeholder={placeholderDireccionProveedor} type="text" required="true" />
                         </div>
                     </div>
                     <div class="text-center">
-                        <Button type="" icon="send" btnTxt="Agregar Nuevo Proveedor" />
+                        <Button type="" icon="send" btnTxt={<Translate content="btnAgregarNuevoProveedor" />} />
                     </div>
                 </form>
             </Card>

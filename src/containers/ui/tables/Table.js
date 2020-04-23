@@ -21,6 +21,7 @@ import EditarProducto from '../../administracion/forms/Editar_Producto';
 import EditarCliente from '../../administracion/forms/Editar_Cliente';
 import EditarProveedor from '../../administracion/forms/Editar_Proveedor';
 import EditarUsuario from '../../seguridad/forms/Editar_Usuario';
+import Translate from 'react-translate-component';
 
 
 class Table extends Component {
@@ -90,7 +91,7 @@ class Table extends Component {
                                     <IconButton
                                         type="" icon="delete" color={colorPalette.red._700}
                                         toggle="modal" target="#delete" />
-                                    <Modal id="delete" body={false} confirmBtn={true} title="¿Está seguro que desea eliminar el item?" />
+                                    <Modal id="delete" body={false} confirmBtn={true} title={<Translate content="modalEliminar" />} />
                                 </div> : <div>
                                     <IconButton
                                         type="" icon="create" color={colorPalette.grey._700}
@@ -103,7 +104,7 @@ class Table extends Component {
                                         type="" icon="delete" color={colorPalette.red._700}
                                         toggle="modal" target="#delete" />
                                     <Modal
-                                        id="edit" body={true} confirmBtn={false} title="Editar"
+                                        id="edit" body={true} confirmBtn={false} title={<Translate content="modalEditar" />}
                                         bodyContent={<div>
                                             {this.props.edit === "materia-prima" ?
                                                 <EditarMateriaPrima /> : null}
@@ -121,7 +122,7 @@ class Table extends Component {
                                                 <EditarUsuario /> : null}
                                         </div>} />
                                     <Modal
-                                        id="info" body={true} confirmBtn={false} title="Información detallada"
+                                        id="info" body={true} confirmBtn={false} title={<Translate content="modalDetalle" />}
                                         bodyContent={<div>
                                             <Label lblText="linea 1" /> <br />
                                             <Label lblText="linea 2" /><br />
@@ -131,7 +132,7 @@ class Table extends Component {
                                             <Label lblText="linea 6" /><br />
                                             <Label lblText="linea 7" /><br />
                                         </div>} />
-                                    <Modal id="delete" body={false} confirmBtn={true} title="¿Está seguro que desea eliminar el item?" />
+                                    <Modal id="delete" body={false} confirmBtn={true} title={<Translate content="modalEliminar" />} />
                                 </div>}
                         </div>
                     )
@@ -189,8 +190,6 @@ class Table extends Component {
                     filterable
                     noDataText={'No se encontraron datos.'}
                     defaultPageSize={10}
-                    previousText={'Anterior'}
-                    nextText={'Siguiente'}
                     loading={false}
                     showPagination={this.props.pagination}
                 />

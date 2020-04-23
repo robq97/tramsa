@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Title from '../../../components/ui/title/Title';
 import Table from '../../ui/tables/Table';
+import Translate from 'react-translate-component';
 
 class Bitacora extends Component {
 
@@ -8,7 +9,7 @@ class Bitacora extends Component {
         return (
             <div>
                 <Title
-                    title="Consulta de Bitácora" titleType="title-form" />
+                    title={<Translate content="tituloConsultaBitacora" />} titleType="title-form" />
                 <Table
                     url="https://jsonplaceholder.typicode.com/posts"
                     header1="Usuario" accessor1="id" filterable1={true} width1={200} show1={true}

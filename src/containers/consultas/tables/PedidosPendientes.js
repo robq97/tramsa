@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Title from '../../../components/ui/title/Title';
 import Table from '../../ui/tables/Table';
+import Translate from 'react-translate-component';
 
 class PedidosPendientes extends Component {
 
@@ -8,7 +9,7 @@ class PedidosPendientes extends Component {
         return (
             <div>
                 <Title
-                    title="Consulta de Pedidos Pendientes" titleType="title-form" />
+                    title={<Translate content="tituloPedidosPendientes" />} titleType="title-form" />
                 <Table
                     url="https://jsonplaceholder.typicode.com/posts"
                     header1="Número de Pedido" accessor1="id" filterable1={true} width1={150} show1={true}

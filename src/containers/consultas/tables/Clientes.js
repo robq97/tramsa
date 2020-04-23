@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Title from '../../../components/ui/title/Title';
 import Table from '../../ui/tables/Table';
+import Translate from 'react-translate-component';
 
 class Clientes extends Component {
 
@@ -8,7 +9,7 @@ class Clientes extends Component {
         return (
             <div>
                 <Title
-                    title="Consulta de Clientes" titleType="title-table" />
+                    title={<Translate content="tituloConsultaClientes" />} titleType="title-table" />
                 <Table
                     type="consulta"
                     url="https://jsonplaceholder.typicode.com/posts"
@@ -20,8 +21,8 @@ class Clientes extends Component {
                     header6="Correo Electrónico" accessor6="body" filterable6={false} width6={250} show6={true}
                     iconShow={false}
                     inputShow={false}
-                    btnTxt="Ver Solo Clientes Activos"
-                    btnTxt2="Ver Solo Clientes Inactivos" />
+                    btnTxt={<Translate content="btnClientesActivos" />}
+                    btnTxt2={<Translate content="btnClientesInactivos" />} />
             </div>
         );
     }

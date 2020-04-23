@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Title from '../../../components/ui/title/Title';
 import Table from '../../ui/tables/Table';
+import Translate from 'react-translate-component';
 
 class Eventos extends Component {
 
@@ -8,7 +9,7 @@ class Eventos extends Component {
         return (
             <div>
                 <Title
-                    title="Eventos" titleType="title-form" />
+                    title={<Translate content="tituloEventos" />} titleType="title-form" />
                 <Table
                     type=""
                     url="https://jsonplaceholder.typicode.com/posts"

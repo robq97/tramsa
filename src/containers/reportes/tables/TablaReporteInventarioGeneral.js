@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Title from '../../../components/ui/title/Title';
 import TableReports from '../../ui/tables/TableReports';
+import Translate from 'react-translate-component';
 
 class TableReporteInventarioGeneral extends Component {
 
@@ -8,7 +9,7 @@ class TableReporteInventarioGeneral extends Component {
         return (
             <div>
                 <Title
-                    title="Reporte de Inventario General" titleType="title-table" />
+                    title={<Translate content="tituloReporteInvetarioGeneral" />} titleType="title-table" />
                 <TableReports
                     category="Inventario"
                     title="Reporte de Inventario General"
