@@ -104,7 +104,7 @@ class Table extends Component {
                                         toggle="modal" target="#delete" />
                                     <Modal
                                         id="edit" body={true} confirmBtn={false} title="Editar"
-                                        bodyContent={<div> EditarUsuario
+                                        bodyContent={<div>
                                             {this.props.edit === "materia-prima" ?
                                                 <EditarMateriaPrima /> : null}
                                             {this.props.edit === "bodega" ?

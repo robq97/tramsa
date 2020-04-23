@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Title from '../../../components/ui/title/Title';
 import Table from '../../ui/tables/Table';
+import Translate from 'react-translate-component';
 
 class Bodegas extends Component {
 
@@ -8,7 +9,7 @@ class Bodegas extends Component {
         return (
             <div>
                 <Title
-                    title="Busqueda de Bodega" titleType="title-table" />
+                    title={<Translate content="tituloBusquedaBodega" />} titleType="title-table" />
                 <Table
                     type="normal"
                     edit="bodega"
@@ -20,7 +21,7 @@ class Bodegas extends Component {
                     show5={false}
                     show6={false}
                     inputShow={false}
-                    btnTxt="Agregar Nueva Bodega" path="/administracion/nueva-bodega" />
+                    btnTxt={<Translate content="btnAgregarNuevaBodega" />} path="/administracion/nueva-bodega" />
             </div>
         );
     }
