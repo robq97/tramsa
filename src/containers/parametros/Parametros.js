@@ -8,6 +8,8 @@ import { colorPalette } from 'material-icons-react';
 import Modal from '../ui/modal/Modal';
 import axios from 'axios';
 import { URL } from '../util/common';
+import Translate from 'react-translate-component';
+import counterpart from 'counterpart';
 
 class Parametros extends Component {
 
@@ -99,6 +101,9 @@ class Parametros extends Component {
     }
 
     render() {
+
+        const placeholderValorCompra = counterpart.translate('placeholderValorCompra');
+
         return (
             <Card>
                 <Modal />
@@ -109,7 +114,7 @@ class Parametros extends Component {
                             {/*<Select
                                 URL="http://apitramsa.azurewebsites.net/rol/" property="name" //esta picha no sirve porque hay que pasar un objeto, no un string
                             smallId="" smallTxt="Seleccione una moneda" size={0} />*/}
-                            <small>Seleccione una moneda</small>
+                            <small><Translate content="smallSeleccionaMoneda" /></small>
                             <select name="moneda" onChange={(ev) => this.handleCurrencyChange(ev.target)}>
                                 <option disabled>Seleccione una moneda</option>
                                 {this.state.monedas.map((monedas) => (
@@ -122,8 +127,8 @@ class Parametros extends Component {
                         </div>
                         <div className="col pr-5">
                             <Input
-                                smallId="" name="cantidad" smallTxt={`Cantidad ${this.state.moneda}:`}
-                                icon="trending_up" id="" placeholder="Cantidad" value={this.state.cantidad} type="number" onChange={(ev) => this.handleCurrencyChange(ev.target)} />
+                                smallId="" name="cantidad" smallTxt={this.state.moneda}
+                                icon="trending_up" id="" placeholder={placeholderValorCompra} value={this.state.cantidad} type="number" onChange={(ev) => this.handleCurrencyChange(ev.target)} />
                         </div>
                     </div>
                     <div className="row align-items-center">
@@ -134,43 +139,43 @@ class Parametros extends Component {
                         </div>
                         <div className="col pr-5">
                             <Input
-                                smallId="" smallTxt="Precio en colones (₡)"
+                                smallId="" smallTxt={<Translate content="smallValorCompra" />}
                                 icon="trending_up" id="" value={this.state.colones} disabled type="text" />
                         </div>
                     </div>
 
                     <hr />
 
-                    <Title title="Tiquete de caja" titleType="title-form" />
-                    <div className="row">
-                        <div className="col pl-5 pr-5">
+                    <Title title={<Translate content="tituloTiqueteCaja" />} titleType="title-form" />
+                    <div class="row">
+                        <div class="col pl-5 pr-5">
                             <Input
-                                smallId="" name="nombreEmpresa" smallTxt="Ingrese el nombre de la compañia"
+                                smallId="" smallTxt={<Translate content="smallNombreCompania" />}
                                 icon="business_center" id="" placeholder={this.state.nombreEmpresa} type="text" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                         <div className="col pl-5 pr-5">
                             <Input
-                                smallId="" name="mensaje" smallTxt="Ingrese un mensaje de saludo"
-                                icon="message" id="" placeholder={this.state.mensaje} type="text" onChange={(ev) => this.handleChange(ev.target)} />
+                                smallId="" smallTxt={<Translate content="smallMensajeSaludo" />}
+                                icon="message" id="" placeholder={this.state.mensaje} type="text" onChange={(ev) => this.handleChange(ev.target)}  />
                         </div>
                     </div>
                     <div className="row">
                         <div className="col pl-5 pr-5">
                             <Input
-                                smallId="" name="cedula" smallTxt="Ingrese la cédula jurídica"
-                                icon="featured_video" id="" placeholder={this.state.cedula} type="text" onChange={(ev) => this.handleChange(ev.target)} />
+                                smallId="" smallTxt={<Translate content="smallCedulaJuridica" />}
+                                icon="featured_video" id="" placeholder={this.state.cedula} type="text" onChange={(ev) => this.handleChange(ev.target)}  />
                         </div>
                         <div className="col pl-5 pr-5">
                             <Input
-                                smallId="" name="telefono" smallTxt="Ingrese el número de teléfono"
-                                icon="phone" id="" placeholder={this.state.telefono} type="tel" onChange={(ev) => this.handleChange(ev.target)} />
+                                smallId="" smallTxt={<Translate content="smallTelefonoActual" />}
+                                icon="phone" id=""  placeholder={this.state.telefono} type="tel" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                     </div>
                     <div className="row">
                         <div className="col pl-5 pr-5">
                             <Input
-                                smallId="" name="direccion" smallTxt="Ingrese la dirección del establecimiento"
-                                icon="place" id="" type="text" placeholder={this.state.direccion} onChange={(ev) => this.handleChange(ev.target)}/>
+                                smallId="" smallTxt={<Translate content="smallDireccionEstablecimiento" />}
+                                icon="place" id="" placeholder={this.state.direccion} onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                     </div>
                     <div className="text-center">

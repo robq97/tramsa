@@ -5,6 +5,9 @@ import Card from '../../components/ui/card/Card';
 import Title from '../../components/ui/title/Title';
 import axios from 'axios';
 import { URL } from '../util/common';
+import Translate from 'react-translate-component';
+import counterpart from 'counterpart';
+
 
 class CambioContraseña extends Component {
 
@@ -74,26 +77,31 @@ class CambioContraseña extends Component {
     }
 
     render() {
+
+        const placeholderContraseaActual = counterpart.translate('placeholderContraseaActual');
+        const placeholderNuevaContrasena = counterpart.translate('placeholderNuevaContrasena');
+        const placeholderConfirmarNuevaContrasena = counterpart.translate('placeholderConfirmarNuevaContrasena');
+
         return (
             <Card>
-                <Title title="Cambio de Contraseña" titleType="title-form" />
-                <form id="password-change-form" onSubmit={this.handleSubmit}>
+                <Title title={<Translate content="tituloCambioContrasena" />} titleType="title-form" />
+                <form>
                     <div class="input-padding-25">
-                        <Input name="currentPassword" smallId="lblActualPassword" smallTxt="Ingrese su contraseña actual."
-                            icon="vpn_key" type="password" id="actualPassword" placeholder="Contraseña Actual" required="true" onChange={(ev) => this.handleChange(ev.target)} />
+                        <Input smallId="lblActualPassword" smallTxt={<Translate content="smallContrasenaActual" />}
+                            icon="vpn_key" type="password" id="actualPassword" placeholder={placeholderContraseaActual} required="true" onChange={(ev) => this.handleChange(ev.target)} />
                     </div>
                     <hr />
                     <div class="input-padding-25">
-                        <Input name="password" smallId="lblNewPassword" smallTxt="Ingrese su nueva contraseña."
-                            icon="lock" type="password" id="newPassword" placeholder="Nueva Contraseña" required="true" onChange={(ev) => this.handleChange(ev.target)} />
+                        <Input smallId="lblNewPassword" smallTxt={<Translate content="smallNuevaContrasena" />}
+                            icon="lock" type="password" id="newPassword" placeholder={placeholderNuevaContrasena} required="true" onChange={(ev) => this.handleChange(ev.target)} />
                     </div>
                     <div class="input-padding-25">
-                        <Input name="newPasswordValidation" smallId="lblNewPasswordConf" smallTxt="Confirme su nueva contraseña."
-                            icon="lock" type="password" id="confirmNewPassword" placeholder="Confirmación Contraseña" required="true" onChange={(ev) => this.handleChange(ev.target)} />
+                        <Input smallId="lblNewPasswordConf" smallTxt={<Translate content="smallConfirmarNuevaContrasena" />}
+                            icon="lock" type="password" id="confirmNewPassword" placeholder={placeholderConfirmarNuevaContrasena} required="true" onChange={(ev) => this.handleChange(ev.target)} />
                     </div>
 
                     <div class="text-center">
-                        <Button type="submit" icon="send" btnTxt="Cambiar Contraseña" />
+                        <Button type="" icon="send" btnTxt={<Translate content="btnContrasena" />} />
                     </div>
                 </form>
             </Card>

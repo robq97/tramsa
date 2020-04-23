@@ -25,8 +25,8 @@ class Roles extends Component {
                     inputShow={false}
                     iconShow={true}
                     iconDeleteOnly={true}
-                    deleteAction={this.deleteRol()}
-                    btnTxt="Agregar Rol" />
+                    btnTxt="Agregar Rol"
+                    path="/seguridad/roles/nuevo" />
             </div>
         );
     }

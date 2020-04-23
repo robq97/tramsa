@@ -34,11 +34,12 @@ class Select extends Component {
         this._isMounted = false;
     }
 
+
     render() {
+
         let options = this.state.options;
         let optionItems = options.map((option) =>
-
-            <option key={option.name}>{option.name}</option>
+            <option key={option._id}>{option.ROL_Nombre}</option>
         );
 
         return (

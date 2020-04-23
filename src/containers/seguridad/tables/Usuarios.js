@@ -11,6 +11,7 @@ class Usuarios extends Component {
                     title="Busqueda de Usuario" titleType="title-table" />
                 <Table
                     type="normal"
+                    edit="usuario"
                     url="http://apitramsa.azurewebsites.net/user/"
                     header1="Usuario" accessor1="USU_User" filterable1={true} width1={200} show1={true}
                     header2="Correo Electrónico" accessor2="USU_Email" filterable2={true} width2={300} show2={true}

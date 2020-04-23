@@ -6,20 +6,31 @@ import NavBar from '../components/navbar/navbar'
 import { Redirect } from 'react-router-dom';
 import RouterAdministracion from '../containers/administracion/router/RouterAdministracion';
 import RouterAyuda from '../containers/ayuda/router/RouterAyuda';
-import RouterProcesos from '../containers/procesos/router/RouterProcesos';
 import RouterReportes from '../containers/reportes/router/RouterReportes';
 import RouterSistema from '../containers/sistema/router/RouterSistema';
 import RouterParametros from '../containers/parametros/router/RouterParametros';
 import RouterLogin from '../containers/login/router/RouterLogin';
 import RouterConsultas from '../containers/consultas/router/RouterConsultas';
 import RouterSeguridad from '../containers/seguridad/router/RouterSeguridad';
-import RouterCajas from '../containers/cajas/router/RouterCajas';
 import { getUser } from './util/common';
+import counterpart from 'counterpart';
+import es from '../lang/es';
+import en from '../lang/en';
+
+counterpart.registerTranslations('es', es);
+counterpart.registerTranslations('en', en);
+counterpart.setLocale('es');
 
 class App extends Component {
 
   state = {
-    auth: sessionStorage.getItem('auth')
+    auth: sessionStorage.getItem('auth'),
+    lang: 'es'
+  }
+
+  langChange = (lang) => {
+    this.setState({ lang: lang });
+    counterpart.setLocale(lang);
   }
 
   render() {
@@ -27,19 +38,17 @@ class App extends Component {
       <BrowserRouter>
         {this.state.auth === "1" ?
           <div>
-            <NavBar user={getUser()} />
+            <NavBar user={getUser()} parentCallback={this.langChange} />
             <Layout>
 
               <Redirect from='/' to="/parametros/param-generales" />
               <RouterAdministracion />
               <RouterAyuda />
-              <RouterProcesos />
               <RouterReportes />
               <RouterSistema />
               <RouterParametros />
               <RouterConsultas />
               <RouterSeguridad />
-              <RouterCajas />
 
             </Layout>
           </div> : <div>

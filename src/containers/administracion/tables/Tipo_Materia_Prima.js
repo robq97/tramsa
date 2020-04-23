@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Title from '../../../components/ui/title/Title';
 import Table from '../../ui/tables/Table';
+import Translate from 'react-translate-component';
 
 class Tipo_Materia_Prima extends Component {
 
@@ -8,9 +9,10 @@ class Tipo_Materia_Prima extends Component {
         return (
             <div>
                 <Title
-                    title="Tipo de Materia Prima" titleType="title-table" />
+                    title={<Translate content="tituloTipoMateriaPrima" />} titleType="title-table" />
                 <Table
                     type="normal"
+                    edit="materia-prima"
                     url="https://jsonplaceholder.typicode.com/posts"
                     header1="Código" accessor1="id" filterable1={true} width1={80} show1={true}
                     header2="Nombre" accessor2="title" filterable2={true} width2={300} show2={true}
@@ -19,7 +21,7 @@ class Tipo_Materia_Prima extends Component {
                     show5={false}
                     show6={false}
                     inputShow={false}
-                    btnTxt="Agregar Nueva Materia Prima"
+                    btnTxt={<Translate content="btnAgregarMateriaPrima" />}
                     path="/administracion/nueva-materia-prima" />
             </div>
         );
