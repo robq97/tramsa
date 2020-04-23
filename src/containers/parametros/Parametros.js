@@ -7,6 +7,7 @@ import IconButton from '../../components/ui/buttons/Icon-Button'
 import { colorPalette } from 'material-icons-react';
 import Modal from '../ui/modal/Modal';
 import axios from 'axios';
+import { URL } from '../util/common';
 
 class Parametros extends Component {
 
@@ -24,7 +25,9 @@ class Parametros extends Component {
                 'BGN', 'TRY', 'CNY', 'NOK', 'NZD', 'ZAR', 'AUD', 'MXN', 'ILS', 'HKD', 'KRW',
                 'MYR'],
             direccion: '',
-            moneda: 'USD'
+            moneda: 'USD',
+            USU_User: sessionStorage.getItem('user'),
+            empresa_id: ''
         }
     }
 
@@ -36,6 +39,18 @@ class Parametros extends Component {
                 })
             })
             .catch((err) => console.error(err));
+
+        axios.get(URL.concat(`infoEmpresa/${this.state.USU_User}`))
+            .then((response) => {
+                this.setState({
+                    empresa_id: response.data._id,
+                    nombreEmpresa: response.data.NombreActual,
+                    mensaje: response.data.MensajeActual,
+                    cedula: response.data.CedulaJuridica,
+                    telefono: response.data.Telefono,
+                    direccion: response.data.Direccion
+                })
+            })
     }
 
     currencyUpdate = () => {
@@ -48,7 +63,7 @@ class Parametros extends Component {
             .catch((err) => console.error(err));
     }
 
-    
+
     handleCurrencyChange = control => {
         const { name, value } = control;
         const state = {};
@@ -62,6 +77,25 @@ class Parametros extends Component {
         const state = {};
         state[name] = value;
         this.setState(state);
+    }
+
+    handleSubmit = event => {
+        event.preventDefault();
+        const data = {
+            _id: this.state.empresa_id,
+            NombreActual: this.state.nombreEmpresa,
+            MensajeActual: this.state.mensaje,
+            CedulaJuridica: this.state.cedula,
+            Telefono: this.state.telefono,
+            Direccion: this.state.direccion
+        }
+
+        axios.post(URL.concat(`infoEmpresa/update/${this.state.USU_User}`), { data })
+            .then((response) => {
+                alert(response.data.message);
+                window.location.reload();
+            })
+            .catch((err) => console.error(err));
     }
 
     render() {
@@ -89,7 +123,7 @@ class Parametros extends Component {
                         <div className="col pr-5">
                             <Input
                                 smallId="" name="cantidad" smallTxt={`Cantidad ${this.state.moneda}:`}
-                                icon="trending_up" id="" placeholder={this.state.cantidad} type="number" onChange={(ev) => this.handleCurrencyChange(ev.target)} />
+                                icon="trending_up" id="" placeholder="Cantidad" value={this.state.cantidad} type="number" onChange={(ev) => this.handleCurrencyChange(ev.target)} />
                         </div>
                     </div>
                     <div className="row align-items-center">
@@ -111,36 +145,37 @@ class Parametros extends Component {
                     <div className="row">
                         <div className="col pl-5 pr-5">
                             <Input
-                                smallId="" smallTxt="Ingrese el nombre de la compañia"
-                                icon="business_center" id="" placeholder="Nombre actual de la compañia" type="text" />
+                                smallId="" name="nombreEmpresa" smallTxt="Ingrese el nombre de la compañia"
+                                icon="business_center" id="" placeholder={this.state.nombreEmpresa} type="text" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                         <div className="col pl-5 pr-5">
                             <Input
-                                smallId="" smallTxt="Ingrese un mensaje de saludo"
-                                icon="message" id="" placeholder="Mensaje actual" type="text" />
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col pl-5 pr-5">
-                            <Input
-                                smallId="" smallTxt="Ingrese la cédula jurídica"
-                                icon="featured_video" id="" placeholder="Número de ced jurídica actual" type="number" />
-                        </div>
-                        <div className="col pl-5 pr-5">
-                            <Input
-                                smallId="" smallTxt="Ingrese el número de teléfono"
-                                icon="phone" id="" placeholder="Número de teléfono actual" type="tel" />
+                                smallId="" name="mensaje" smallTxt="Ingrese un mensaje de saludo"
+                                icon="message" id="" placeholder={this.state.mensaje} type="text" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                     </div>
                     <div className="row">
                         <div className="col pl-5 pr-5">
                             <Input
-                                smallId="" smallTxt="Ingrese la dirección del establecimiento"
-                                icon="place" id="" placeholder="Dirección actual" type="text" required={true} />
+                                smallId="" name="cedula" smallTxt="Ingrese la cédula jurídica"
+                                icon="featured_video" id="" placeholder={this.state.cedula} type="text" onChange={(ev) => this.handleChange(ev.target)} />
+                        </div>
+                        <div className="col pl-5 pr-5">
+                            <Input
+                                smallId="" name="telefono" smallTxt="Ingrese el número de teléfono"
+                                icon="phone" id="" placeholder={this.state.telefono} type="tel" onChange={(ev) => this.handleChange(ev.target)} />
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col pl-5 pr-5">
+                            <Input
+                                smallId="" name="direccion" smallTxt="Ingrese la dirección del establecimiento"
+                                icon="place" id="" type="text" placeholder={this.state.direccion} onChange={(ev) => this.handleChange(ev.target)}/>
                         </div>
                     </div>
                     <div className="text-center">
-                        <Button type="" icon="send" btnTxt="Actualizar Información" />
+                        <Button type="" icon="send" disabled={!this.state.direccion && !this.state.mensaje &&
+                            !this.state.telefono && !this.state.cedula && !this.state.nombreEmpresa} btnTxt="Actualizar Información" />
                     </div>
                 </form>
             </Card>
