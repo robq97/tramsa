@@ -117,7 +117,7 @@ class Table extends Component {
                                 <div>
                                     <IconButton
                                         type="" icon="delete" color={colorPalette.red._700}
-                                        toggle="modal" target="#delete" />
+                                        toggle="modal" target="#delete" />            
                                     <Modal id="delete" body={false} confirmBtn={true} title={<Translate content="modalEliminar" />} />
                                 </div> : <div>
                                     <IconButton
