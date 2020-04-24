@@ -109,17 +109,16 @@ class Parametros extends Component {
                 <form id="update-company-info-form" onSubmit={this.handleSubmit}>
                     <Title title={<Translate content="tituloTipoCambio" />} titleType="title-form" />
                     <div className="row align-items-center">
-                        <div className="col pl-5">
-                            {/*<Select
-                                URL="http://apitramsa.azurewebsites.net/rol/" property="name" //esta picha no sirve porque hay que pasar un objeto, no un string
-                            smallId="" smallTxt="Seleccione una moneda" size={0} />*/}
-                            <small><Translate content="smallSeleccionaMoneda" /></small>
-                            <select name="moneda" onChange={(ev) => this.handleCurrencyChange(ev.target)}>
-                                <option disabled>Seleccione una moneda</option>
-                                {this.state.monedas.map((monedas) => (
-                                    <option key={monedas}>{monedas}</option>
-                                ))}
-                            </select>
+                        <div className="col-sm-4 pl-5">
+                            <small><Translate content="smallSeleccionaMoneda" className="form-text text-muted mb-1" /></small>
+                            <div className="input-group mb-4">
+                                <select class="form-control" name="moneda" onChange={(ev) => this.handleCurrencyChange(ev.target)}>
+                                    <option disabled>Seleccione una moneda</option>
+                                    {this.state.monedas.map((monedas) => (
+                                        <option key={monedas}>{monedas}</option>
+                                    ))}
+                                </select>
+                            </div>
                         </div>
                         <div className="col-sm- text-center">
                             <IconButton type="" icon="arrow_forward" color={colorPalette.grey._700} />
