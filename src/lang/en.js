@@ -128,6 +128,8 @@ export default {
     tituloMateriPrima: 'Raw Materials',
     btnAgregarMateriaPrima: 'New Raw Material',
 
+    tituloEditarTipoMateriaPrima: 'Edit Raw Material Type',
+
     //Form & Modal - Nueva Materia Prima
     tituloNuevaMateriaPrima: 'New Raw Material',
     smallNombreMateria: 'Enter the name',

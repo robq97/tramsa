@@ -60,7 +60,7 @@ class Table extends Component {
 
     deleteItem() {
         const url = this.props.url;
-        Axios.get(url.concat(`delete/${this.state.selectedRow}`))
+        Axios.get(url.concat(`${sessionStorage.getItem('user')}/delete/${this.state.meCago}`))
             .then((res) => {
                 alert(res.data.message);
             })
@@ -118,23 +118,31 @@ class Table extends Component {
                                     <IconButton
                                         type="" icon="delete" color={colorPalette.red._700}
                                         toggle="modal" target="#delete" />
-                                    <Modal id="delete" body={false} confirmBtn={true} title={<Translate content="modalEliminar" />} />
+                                    <Modal id="delete" body={false} confirmBtn={true} confirmBtnAction={this.deleteItem} title={<Translate content="modalEliminar" />} onClick={() => {
+                                        console.log("props", props.original._id)
+                                    }} />
                                 </div> : <div>
                                     <IconButton
-                                        type="" icon="create" color={colorPalette.grey._700}
+                                        type="" icon="create" color={colorPalette.grey._700} onClick={() => {
+                                            console.log("props", props.original._id)
+                                        }}
                                         toggle="modal" target="#edit" />
 
                                     <IconButton
-                                        type="" icon="info" color={colorPalette.blue._700}
+                                        type="" icon="info" color={colorPalette.blue._700} onClick={() => {
+                                            console.log("props", props.original._id)
+                                        }}
                                         toggle="modal" target="#info" />
                                     <IconButton
-                                        type="" icon="delete" color={colorPalette.red._700}
+                                        type="" icon="delete" color={colorPalette.red._700} onClick={() => {
+                                            console.log("props", props.original._id)
+                                        }}
                                         toggle="modal" target="#delete" />
                                     <Modal
                                         id="edit" body={true} confirmBtn={false} title={<Translate content="modalEditar" />}
                                         bodyContent={<div>
                                             {this.props.edit === "tipo-materia-prima" ?
-                                                <EditarTipoMateriaPrima /> : null}
+                                                <EditarTipoMateriaPrima selectedRow={props.original._id} /> : null}
                                             {this.props.edit === "materia-prima" ?
                                                 <EditarMateriaPrima /> : null}
                                             {this.props.edit === "bodega" ?
@@ -161,7 +169,7 @@ class Table extends Component {
                                             <Label lblText="linea 6" /><br />
                                             <Label lblText="linea 7" /><br />
                                         </div>} />
-                                    <Modal id="delete" body={false} confirmBtn={true} title={<Translate content="modalEliminar" />} />
+                                    <Modal id="delete" body={false} confirmBtn={true} title={<Translate content="modalEliminar" />} confirmBtnAction={this.deleteItem} />
                                 </div>}
                         </div>
                     )
@@ -221,7 +229,7 @@ class Table extends Component {
                     defaultPageSize={10}
                     loading={false}
                     showPagination={this.props.pagination}
-                    getTrProps={this.onRowClick}
+
                 />
 
                 {this.props.type === "arqueo" ?

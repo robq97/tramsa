@@ -126,6 +126,8 @@ export default {
     tituloTipoMateriaPrima: 'Tipo de Materia Prima',
     btnAgregarTipoMateriaPrima: 'Nuevo Tipo de Materia Prima',
 
+    tituloEditarTipoMateriaPrima: 'Editar Tipo de Materia Prima',
+
     //Tabla Materia Prima
     tituloMateriPrima: 'Materias Primas',
     btnAgregarMateriaPrima: 'Nueva Materia Prima',
