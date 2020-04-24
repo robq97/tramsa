@@ -63,6 +63,7 @@ class Consecutivos extends Component {
                     <Title title={<Translate content="tituloConsecutivos" />} titleType="title-form" />
                     <div class="row align-items-center">
                         <div class="col pl-5">
+
                             <small>{<Translate content="smallSeleccioneTipo" className="form-text text-muted mb-1" />}</small>
                             <div className="input-group mb-4">
                                 <select class="form-control" name="consecutivo" onChange={(ev) => this.handleChange(ev.target)}>
@@ -72,6 +73,7 @@ class Consecutivos extends Component {
                                     ))}
                                 </select>
                             </div>
+
                         </div>
                         <div class="col-sm- text-center">
                             <IconButton type="" icon="arrow_forward" color={colorPalette.grey._700} />

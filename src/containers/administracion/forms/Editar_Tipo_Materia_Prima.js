@@ -14,7 +14,7 @@ class EditarMateriaPrima extends Component {
         this.state = {
             nombre: '',
             usuario: sessionStorage.getItem('user'),
-            selectedRow: sessionStorage.getItem('itemId')
+            selectedRow: this.props.selectedRow
         }
     }
 
@@ -47,7 +47,7 @@ class EditarMateriaPrima extends Component {
 
         return (
             <form onSubmit={this.handleSubmit}>
-                <Title title={<Translate content="Tipo Materia Prima" />} titleType="title-form" />
+                <Title title={<Translate content="tituloEditarTipoMateriaPrima" />} titleType="title-form" />
                 <div class="row align-items-center">
                     <div class="col pl-5">
                         <Input
@@ -56,7 +56,7 @@ class EditarMateriaPrima extends Component {
                     </div>
                 </div>
                 <div class="text-center">
-                    <Button type="submit" icon="send" btnTxt={<Translate content="Agregar Nuevo Tipo Materia Prima" />} />
+                    <Button type="submit" icon="send" btnTxt={<Translate content="modalGuardar" />} />
                 </div>
             </form>
         )
