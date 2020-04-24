@@ -13,8 +13,8 @@ class Eventos extends Component {
                 <Table
                     type=""
                     url="https://jsonplaceholder.typicode.com/posts"
-                    header1="Código" accessor1="id" filterable1={true} width1={200} show1={true}
-                    header2="Descripción" accessor2="title" filterable2={true} width2={900} show2={true}
+                    header1={<Translate content="tableCodigo" />} accessor1="id" filterable1={true} width1={200} show1={true}
+                    header2={<Translate content="tableDescripción" />} accessor2="title" filterable2={true} width2={900} show2={true}
                     show3={false}
                     show4={false}
                     show5={false}
