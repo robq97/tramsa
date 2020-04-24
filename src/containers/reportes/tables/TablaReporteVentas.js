@@ -14,9 +14,9 @@ class TableReporteVentas extends Component {
                     category="Ventas"
                     title="Reporte de Ventas"
                     url="https://jsonplaceholder.typicode.com/posts"
-                    header1="Número Factura" accessor1="id" filterable1={true} width1={350} show1={true}
-                    header2="Fecha" accessor2="title" width2={400} show2={true}
-                    header3="Monto Venta" accessor3="userId" width3={350} show3={true}
+                    header1={<Translate content="tablaNumeroFactura" />} accessor1="id" filterable1={true} width1={350} show1={true}
+                    header2={<Translate content="tablaFecha" />} accessor2="title" width2={400} show2={true}
+                    header3={<Translate content="tablaMontoVenta" />} accessor3="userId" width3={350} show3={true}
                     show4={false}
                     show5={false}
                     show6={false}

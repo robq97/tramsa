@@ -46,6 +46,7 @@ export default {
     tablaFecha: 'Date',
     tablaMontoVenta: 'Sale Amount',
     tablaIdentificacion: 'Identification',
+    tablaNumeroFactura: 'Bill Number',
 
     //<---------------------------------------------------------------------------->
 

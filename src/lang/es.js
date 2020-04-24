@@ -44,7 +44,7 @@ export default {
     tableUnidadMedida: 'Unidad de Medida',
     tablaCantidad: 'Cantidad',
     tablaFecha: 'Fecha',
-    tablaMontoVenta: 'Monto Venta',
+    tablaMontoVenta: 'Monto de Venta',
     tablaIdentificacion: 'Identificación',
 
 
