@@ -245,4 +245,41 @@ export default {
     tituloReporteVentas: 'Sales Report',
     tituloListaPrecios: 'Pricing List',
 
+    //<---------------------------------------------------------------------------->
+
+    //SEGURIDAD
+    //Eventos
+    tituloEventos: 'Events',
+
+    //Roles
+    tituloRoles: 'Roles',
+    btnNuevoRol: 'Add New Role',
+    tituloNuevoRol: 'New Role',
+    smallNombreRol: 'Enter a name for the new role',
+    placeholderNombreRol: 'Role name',
+    smallNombreCortoRol: 'Enter a short name',
+    placeholderNombreCortoRol: 'Short name',
+    smalldescRol: 'Enter a description for the new role',
+    placeholderDescRol: 'Description',
+    smallNuevoRol: 'Automatic code for new role',
+
+    //Usuario
+    tituloBusquedaUsuario: 'User Search',
+    btnAgregarNuevoUsuario: 'Add New User',
+    tituloNuevoUsuario: 'New User',
+    smallEmailNuevoUsuario: 'Enter an email',
+    placeholderEmailNuevoUsuario: 'Email',
+    smallNuevoUsuario: 'Enter a username',
+    placeholderNuevoUsuario: 'Username',
+    smallNombreNuevoUsuario: 'Enter a name',
+    placeholderNombreNuevoUsuario: 'Name',
+    smallRolNuevoUsuario: 'Select a role',
+    smallContraseñaNuevoUsuario: 'Enter a password',
+    placeholderContraseñaNuevoUsuario: 'Password',
+    smallConfirmarContrasenaNuevoUsuario: 'Confirm the password',
+    placeholderConfirmarContrasenaNuevoUsuario: 'Confirm password',
+    tituloEditarNuevoUsuario: 'Edit user',
+
+
+
 }

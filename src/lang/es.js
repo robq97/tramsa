@@ -255,6 +255,33 @@ export default {
 
     //Roles
     tituloRoles: 'Roles',
+    btnNuevoRol: 'Agregar Nuevo Rol',
+    tituloNuevoRol: 'Nuevo Rol',
+    smallNombreRol: 'Ingrese el nombre del nuevo rol',
+    placeholderNombreRol: 'Nombre rol',
+    smallNombreCortoRol: 'Ingrese el nombre corto',
+    placeholderNombreCortoRol: 'Nombre corto',
+    smalldescRol: 'Ingrese una descripción del nuevo rol',
+    placeholderDescRol: 'Descripción',
+    smallNuevoRol: 'Código automático del nuevo rol',
+
+    //Usuario
+    tituloBusquedaUsuario: 'Busqueda de usuario',
+    btnAgregarNuevoUsuario: 'Agregar Nuevo Usuario',
+    tituloNuevoUsuario: 'Nuevo Usuario',
+    smallEmailNuevoUsuario: 'Ingrese un Correo Electrónico',
+    placeholderEmailNuevoUsuario: 'Correo Electrónico',
+    smallNuevoUsuario: 'Ingrese un usuario',
+    placeholderNuevoUsuario: 'Usuario',
+    smallNombreNuevoUsuario: 'Ingrese un nombre',
+    placeholderNombreNuevoUsuario: 'Nombre',
+    smallRolNuevoUsuario: 'Seleccione un rol',
+    smallContraseñaNuevoUsuario: 'Ingrese una contraseña',
+    placeholderContraseñaNuevoUsuario: 'Contraseña',
+    smallConfirmarContrasenaNuevoUsuario: 'Confirme la contraseña',
+    placeholderConfirmarContrasenaNuevoUsuario: 'Confirmar contraseña',
+    tituloEditarNuevoUsuario: 'Editar Usuario',
+    smallEstadoUsuario: 'Seleccione un estado',
 
 
 }

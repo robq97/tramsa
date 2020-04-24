@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Title from '../../../components/ui/title/Title';
 import Table from '../../ui/tables/Table';
+import Translate from 'react-translate-component';
 
 class Usuarios extends Component {
 
@@ -8,7 +9,7 @@ class Usuarios extends Component {
         return (
             <div>
                 <Title
-                    title="Busqueda de Usuario" titleType="title-table" />
+                    title={<Translate content="tituloBusquedaUsuario" />} titleType="title-table" />
                 <Table
                     type="normal"
                     edit="usuario"
@@ -21,7 +22,7 @@ class Usuarios extends Component {
                     show6={false}
                     iconShow={true}
                     inputShow={false}
-                    btnTxt="Agregar Nuevo Usuario"
+                    btnTxt={<Translate content="tituloBusquedaUsuario" />}
                     path="/seguridad/nuevo-usuario" />
             </div>
         );
