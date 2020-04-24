@@ -47,16 +47,18 @@ class NuevaMateriaPrima extends Component {
         return (
             <Card>
                 <form onSubmit={this.handleSubmit}>
-                    <Title title={<Translate content="Tipo Materia Prima" />} titleType="title-form" />
+                    <Title title={<Translate content="tituloTipoMateriaPrima" />} titleType="title-form" />
                     <div class="row align-items-center">
-                        <div class="col pl-5">
+                        <div class="col"></div>
+                        <div class="col-6 pl-5 pr-5">
                             <Input
                                 smallId="" name="nombre" smallTxt={<Translate content="smallNombreMateria" />}
                                 icon="title" id="" placeholder={placeholderNombreMateria} type="text" required="true" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
+                        <div class="col"></div>
                     </div>
                     <div class="text-center">
-                        <Button type="submit" icon="send" btnTxt={<Translate content="Agregar Nuevo Tipo Materia Prima" />} />
+                        <Button type="submit" icon="send" btnTxt={<Translate content="btnAgregarMateriaPrima" />} />
                     </div>
                 </form>
             </Card>

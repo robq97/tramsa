@@ -46,6 +46,7 @@ export default {
     tablaFecha: 'Fecha',
     tablaMontoVenta: 'Monto de Venta',
     tablaIdentificacion: 'Identificación',
+    tablaNumeroFactura: 'Número Factura',
 
 
     //<---------------------------------------------------------------------------->
@@ -53,7 +54,7 @@ export default {
     //Navbar
     sistema: 'Sistema', cambiarContrasena: 'Cambiar Contraseña',
     parametros: 'Parámetros', parametrosGenerales: 'Párametros Generales', consecutivos: 'Consecutivos',
-    administracion: 'Administración', tipoMateriaPrima: 'Tipo Materia Prima', bodegas: 'Bodegas', camiones: 'Camiones', productos: 'Productos', empresas: 'Empresas/Clientes', provedores: 'Proveedores',
+    administracion: 'Administración', tipoMateriaPrima: 'Tipo Materia Prima', bodegas: 'Bodegas', camiones: 'Camiones', productos: 'Productos', empresas: 'Empresas/Clientes', provedores: 'Proveedores', materiaPrima: 'Materia Prima',
     seguridad: 'Seguridad', eventos: 'Eventos', roles: 'Roles', usuarios: 'Usuarios',
     consultasClientes: 'Consultas', bitacora: 'Bitácora', clientes: 'Clientes', pedidosPendientes: 'Pedidos Pendientes',
     reportes: 'Reportes', reporteProductos: 'Productos', reportesClientes: 'Clientes', inventarios: 'Inventarios', ventas: 'Ventas',
@@ -123,7 +124,11 @@ export default {
     //ADMINISTRACION
     //Tabla Tipo de Materia Prima
     tituloTipoMateriaPrima: 'Tipo de Materia Prima',
-    btnAgregarMateriaPrima: 'Agregar Nueva Materia Prima',
+    btnAgregarTipoMateriaPrima: 'Nuevo Tipo de Materia Prima',
+
+    //Tabla Materia Prima
+    tituloMateriPrima: 'Materias Primas',
+    btnAgregarMateriaPrima: 'Nueva Materia Prima',
 
     //Form & Modal - Nueva Materia Prima
     tituloNuevaMateriaPrima: 'Nueva Materia Prima',

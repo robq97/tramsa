@@ -179,7 +179,7 @@ class Parametros extends Component {
                     </div>
                     <div className="text-center">
                         <Button type="" icon="send" disabled={!this.state.direccion && !this.state.mensaje &&
-                            !this.state.telefono && !this.state.cedula && !this.state.nombreEmpresa} btnTxt="Actualizar Información" />
+                            !this.state.telefono && !this.state.cedula && !this.state.nombreEmpresa} btnTxt={<Translate content="btnActualizarInfo" />} />
                     </div>
                 </form>
             </Card>

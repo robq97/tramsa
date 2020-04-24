@@ -21,7 +21,7 @@ class Tipo_Materia_Prima extends Component {
                     show5={false}
                     show6={false}
                     inputShow={false}
-                    btnTxt={<Translate content="btnAgregarMateriaPrima" />}
+                    btnTxt={<Translate content="btnAgregarTipoMateriaPrima" />}
                     path="/administracion/nuevo-tipo-materia-prima" />
             </div>
         );
