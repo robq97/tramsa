@@ -3,7 +3,6 @@ import Button from '../../components/ui/buttons/Button';
 import Input from '../../components/ui/input/Input';
 import Card from '../../components/ui/card/Card';
 import Title from '../../components/ui/title/Title';
-import Select from '../../containers/ui/select/Select';
 import IconButton from '../../components/ui/buttons/Icon-Button';
 import { colorPalette } from 'material-icons-react';
 import Translate from 'react-translate-component';
@@ -35,7 +34,7 @@ class Consecutivos extends Component {
 
     onTMPSelect() {
         this.state.consecutivos.forEach(element => {
-            if(this.state.consecutivo === element.CON_Tipo) {
+            if (this.state.consecutivo === element.CON_Tipo) {
                 this.setState({
                     valor: element.CON_ValorConsecutivo,
                     prefijo: element.CON_Prefijo,
@@ -64,9 +63,6 @@ class Consecutivos extends Component {
                     <Title title={<Translate content="tituloConsecutivos" />} titleType="title-form" />
                     <div class="row align-items-center">
                         <div class="col pl-5">
-                            {/*} <Select
-                                URL="http://apitramsa.azurewebsites.net/consecutivos/" property="name"
-                                smallId="" smallTxt={<Translate content="smallSeleccioneTipo" />} />*/}
                             <small>{<Translate content="smallSeleccioneTipo" />}</small>
                             <select name="consecutivo" onChange={(ev) => this.handleChange(ev.target)}>
                                 {this.state.consecutivos.map((consecutivos) => (

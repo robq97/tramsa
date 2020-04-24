@@ -4,36 +4,43 @@ import Input from '../../../components/ui/input/Input';
 import Card from '../../../components/ui/card/Card';
 import Title from '../../../components/ui/title/Title';
 import AutomaticCode from '../../../components/ui/automaticCode/AutomaticCode';
+import Translate from 'react-translate-component';
+import counterpart from 'counterpart';
 
 class NuevoRol extends Component {
     render() {
+
+        const placeholderNombreRol = counterpart.translate('placeholderNombreRol');
+        const placeholderNombreCortoRol = counterpart.translate('placeholderNombreCortoRol');
+        const placeholderDescRol = counterpart.translate('placeholderDescRol');
+
         return (
             <Card>
-                <Title title="Nuevo Rol" titleType="title-form" />
+                <Title title={<Translate content="tituloNuevoRol" />} titleType="title-form" />
                 <form>
                     <div class="row align-items-center">
                         <div class="col pl-5">
                             <Input
-                                smallId="" smallTxt="Nombre del nuevo rol"
-                                icon="title" id="" placeholder="Nombre del nuevo rol" type="text" required="true" />
+                                smallId="" smallTxt={<Translate content="smallNombreRol" />}
+                                icon="title" id="" placeholder={placeholderNombreRol} type="text" required="true" />
                         </div>
                         <div class="col pr-5">
                             <Input
-                                smallId="" smallTxt="Nombre Corto"
-                                icon="title" id="" placeholder="Nombre Corto" type="txt" required="true" />
+                                smallId="" smallTxt={<Translate content="smallNombreCortoRol" />}
+                                icon="title" id="" placeholder={placeholderNombreCortoRol} type="txt" required="true" />
                         </div>
                     </div>
                     <div class="row align-items-center">
                         <div class="col pr-5 pl-5">
                             <Input
-                                smallId="" smallTxt="Descripción"
-                                icon="description" id="" placeholder="Descripción" type="text" required="true" />
+                                smallId="" smallTxt={<Translate content="smalldescRol" />}
+                                icon="description" id="" placeholder={placeholderDescRol} type="text" required="true" />
                         </div>
                     </div>
-                    <AutomaticCode smallId="" smallTxt="Código automático del nuevo rol"
+                    <AutomaticCode smallId="" smallTxt={<Translate content="smallNuevoRol" />}
                         id="" placeholder="12345" />
-                    <div class="text-center">
-                        <Button type="" icon="send" btnTxt="Crear Rol" />
+                    <div class="text-center">btnNuevoRol
+                        <Button type="" icon="send" btnTxt={<Translate content="btnNuevoRol" />} />
                     </div>
                 </form>
             </Card>

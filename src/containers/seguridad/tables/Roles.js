@@ -6,7 +6,7 @@ import Translate from 'react-translate-component';
 class Roles extends Component {
 
     deleteRol = ROL_Codigo => {
-        
+
     }
 
     render() {
@@ -26,7 +26,7 @@ class Roles extends Component {
                     inputShow={false}
                     iconShow={true}
                     iconDeleteOnly={true}
-                    btnTxt="Agregar Rol"
+                    btnTxt={<Translate content="btnNuevoRol" />}
                     path="/seguridad/roles/nuevo" />
             </div>
         );
