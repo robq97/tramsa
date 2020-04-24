@@ -14,9 +14,9 @@ class TableListaPrecios extends Component {
                     category="Precios"
                     title="Lista de Precios"
                     url="https://jsonplaceholder.typicode.com/posts"
-                    header1="Código" accessor1="id" filterable1={true} width1={350} show1={true}
-                    header2="Nombre" accessor2="title" width2={400} show2={true}
-                    header3="Precio Venta" accessor3="userId" width3={350} show3={true}
+                    header1={<Translate content="tableCodigo" />} accessor1="id" filterable1={true} width1={350} show1={true}
+                    header2={<Translate content="tableNombre" />} accessor2="title" width2={400} show2={true}
+                    header3={<Translate content="tablaMontoVenta" />} accessor3="userId" width3={350} show3={true}
                     show4={false}
                     show5={false}
                     show6={false}
