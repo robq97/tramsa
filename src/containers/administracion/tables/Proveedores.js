@@ -14,10 +14,10 @@ class Proveedores extends Component {
                     type="normal"
                     edit="proveedor"
                     url="https://jsonplaceholder.typicode.com/posts"
-                    header1="Código" accessor1="id" filterable1={true} width1={80} show1={true}
-                    header2="Nombre" accessor2="title" filterable2={true} width2={300} show2={true}
-                    header3="Teléfono" accessor3="userId" filterable3={false} width3={150} show3={true}
-                    header4="Correo Electrónico" accessor4="body" filterable4={false} width4={400} show4={true}
+                    header1={<Translate content="tableCodigo" />} accessor1="id" filterable1={true} width1={80} show1={true}
+                    header2={<Translate content="tableNombre" />} accessor2="title" filterable2={true} width2={300} show2={true}
+                    header3={<Translate content="tableTelefono" />} accessor3="userId" filterable3={false} width3={150} show3={true}
+                    header4={<Translate content="tableEmail" />} accessor4="body" filterable4={false} width4={400} show4={true}
                     show5={false}
                     show6={false}
                     inputShow={false}
