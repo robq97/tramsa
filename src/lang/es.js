@@ -13,6 +13,7 @@ export default {
     btnExcel: 'Exportar a Excel',
 
     tableCodigo: 'Código',
+    tableNombre: 'Nombre',
     tableNombreCorto: 'Nombre Corto',
     tableDescripción: 'Descripción',
     tableTipo: 'Tipo',
@@ -20,7 +21,7 @@ export default {
     tableMarca: 'Marca',
     tableReorden: 'Punto Re-orden',
     tableEstado: 'Estado',
-    tableEmail: 'Correo  Electrónico',
+    tableEmail: 'Correo Electrónico',
     tableTelefono: 'Teléfono',
     tableCodigoRol: 'Código Rol',
     tableNombreRol: 'Nombre de Rol',
@@ -44,6 +45,7 @@ export default {
     tablaCantidad: 'Cantidad',
     tablaFecha: 'Fecha',
     tablaMontoVenta: 'Monto Venta',
+    tablaIdentificacion: 'Identificación',
 
 
     //<---------------------------------------------------------------------------->

@@ -13,6 +13,7 @@ export default {
     btnExcel: 'Export to Excel',
 
     tableCodigo: 'Code',
+    tableNombre: 'Name',
     tableNombreCorto: 'Short Name',
     tableDescripción: 'Description',
     tableTipo: 'Type',
@@ -44,6 +45,7 @@ export default {
     tablaCantidad: 'Quantity',
     tablaFecha: 'Date',
     tablaMontoVenta: 'Sale Amount',
+    tablaIdentificacion: 'Identification',
 
     //<---------------------------------------------------------------------------->
 
