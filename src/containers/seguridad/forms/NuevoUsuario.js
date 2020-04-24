@@ -103,12 +103,13 @@ class NuevoUsuario extends Component {
                     <div className="row align-items-center">
                         <div className="col pl-5">
                             <small>{<Translate content="smallRolNuevoUsuario" />}</small>
-                            <select name="rol" onChange={(ev) => this.handleChange(ev.target)}>
-                                {this.state.roles.map((roles) => (
-                                    <option key={roles.ROL_Codigo}>{roles.ROL_Nombre}</option>
-                                ))}
-                            </select>
-
+                            <div className="input-group mb-4">
+                                <select class="form-control" name="rol" onChange={(ev) => this.handleChange(ev.target)}>
+                                    {this.state.roles.map((roles) => (
+                                        <option key={roles.ROL_Codigo}>{roles.ROL_Nombre}</option>
+                                    ))}
+                                </select>
+                            </div>
                         </div>
                         <div className="col">
                             <Input
