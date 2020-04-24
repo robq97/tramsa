@@ -85,7 +85,6 @@ class Navbar extends Component {
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <Link class="dropdown-item" to="/reportes/productos">{<Translate content="reporteProductos" />}</Link>
-                                <Link class="dropdown-item" to="/#">{<Translate content="reportesClientes" />}</Link>
                                 <Link class="dropdown-item" to="/reportes/inventarios">{<Translate content="inventarios" />}</Link>
                                 <Link class="dropdown-item" to="/reportes/ventas">{<Translate content="ventas" />}</Link>
                             </div>

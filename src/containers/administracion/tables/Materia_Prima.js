@@ -9,7 +9,7 @@ class Tipo_Materia_Prima extends Component {
         return (
             <div>
                 <Title
-                    title={<Translate content="tituloTipoMateriaPrima" />} titleType="title-table" />
+                    title={<Translate content="tituloMateriPrima" />} titleType="title-table" />
                 <Table
                     type="normal"
                     edit="materia-prima"

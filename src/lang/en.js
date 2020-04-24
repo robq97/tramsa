@@ -53,7 +53,7 @@ export default {
     //Navbar
     sistema: 'System', cambiarContrasena: 'Change Password',
     parametros: 'Parameters', parametrosGenerales: 'General Parameters', consecutivos: 'Consecutives',
-    administracion: 'Administration', tipoMateriaPrima: 'Type of Raw Material', bodegas: 'Warehouses', camiones: 'Trucks', productos: 'Products', empresas: 'Companies/Clients', provedores: 'Providers',
+    administracion: 'Administration', tipoMateriaPrima: 'Type of Raw Material', bodegas: 'Warehouses', camiones: 'Trucks', productos: 'Products', empresas: 'Companies/Clients', provedores: 'Providers', materiaPrima: 'Raw Material',
     seguridad: 'Security', eventos: 'Events', roles: 'Roles', usuarios: 'Users',
     consultasClientes: 'Queries', bitacora: 'Log', clientes: 'Clients', pedidosPendientes: 'Pending Orders',
     reportes: 'Reports', reporteProductos: 'Products', reportesClientes: 'Clients', inventarios: 'Inventories', ventas: 'Sales',
@@ -122,7 +122,11 @@ export default {
     //ADMINISTRACION
     //Tabla Tipo de Materia Prima
     tituloTipoMateriaPrima: 'Type of Raw Material',
-    btnAgregarMateriaPrima: 'Add New Raw Material',
+    btnAgregarTipoMateriaPrima: 'Add New Type of Raw Material',
+
+    //Tabla Materia Prima
+    tituloMateriPrima: 'Raw Materials',
+    btnAgregarMateriaPrima: 'New Raw Material',
 
     //Form & Modal - Nueva Materia Prima
     tituloNuevaMateriaPrima: 'New Raw Material',
