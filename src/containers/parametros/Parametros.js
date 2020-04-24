@@ -107,7 +107,7 @@ class Parametros extends Component {
             <Card>
                 <Modal />
                 <form id="update-company-info-form" onSubmit={this.handleSubmit}>
-                    <Title title="Tipo de Cambio" titleType="title-form" />
+                    <Title title={<Translate content="tituloTipoCambio" />} titleType="title-form" />
                     <div className="row align-items-center">
                         <div className="col pl-5">
                             {/*<Select
@@ -155,19 +155,19 @@ class Parametros extends Component {
                         <div className="col pl-5 pr-5">
                             <Input
                                 smallId="" smallTxt={<Translate content="smallMensajeSaludo" />}
-                                icon="message" id="" placeholder={this.state.mensaje} type="text" onChange={(ev) => this.handleChange(ev.target)}  />
+                                icon="message" id="" placeholder={this.state.mensaje} type="text" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                     </div>
                     <div className="row">
                         <div className="col pl-5 pr-5">
                             <Input
                                 smallId="" smallTxt={<Translate content="smallCedulaJuridica" />}
-                                icon="featured_video" id="" placeholder={this.state.cedula} type="text" onChange={(ev) => this.handleChange(ev.target)}  />
+                                icon="featured_video" id="" placeholder={this.state.cedula} type="text" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                         <div className="col pl-5 pr-5">
                             <Input
                                 smallId="" smallTxt={<Translate content="smallTelefonoActual" />}
-                                icon="phone" id=""  placeholder={this.state.telefono} type="tel" onChange={(ev) => this.handleChange(ev.target)} />
+                                icon="phone" id="" placeholder={this.state.telefono} type="tel" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                     </div>
                     <div className="row">
