@@ -5,7 +5,6 @@ import Card from '../../../components/ui/card/Card';
 import Title from '../../../components/ui/title/Title';
 import AutomaticCode from '../../../components/ui/automaticCode/AutomaticCode';
 import Label from '../../../components/ui/label/Label';
-import Select from '../../../containers/ui/select/Select';
 import Translate from 'react-translate-component';
 import counterpart from 'counterpart';
 import Axios from 'axios';

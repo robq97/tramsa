@@ -21,7 +21,8 @@ class NuevaBodega extends Component {
             tipo: '',
             espacio: '',
             codigonuevo: '',
-            usuario: sessionStorage.getItem('user')
+            usuario: sessionStorage.getItem('user'),
+            selectedRow: this.props.selectedRow
         }
     }
 

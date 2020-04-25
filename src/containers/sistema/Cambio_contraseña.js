@@ -85,23 +85,23 @@ class CambioContraseña extends Component {
         return (
             <Card>
                 <Title title={<Translate content="tituloCambioContrasena" />} titleType="title-form" />
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <div class="input-padding-25">
-                        <Input smallId="lblActualPassword" smallTxt={<Translate content="smallContrasenaActual" />}
+                        <Input smallId="lblActualPassword" name="currentPassword" smallTxt={<Translate content="smallContrasenaActual" />}
                             icon="vpn_key" type="password" id="actualPassword" placeholder={placeholderContraseaActual} required="true" onChange={(ev) => this.handleChange(ev.target)} />
                     </div>
                     <hr />
                     <div class="input-padding-25">
-                        <Input smallId="lblNewPassword" smallTxt={<Translate content="smallNuevaContrasena" />}
+                        <Input smallId="lblNewPassword" name="password" smallTxt={<Translate content="smallNuevaContrasena" />}
                             icon="lock" type="password" id="newPassword" placeholder={placeholderNuevaContrasena} required="true" onChange={(ev) => this.handleChange(ev.target)} />
                     </div>
                     <div class="input-padding-25">
-                        <Input smallId="lblNewPasswordConf" smallTxt={<Translate content="smallConfirmarNuevaContrasena" />}
+                        <Input smallId="lblNewPasswordConf" name="newPasswordValidation" smallTxt={<Translate content="smallConfirmarNuevaContrasena" />}
                             icon="lock" type="password" id="confirmNewPassword" placeholder={placeholderConfirmarNuevaContrasena} required="true" onChange={(ev) => this.handleChange(ev.target)} />
                     </div>
 
                     <div class="text-center">
-                        <Button type="" icon="send" btnTxt={<Translate content="btnContrasena" />} />
+                        <Button type="submit" icon="send" btnTxt={<Translate content="btnContrasena" />} />
                     </div>
                 </form>
             </Card>

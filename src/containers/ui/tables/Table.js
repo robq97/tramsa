@@ -61,7 +61,7 @@ class Table extends Component {
 
     deleteItem() {
         const url = this.props.url;
-        Axios.get(url.concat(`${sessionStorage.getItem('user')}/delete/${this.state.meCago}`))
+        Axios.get(url.concat(`${sessionStorage.getItem('user')}/delete/${this.state.selectedRow}`))
             .then((res) => {
                 alert(res.data.message);
             })
@@ -137,6 +137,9 @@ class Table extends Component {
                                     <IconButton
                                         type="" icon="delete" color={colorPalette.red._700} onClick={() => {
                                             console.log("props", props.original._id)
+                                            this.setState({
+                                                selectedRow: props.original._id
+                                            })
                                         }}
                                         toggle="modal" target="#delete" />
                                     <Modal

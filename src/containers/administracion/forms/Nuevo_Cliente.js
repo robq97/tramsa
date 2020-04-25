@@ -3,7 +3,6 @@ import Button from '../../../components/ui/buttons/Button';
 import Input from '../../../components/ui/input/Input';
 import Card from '../../../components/ui/card/Card';
 import Title from '../../../components/ui/title/Title';
-import Select from '../../../containers/ui/select/Select';
 import Translate from 'react-translate-component';
 import counterpart from 'counterpart';
 import Axios from 'axios';

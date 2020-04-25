@@ -8,7 +8,7 @@ import { URL } from '../../util/common';
 import Axios from 'axios';
 
 
-class EditarMateriaPrima extends Component {
+class EditarBodega extends Component {
 
     constructor(props) {
         super(props);
@@ -20,7 +20,6 @@ class EditarMateriaPrima extends Component {
             tipo: '',
             espacio: '',
             codigonuevo: '',
-            usuario: sessionStorage.getItem('user'),
             selectedRow: this.props.selectedRow
         }
     }
@@ -42,7 +41,6 @@ class EditarMateriaPrima extends Component {
             RGB_UNI_Medida: this.state.unidadMedida,
             RGB_Tipo: this.state.tipo,
             RGB_Espacio: this.state.espacio,
-            USU_User: this.state.usuario
         }
         alert(this.state.selectedRow)
 
@@ -69,7 +67,7 @@ class EditarMateriaPrima extends Component {
                 <div class="row align-items-center">
                     <div class="col">
                         <Input
-                            smallId="" smallTxt={<Translate content="smallAliasBodega" />}
+                            smallId=""  smallTxt={<Translate content="smallAliasBodega" />}
                             icon="title" name="nombre" id="" placeholder={placeholderNombreBodega} type="text" required="true" onChange={(ev) => this.handleChange(ev.target)} />
                     </div>
                 </div>
@@ -124,4 +122,4 @@ class EditarMateriaPrima extends Component {
     }
 }
 
-export default EditarMateriaPrima;
+export default EditarBodega;
