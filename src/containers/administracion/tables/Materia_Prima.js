@@ -10,14 +10,13 @@ class Tipo_Materia_Prima extends Component {
             <div>
                 <Title
                     title={<Translate content="tituloMateriPrima" />} titleType="title-table" />
-                <Table
+                <Table 
                     type="normal"
                     edit="materia-prima"
-                    url="https://jsonplaceholder.typicode.com/posts"
-                    header1={<Translate content="tableCodigo" />} accessor1="id" filterable1={true} width1={80} show1={true}
-                    header2={<Translate content="tableNombre" />} accessor2="title" filterable2={true} width2={300} show2={true}
-                    header3={<Translate content="tablaCantidad" />} accessor3="userId" filterable3={false} width3={150} show3={true}
-                    header4={<Translate content="tableUnidadMedida" />} accessor4="body" filterable4={false} width4={400} show4={true}
+                    url={`http://apitramsa.azurewebsites.net/materiaprima/${sessionStorage.getItem('user')}`}
+                    header1={<Translate content="tableCodigo" />} accessor1="MTP_Codigo" filterable1={true} width1={80} show1={true}
+                    header2={<Translate content="tableNombreCorto" />} accessor2="MTP_NOM_Corto" filterable2={true} width2={300} show2={true}
+                    header3={<Translate content="tablaCantidad" />} accessor3="MTP_CAN_Existente" filterable3={false} width3={150} show3={true}
                     show5={false}
                     show6={false}
                     inputShow={false}
