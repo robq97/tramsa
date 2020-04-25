@@ -13,11 +13,11 @@ class Bodegas extends Component {
                 <Table
                     type="normal"
                     edit="bodega"
-                    url="https://jsonplaceholder.typicode.com/posts"
-                    header1={<Translate content="tableCodigo" />} accessor1="id" filterable1={true} width1={80} show1={true}
-                    header2={<Translate content="tableNombreCorto" />} accessor2="title" filterable2={true} width2={300} show2={true}
-                    header3={<Translate content="tableTipo" />} accessor3="userId" filterable3={false} width3={150} show3={true}
-                    header4={<Translate content="tableUbicacion" />} accessor4="body" filterable4={false} width4={400} show4={true}
+                    url={`http://apitramsa.azurewebsites.net/registroBodega/${sessionStorage.getItem('user')}`}
+                    header1={<Translate content="tableCodigo" />} accessor1="RGB_COD_Bodega" filterable1={true} width1={80} show1={true}
+                    header2={<Translate content="tableNombreCorto" />} accessor2="RGB_NOM_Corto" filterable2={true} width2={300} show2={true}
+                    header3={<Translate content="tableTipo" />} accessor3="RGB_Tipo" filterable3={false} width3={150} show3={true}
+                    header4={<Translate content="tableUbicacion" />} accessor4="RGB_Ubicacion" filterable4={false} width4={400} show4={true}
                     show5={false}
                     show6={false}
                     inputShow={false}

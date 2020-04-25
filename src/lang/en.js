@@ -42,6 +42,7 @@ export default {
     tableCamion: 'Truck',
     tableMontoPedido: 'Order Amount',
     tableUnidadMedida: 'Unit of measurement',
+    tablePrimerApellido: 'Last name',
     tablaCantidad: 'Quantity',
     tablaFecha: 'Date',
     tablaMontoVenta: 'Sale Amount',
@@ -219,6 +220,7 @@ export default {
     smallNumeroIdentificacion: 'Enter an ID',
     placeholderNumeroIdentificacion: 'Identification',
     smallNumeroTelefono: 'Enter a phone number',
+    smallNumeroTelefonoOficina: 'Enter a office phone number',
     placeholderNumeroTelefono: 'Phone number',
     smallEmail: 'Enter an email',
     placeholderEmail: 'Email',
@@ -246,7 +248,7 @@ export default {
     smallNombreContacto: 'Enter the contact name',
     placeholderNombreContacto: 'Name',
     smallDireccionProveedor: 'Enter an address',
-    smallTelefonoContacto: 'Enter the contact phone number',
+    smallTelefonoContacto: 'Enter the contact phone number office',
     placeholderTelefonoContacto: 'Contact phone number',
     placeholderDireccionProveedor: 'Address',
     tituloEditarProveedor: 'Edit Provider',
@@ -304,6 +306,8 @@ export default {
     smalldescRol: 'Enter a description for the new role',
     placeholderDescRol: 'Description',
     smallNuevoRol: 'Automatic code for new role',
+    smallDisponible: 'Enter available row',
+    smallAsignado: 'Enter assign row',
 
     //Usuario
     tituloBusquedaUsuario: 'User Search',

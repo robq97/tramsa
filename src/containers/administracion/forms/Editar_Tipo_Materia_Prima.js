@@ -39,9 +39,9 @@ class EditarMateriaPrima extends Component {
             USU_User: this.state.usuario
         }
 
-        console.log(this.state.selectedRow)
+        alert(this.state.selectedRow)
 
-        Axios.post(URL.concat(`tipomateriaprima/update`), { data })
+        Axios.post(URL.concat(`tipomateriaprima/update/${sessionStorage.getItem('user')}`), { data })
             .then((response) => {
                 alert(response.data.message);
             })

@@ -16,7 +16,7 @@ class Roles extends Component {
                     title={<Translate content="tituloRoles" />} titleType="title-table" />
                 <Table
                     type="normal"
-                    url="http://apitramsa.azurewebsites.net/rol"
+                    url={`http://localhost:4000/rol/${sessionStorage.getItem('user')}`}
                     header1={<Translate content="tableCodigoRol" />} accessor1="ROL_Codigo" filterable1={true} width1={150} show1={true}
                     header2={<Translate content="tableNombreRol" />} accessor2="ROL_Nombre" filterable2={true} width2={300} show2={true}
                     header3={<Translate content="tableRolesDisponibles" />} accessor3="ROL_Disponibles" filterable3={false} width3={225} show3={true}

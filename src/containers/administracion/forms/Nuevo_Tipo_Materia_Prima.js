@@ -16,6 +16,7 @@ class NuevaMateriaPrima extends Component {
             nombre: '',
             usuario: sessionStorage.getItem('user')
         }
+        
     }
 
     handleChange = control => {

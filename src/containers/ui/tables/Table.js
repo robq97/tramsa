@@ -147,7 +147,7 @@ class Table extends Component {
                                             {this.props.edit === "materia-prima" ?
                                                 <EditarMateriaPrima /> : null}
                                             {this.props.edit === "bodega" ?
-                                                <EditarBodega /> : null}
+                                                <EditarBodega  selectedRow={props.original._id}/> : null}
                                             {this.props.edit === "camion" ?
                                                 <EditarCamion /> : null}
                                             {this.props.edit === "producto" ?

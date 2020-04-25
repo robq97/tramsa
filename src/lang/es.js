@@ -42,6 +42,7 @@ export default {
     tableCamion: 'Camión',
     tableMontoPedido: 'Monto del Pedido',
     tableUnidadMedida: 'Unidad de Medida',
+    tablePrimerApellido: 'Primer apellido',
     tablaCantidad: 'Cantidad',
     tablaFecha: 'Fecha',
     tablaMontoVenta: 'Monto de Venta',
@@ -221,6 +222,7 @@ export default {
     smallNumeroIdentificacion: 'Ingrese el número de identificación',
     placeholderNumeroIdentificacion: 'Identificación',
     smallNumeroTelefono: 'Ingrese el número de teléfono',
+    smallNumeroTelefonoOficina: 'Ingrese el número de la oficina',
     placeholderNumeroTelefono: 'Teléfono',
     smallEmail: 'Ingrese el correo electrónico',
     placeholderEmail: 'Correo electrónico',
@@ -248,7 +250,7 @@ export default {
     smallNombreContacto: 'Ingrese el nombre del contacto',
     placeholderNombreContacto: 'Nombre contacto',
     smallDireccionProveedor: 'Ingrese la dirección',
-    smallTelefonoContacto: 'Ingrese el número de teléfono del contacto',
+    smallTelefonoContacto: 'Ingrese el número de teléfono de la oficina',
     placeholderTelefonoContacto: 'Teléfono contacto',
     placeholderDireccionProveedor: 'Dirección',
     tituloEditarProveedor: 'Editar Proveedor',
@@ -306,6 +308,8 @@ export default {
     smalldescRol: 'Ingrese una descripción del nuevo rol',
     placeholderDescRol: 'Descripción',
     smallNuevoRol: 'Código automático del nuevo rol',
+    smallDisponibleRol: 'Ingrese Rol disponible',
+    smallAsignadoRol: 'Ingrege el rol asignado',
 
     //Usuario
     tituloBusquedaUsuario: 'Busqueda de usuario',
