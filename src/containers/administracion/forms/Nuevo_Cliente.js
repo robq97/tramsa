@@ -49,7 +49,7 @@ class NuevoCliente extends Component {
             CLT_Direccion: this.state.segundoApellido,
             USU_User: this.state.usuario
         }
-        Axios.post("http://localhost:4000/cliente/create", { data })
+        Axios.post(URL.concat('cliente/create'), { data })
             .then((response) => {
                 alert(response.data.message);
                 this.context.router.history.push('/administracion/nuevo-cliente');
