@@ -3,7 +3,6 @@ import Button from '../../../components/ui/buttons/Button';
 import Input from '../../../components/ui/input/Input';
 import Card from '../../../components/ui/card/Card';
 import Title from '../../../components/ui/title/Title';
-import Select from '../../../containers/ui/select/Select';
 import Translate from 'react-translate-component';
 import counterpart from 'counterpart';
 import Axios from 'axios';
@@ -105,7 +104,7 @@ class NuevoCliente extends Component {
                                 icon="featured_video" id="" placeholder={placeholderNumeroIdentificacion} type="number" required="true" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                         <div class="col pr-5">
-                        <small className="form-text text-muted mb-1">{<Translate content="smallEstadoCliente" />}</small>
+                            <small className="form-text text-muted mb-1">{<Translate content="smallEstadoCliente" />}</small>
                             <div className="input-group mb-4">
                                 <select className="form-control" name="docIdentidad" onChange={(ev) => this.handleChange(ev.target)}>
                                     <option value="Activo">Activo</option>
@@ -121,12 +120,12 @@ class NuevoCliente extends Component {
                                 icon="featured_video" id="" placeholder={placeholderEmail} type="email" required="true" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                         <div class="col">
-                        <Input
+                            <Input
                                 smallId="" name="telefonoOficina" smallTxt={<Translate content="smallNumeroTelefonoOficina" />}
                                 icon="phone" id="" placeholder={placeholderNumeroTelefono} type="tel" required="true" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                         <div class="col pr-5">
-                        <Input
+                            <Input
                                 smallId="" name="telefono" smallTxt={<Translate content="smallNumeroTelefono" />}
                                 icon="phone" id="" placeholder={placeholderNumeroTelefono} type="tel" required="true" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>

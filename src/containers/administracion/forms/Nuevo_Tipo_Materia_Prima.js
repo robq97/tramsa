@@ -1,4 +1,4 @@
-import React, { Component, useReducer } from 'react';
+import React, { Component } from 'react';
 import Button from '../../../components/ui/buttons/Button';
 import Input from '../../../components/ui/input/Input';
 import Card from '../../../components/ui/card/Card';
@@ -16,7 +16,7 @@ class NuevaMateriaPrima extends Component {
             nombre: '',
             usuario: sessionStorage.getItem('user')
         }
-        
+
     }
 
     handleChange = control => {

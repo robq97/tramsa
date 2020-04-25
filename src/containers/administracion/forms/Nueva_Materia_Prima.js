@@ -3,7 +3,6 @@ import Button from '../../../components/ui/buttons/Button';
 import Input from '../../../components/ui/input/Input';
 import Card from '../../../components/ui/card/Card';
 import Title from '../../../components/ui/title/Title';
-import Select from '../../../containers/ui/select/Select'
 import AutomaticCode from '../../../components/ui/automaticCode/AutomaticCode'
 import Translate from 'react-translate-component';
 import counterpart from 'counterpart';
@@ -71,12 +70,12 @@ class NuevaMateriaPrima extends Component {
                         <div class="col pl-5">
                             <Input
                                 smallId="" name="nombre" smallTxt={<Translate content="smallNombreMateria" />}
-                                icon="title" id="" placeholder={placeholderNombreMateria} type="text" required="true" onChange={(ev) => this.handleChange(ev.target)}/>
+                                icon="title" id="" placeholder={placeholderNombreMateria} type="text" required="true" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                         <div class="col">
                             <Input
                                 smallId="" name="cantidad" smallTxt={<Translate content="smallCantidadMateria" />}
-                                icon="filter_1" id="" placeholder={placeholderCantidadMateria} type="text" required="true"onChange={(ev) => this.handleChange(ev.target)} />
+                                icon="filter_1" id="" placeholder={placeholderCantidadMateria} type="text" required="true" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                         <div class="col pr-5">
                             <small className="form-text text-muted mb-1">{<Translate content="smallMedidaBodega" />}</small>

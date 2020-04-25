@@ -5,7 +5,6 @@ import Card from '../../../components/ui/card/Card';
 import Title from '../../../components/ui/title/Title';
 import AutomaticCode from '../../../components/ui/automaticCode/AutomaticCode';
 import Label from '../../../components/ui/label/Label';
-import Select from '../../../containers/ui/select/Select';
 import Translate from 'react-translate-component';
 import counterpart from 'counterpart';
 import Axios from 'axios';
@@ -74,7 +73,7 @@ class NuevoProducto extends Component {
                         <div class="col  pl-5 pr-5">
                             <Input
                                 smallId="" name="descripcion" smallTxt={<Translate content="smallDescProducto" />}
-                                icon="description" id="" placeholder={placeholderDescProducto} type="text" required="true" onChange={(ev) => this.handleChange(ev.target)}  />
+                                icon="description" id="" placeholder={placeholderDescProducto} type="text" required="true" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                     </div>
                     <div class="row align-items-center pt-3">
@@ -94,7 +93,7 @@ class NuevoProducto extends Component {
                         <div class="col pr-5">
                             <Input
                                 smallId="" name="orden" smallTxt={<Translate content="smallPuntoReorden" />}
-                                icon="room" id="" placeholder={placeholderPuntoReorden} type="text" required="true"  onChange={(ev) => this.handleChange(ev.target)} />
+                                icon="room" id="" placeholder={placeholderPuntoReorden} type="text" required="true" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                     </div>
                     <AutomaticCode smallId="" smallTxt={<Translate content="smallNuevoProducto" />}
