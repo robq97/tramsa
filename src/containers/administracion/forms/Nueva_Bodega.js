@@ -41,15 +41,14 @@ class NuevaBodega extends Component {
             RGB_UNI_Medida: this.state.unidadMedida,
             RGB_Tipo: this.state.tipo,
             RGB_Espacio: this.state.espacio,
-            USU_User: this.state.usuario,
-
+            USU_User: this.state.usuario
         }
         Axios.post(URL.concat('registrobodega/create'), { data })
             .then((response) => {
                 alert(response.data.message);
                 this.context.router.history.push('/administracion/nueva-bodega');
             })
-            .catch((err) => console.error(err));
+            .catch((err) => console.log(err));
     }
 
     componentDidMount() {
@@ -71,25 +70,25 @@ class NuevaBodega extends Component {
         const placeholderUbicacionBodega = counterpart.translate('placeholderUbicacionBodega');
         return (
             <Card>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <Title title={<Translate content="tituloNuevaBodega" />} titleType="title-form" />
                     <div class="row align-items-center">
                         <div class="col pl-5">
                             <Input
-                                smallId="" name="RGB_Nombre" smallTxt={<Translate content="smallNombreBodega" />}
-                                icon="title" id="" placeholder={placeholderNombreBodega} type="text" required="true" />
+                                smallId="" name="nombre" smallTxt={<Translate content="smallNombreBodega" />}
+                                icon="title" id="" placeholder={placeholderNombreBodega} type="text" required="true" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                         <div class="col pr-5">
                             <Input
-                                smallId="" name="RGB_Alias" smallTxt={<Translate content="smallAliasBodega" />}
-                                icon="business_center" id="" placeholder={placeholderAliasBodega} type="text" required="true" />
+                                smallId="" name="alias" smallTxt={<Translate content="smallAliasBodega" />}
+                                icon="business_center" id="" placeholder={placeholderAliasBodega} type="text" required="true" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                     </div>
                     <div class="row align-items-center">
                         <div class="col pl-5">
                             <Input
                                 smallId="" smallTxt={<Translate content="smallEspacioBodega" />}
-                                icon="meeting_room" id="" placeholder={placeholderEspacioBodega} type="number" required="true" />
+                                icon="meeting_room" name="espacio" id="" placeholder={placeholderEspacioBodega} type="number" required="true" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                         <div >
                             <small className="form-text text-muted mb-1">{<Translate content="smallMedidaBodega" />}</small>
@@ -118,13 +117,13 @@ class NuevaBodega extends Component {
                         <div class="col pl-5 pr-5">
                             <Input
                                 smallId="" name="ubicacion" smallTxt={<Translate content="smallUbicacionBodega" />}
-                                icon="place" id="" placeholder={placeholderUbicacionBodega} type="text" required="true" />
+                                icon="place" id="" placeholder={placeholderUbicacionBodega} type="text" required="true" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                     </div>
                     <AutomaticCode smallId="" smallTxt={<Translate content="smallNuevaBodega" />}
                         id="" placeholder={this.state.codigonuevo} />
                     <div class="text-center">
-                        <Button type="" icon="send" btnTxt={<Translate content="btnNuevaBodega" />} />
+                        <Button type="submit" icon="send" btnTxt={<Translate content="btnNuevaBodega" />} />
                     </div>
                 </form>
             </Card>
