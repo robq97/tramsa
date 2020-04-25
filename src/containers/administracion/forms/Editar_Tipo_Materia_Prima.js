@@ -18,6 +18,12 @@ class EditarMateriaPrima extends Component {
         }
     }
 
+    componentDidMount() {
+        this.setState({
+            selectedRow: this.props.selectedRow
+        });
+    }
+
     handleChange = control => {
         const { name, value } = control;
         const state = {};

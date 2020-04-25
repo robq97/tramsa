@@ -4,8 +4,46 @@ import Input from '../../../components/ui/input/Input';
 import Title from '../../../components/ui/title/Title';
 import Select from '../../../containers/ui/select/Select';
 import Translate from 'react-translate-component';
+import Axios from 'axios';
+import { URL } from '../../util/common';
 
 class EditarProveedor extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            cedula: '',
+            usuario: sessionStorage.getItem('user'),
+            telefono: this.props.selectedRow,
+            ofi_telefono: '',
+            direccion: ''
+        }
+    }
+
+    handleChange = control => {
+        const { name, value } = control;
+        const state = {};
+        state[name] = value;
+        this.setState(state);
+    }
+
+    handleSubmit = event => {
+        event.preventDefault();
+        const data = {
+            _id: this.state.selectedRow,
+            TMP_Descripcion: this.state.nombre,
+            USU_User: this.state.usuario
+        }
+
+        console.log(this.state.selectedRow)
+
+        Axios.post(URL.concat(`tipomateriaprima/update`), { data })
+            .then((response) => {
+                alert(response.data.message);
+            })
+            .catch((err) => console.error(err));
+    }
+
     render() {
         return (
             <form>

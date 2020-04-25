@@ -23,6 +23,7 @@ import EditarProducto from '../../administracion/forms/Editar_Producto';
 import EditarCliente from '../../administracion/forms/Editar_Cliente';
 import EditarProveedor from '../../administracion/forms/Editar_Proveedor';
 import EditarUsuario from '../../seguridad/forms/Editar_Usuario';
+import InfoTipoMateriaPrima from '../../administracion/forms/Info_Tipo_Materia_Prima';
 import Translate from 'react-translate-component';
 
 class Table extends Component {
@@ -124,7 +125,7 @@ class Table extends Component {
                                 </div> : <div>
                                     <IconButton
                                         type="" icon="create" color={colorPalette.grey._700} onClick={() => {
-                                            console.log("props", props.original._id)
+                                            console.log("props", props.original._id);
                                         }}
                                         toggle="modal" target="#edit" />
 
@@ -161,13 +162,22 @@ class Table extends Component {
                                     <Modal
                                         id="info" body={true} confirmBtn={false} title={<Translate content="modalDetalle" />}
                                         bodyContent={<div>
-                                            <Label lblText="linea 1" /> <br />
-                                            <Label lblText="linea 2" /><br />
-                                            <Label lblText="linea 3" /><br />
-                                            <Label lblText="linea 4" /><br />
-                                            <Label lblText="linea 5" /><br />
-                                            <Label lblText="linea 6" /><br />
-                                            <Label lblText="linea 7" /><br />
+                                            {this.props.edit === "tipo-materia-prima" ?
+                                                <InfoTipoMateriaPrima selectedRow={props.original._id} /> : null}
+                                            {this.props.edit === "materia-prima" ?
+                                                <EditarMateriaPrima /> : null}
+                                            {this.props.edit === "bodega" ?
+                                                <EditarBodega /> : null}
+                                            {this.props.edit === "camion" ?
+                                                <EditarCamion /> : null}
+                                            {this.props.edit === "producto" ?
+                                                <EditarProducto /> : null}
+                                            {this.props.edit === "cliente" ?
+                                                <EditarCliente /> : null}
+                                            {this.props.edit === "proveedor" ?
+                                                <EditarProveedor /> : null}
+                                            {this.props.edit === "usuario" ?
+                                                <EditarUsuario /> : null}
                                         </div>} />
                                     <Modal id="delete" body={false} confirmBtn={true} title={<Translate content="modalEliminar" />} confirmBtnAction={this.deleteItem} />
                                 </div>}
