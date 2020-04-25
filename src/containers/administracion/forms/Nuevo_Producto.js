@@ -59,10 +59,8 @@ class NuevoProducto extends Component {
 
     render() {
 
-        const placeholderNombreProducto = counterpart.translate('placeholderNombreProducto');
         const placeholderDescProducto = counterpart.translate('placeholderDescProducto');
         const placeholderPuntoReorden = counterpart.translate('placeholderPuntoReorden');
-        const placeholderCodigoProducto = counterpart.translate('placeholderCodigoProducto');
 
         return (
             <Card>

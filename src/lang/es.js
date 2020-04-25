@@ -250,7 +250,7 @@ export default {
     smallNombreContacto: 'Ingrese el nombre del contacto',
     placeholderNombreContacto: 'Nombre contacto',
     smallDireccionProveedor: 'Ingrese la dirección',
-    smallTelefonoContacto: 'Ingrese el número de teléfono del contacto',
+    smallTelefonoContacto: 'Ingrese el número de teléfono de la oficina',
     placeholderTelefonoContacto: 'Teléfono contacto',
     placeholderDireccionProveedor: 'Dirección',
     tituloEditarProveedor: 'Editar Proveedor',

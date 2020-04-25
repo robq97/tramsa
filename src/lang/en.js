@@ -248,7 +248,7 @@ export default {
     smallNombreContacto: 'Enter the contact name',
     placeholderNombreContacto: 'Name',
     smallDireccionProveedor: 'Enter an address',
-    smallTelefonoContacto: 'Enter the contact phone number',
+    smallTelefonoContacto: 'Enter the contact phone number office',
     placeholderTelefonoContacto: 'Contact phone number',
     placeholderDireccionProveedor: 'Address',
     tituloEditarProveedor: 'Edit Provider',
