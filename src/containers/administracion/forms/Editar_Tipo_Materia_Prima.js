@@ -18,6 +18,12 @@ class EditarMateriaPrima extends Component {
         }
     }
 
+    componentDidMount() {
+        this.setState({
+            selectedRow: this.props.selectedRow
+        });
+    }
+
     handleChange = control => {
         const { name, value } = control;
         const state = {};
@@ -32,8 +38,6 @@ class EditarMateriaPrima extends Component {
             TMP_Descripcion: this.state.nombre,
             USU_User: this.state.usuario
         }
-
-        alert(this.state.selectedRow)
 
         Axios.post(URL.concat(`tipomateriaprima/update/${sessionStorage.getItem('user')}`), { data })
             .then((response) => {

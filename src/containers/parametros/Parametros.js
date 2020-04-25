@@ -148,31 +148,31 @@ class Parametros extends Component {
                     <div class="row">
                         <div class="col pl-5 pr-5">
                             <Input
-                                smallId="" smallTxt={<Translate content="smallNombreCompania" />}
+                                smallId="" name="nombreEmpresa" smallTxt={<Translate content="smallNombreCompania" />}
                                 icon="business_center" id="" placeholder={this.state.nombreEmpresa} type="text" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                         <div className="col pl-5 pr-5">
                             <Input
-                                smallId="" smallTxt={<Translate content="smallMensajeSaludo" />}
+                                smallId="" name="mensaje" smallTxt={<Translate content="smallMensajeSaludo" />}
                                 icon="message" id="" placeholder={this.state.mensaje} type="text" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                     </div>
                     <div className="row">
                         <div className="col pl-5 pr-5">
                             <Input
-                                smallId="" smallTxt={<Translate content="smallCedulaJuridica" />}
+                                smallId="" name="cedula" smallTxt={<Translate content="smallCedulaJuridica" />}
                                 icon="featured_video" id="" placeholder={this.state.cedula} type="text" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                         <div className="col pl-5 pr-5">
                             <Input
-                                smallId="" smallTxt={<Translate content="smallTelefonoActual" />}
+                                smallId="" name="telefono" smallTxt={<Translate content="smallTelefonoActual" />}
                                 icon="phone" id="" placeholder={this.state.telefono} type="tel" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                     </div>
                     <div className="row">
                         <div className="col pl-5 pr-5">
                             <Input
-                                smallId="" smallTxt={<Translate content="smallDireccionEstablecimiento" />}
+                                smallId="" name="direccion" smallTxt={<Translate content="smallDireccionEstablecimiento" />}
                                 icon="place" id="" placeholder={this.state.direccion} onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                     </div>
