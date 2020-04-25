@@ -306,6 +306,8 @@ export default {
     smalldescRol: 'Enter a description for the new role',
     placeholderDescRol: 'Description',
     smallNuevoRol: 'Automatic code for new role',
+    smallDisponible: 'Enter available row',
+    smallAsignado: 'Enter assign row',
 
     //Usuario
     tituloBusquedaUsuario: 'User Search',

@@ -308,6 +308,8 @@ export default {
     smalldescRol: 'Ingrese una descripción del nuevo rol',
     placeholderDescRol: 'Descripción',
     smallNuevoRol: 'Código automático del nuevo rol',
+    smallDisponibleRol: 'Ingrese Rol disponible',
+    smallAsignadoRol: 'Ingrege el rol asignado',
 
     //Usuario
     tituloBusquedaUsuario: 'Busqueda de usuario',
