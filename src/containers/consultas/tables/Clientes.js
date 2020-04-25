@@ -11,14 +11,15 @@ class Clientes extends Component {
                 <Title
                     title={<Translate content="tituloConsultaClientes" />} titleType="title-table" />
                 <Table
-                    type="consulta"
-                    url="https://jsonplaceholder.typicode.com/posts"
-                    header1={<Translate content="tablaIdentificacion" />} accessor1="id" filterable1={true} width1={150} show1={true}
-                    header2={<Translate content="tableNombreCompleto" />} accessor2="title" filterable2={true} width2={300} show2={true}
-                    header3={<Translate content="tableTelHabitacion" />} accessor3="userId" filterable3={false} width3={130} show3={true}
-                    header4={<Translate content="tableTelCelular" />} accessor4="body" filterable4={false} width4={130} show4={true}
-                    header5={<Translate content="tableTelTrabajo" />} accessor5="body" filterable5={false} width5={130} show5={true}
-                    header6={<Translate content="tableEmail" />} accessor6="body" filterable6={false} width6={250} show6={true}
+                    type="consulta" 
+
+                    url={`http://apitramsa.azurewebsites.net/cliente/${sessionStorage.getItem('user')}`}
+                    header1={<Translate content="tablaIdentificacion" />} accessor1="CLT_Identificacion" filterable1={true} width1={150} show1={true}
+                    header2={<Translate content="tableNombre" />} accessor2="CLT_Nombre" filterable2={true} width2={300} show2={true}
+                    header3={<Translate content="tablePrimerApellido" />} accessor3="CLT_PRI_Apellido" filterable3={false} width3={130} show3={true}
+                    header4={<Translate content="tableTelefono" />} accessor4="CLT_Telefono" filterable4={false} width4={130} show4={true}
+                    header5={<Translate content="tableEmail" />} accessor5="CLT_Correo" filterable5={false} width5={250} show5={true}
+                    show6={false}
                     iconShow={false}
                     inputShow={false}
                     btnTxt={<Translate content="btnClientesActivos" />}

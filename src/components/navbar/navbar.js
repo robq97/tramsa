@@ -76,7 +76,6 @@ class Navbar extends Component {
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <Link class="dropdown-item" to="/consultas/bitacora">{<Translate content="bitacora" />}</Link>
                                 <Link class="dropdown-item" to="/consultas/clientes">{<Translate content="clientes" />}</Link>
-                                <Link class="dropdown-item" to="/consultas/pedidos-pendientes">{<Translate content="pedidosPendientes" />}</Link>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -85,8 +84,6 @@ class Navbar extends Component {
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <Link class="dropdown-item" to="/reportes/productos">{<Translate content="reporteProductos" />}</Link>
-                                <Link class="dropdown-item" to="/reportes/inventarios">{<Translate content="inventarios" />}</Link>
-                                <Link class="dropdown-item" to="/reportes/ventas">{<Translate content="ventas" />}</Link>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
