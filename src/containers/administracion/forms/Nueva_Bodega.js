@@ -76,7 +76,7 @@ class NuevaBodega extends Component {
                     <div class="row align-items-center">
                         <div class="col pl-5">
                             <Input
-                                smallId="" name="nombre" smallTxt={<Translate content="smallNombreBodega" />}
+                                smallId=""smallTxt={<Translate content="smallNombreBodega" />}
                                 icon="title" id="" placeholder={placeholderNombreBodega} type="text" required="true" onChange={(ev) => this.handleChange(ev.target)} />
                         </div>
                         <div class="col pr-5">

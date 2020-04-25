@@ -68,9 +68,9 @@ class ExportToExcel extends Component {
                                 this.props.rows.map(row => {
                                     return (
                                         <tr key={row.id}>
-                                            <td>{row.userId}</td>
-                                            <td>{row.title}</td>
-                                            <td>{row.id}</td>
+                                            <td>{row.PRD_Codigo}</td>
+                                            <td>{row.PRD_UNI_Medida}</td>
+                                            <td>{row.PRD_PTR_Orden}</td>
                                         </tr>
                                     )
                                 })
