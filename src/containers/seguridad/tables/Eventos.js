@@ -12,9 +12,9 @@ class Eventos extends Component {
                     title={<Translate content="tituloEventos" />} titleType="title-form" />
                 <Table
                     type=""
-                    url="https://jsonplaceholder.typicode.com/posts"
-                    header1={<Translate content="tableCodigo" />} accessor1="id" filterable1={true} width1={200} show1={true}
-                    header2={<Translate content="tableDescripción" />} accessor2="title" filterable2={true} width2={900} show2={true}
+                    url={`http://apitramsa.azurewebsites.net/evento/${sessionStorage.getItem('user')}`}
+                    header1={<Translate content="tableCodigo" />} accessor1="EVE_COD_Evento" filterable1={true} width1={200} show1={true}
+                    header2={<Translate content="tableDescripción" />} accessor2="EVE_DES_Evento" filterable2={true} width2={900} show2={true}
                     show3={false}
                     show4={false}
                     show5={false}
