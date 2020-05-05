@@ -20,3 +20,9 @@ steps:
     npm i axios counterpart material-icons-react node-sass react react-credit-cards react-dom react-html-table-to-excel react-interpolate-component react-router react-router-dom react-scripts react-table-6 react-to-print react-translate-component
     npm run build
   displayName: 'npm install and build'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
